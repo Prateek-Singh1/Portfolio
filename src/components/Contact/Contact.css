@@ -1,0 +1,120 @@
+.contact-wrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(234, 234, 234, 0.30);
+    padding-top: 40px;
+    position: relative;
+    height: 570px;
+}
+
+.contact-container {
+    width: 100%;
+    width: -webkit-fill-available;
+    position: absolute;
+    top: 100px;
+    max-width: 1100px;
+    border-radius: 15px;
+    background: var(--Gray-White, #FFF);
+    box-shadow: 0px 59px 124px 0px rgba(0, 0, 0, 0.12);
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+.contact-title {
+    color: #132238;
+    font-size: 38px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 50px;
+}
+.contact-title > span{
+    color: #FD853A;
+}
+.contact-description {
+    margin-top: 15px;
+    margin-bottom: 35px;
+    color: #87909D;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.contact-info-main {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.contact-info-main .contact-info-contaier:nth-child(even){
+    border-radius: 10px;
+    background: #FFF;
+    box-shadow: 0px 12px 64px 0px rgba(28, 25, 25, 0.12);
+}
+
+.contact-info-contaier {
+    display: flex;
+    width: fit-content;
+    padding: 24px;
+    gap: 18px;
+}
+
+.info-title{
+    color:  #424E60;
+font-size: 14px;
+font-weight: 400;
+line-height: 20px;
+}
+.info-description{
+    color: #132238;
+font-size: 16px;
+font-weight: 500;
+line-height: 24px; 
+}
+.contact-image{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 400px;
+}
+.contact-image > img{
+    width: 100%;
+}
+.contact-content{
+    padding: 70px;
+}
+
+@media screen and (max-width: 768px) {
+    .contact-wrapper{
+        padding-bottom: 50px;
+        height: unset;
+    }
+    .contact-container{
+        position: unset;
+        width: 100%;
+        width: -webkit-fill-available;
+    }
+    .contact-content{
+        padding: 25px;
+    }
+    .contact-image > img{
+        display: none;
+    }
+    .contact-title {
+        font-size: 25px;
+    }
+    .contact-description {
+        font-size: 15px;
+        margin-bottom: 20px;
+    }
+    .info-title{
+        font-size: 12px;
+    }
+    .info-description{
+        font-size: 12px;
+    }
+    .contact-info-contaier {
+        padding: 12px;
+    }
+
+}

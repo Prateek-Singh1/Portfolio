@@ -1,0 +1,61 @@
+import React from 'react'
+import './About.css'
+import { TechIcon, TectRange } from '../../constants'
+import RangeSlider from '../common/RangeSlider/RangeSlider'
+import { AboutMeIcon } from '../../assets/svg/svg'
+
+
+const About = () => {
+    return (
+        <section id='About' className='about-wrapper'>
+            <div className='about-section'>
+                <p className='home-sub-title'>About me</p>
+                <div className='hire-me-container'>
+                    <div className='hire-me-image-container'>
+                        <AboutMeIcon/>
+                    </div>
+                    <div className='about-info'>
+
+                        <div className='about-title'>Why <span>Hire me?</span></div>
+                        <ul className='about-description'>
+                            <li><strong>Responsive Design:</strong> Ensures visually appealing websites across all devices.</li>
+                            <li><strong>Clean Code Advocate:</strong> Writes maintainable, scalable code for polished results.</li>
+                            <li><strong>Problem Solving Skills:</strong> Swift issue resolution for smooth project development.</li>
+                            <li><strong>Team Player:</strong> Collaborative and communicative within cross-functional teams.</li>
+                            <li><strong>Adaptable Learner:</strong> Quick adoption of new technologies for innovative projects.</li>
+                        </ul>
+                        <div className='about-range-container'>
+                            {TectRange.map((range) => {
+                                return (
+                                    <div className='range-container'>
+                                        <div className='range-title'>
+                                            <div>{range.title}</div>
+                                            <div>{range.range}%</div>
+                                        </div>
+                                        <RangeSlider min={0} max={10} value={range.range} step={1} />
+                                    </div>
+                                )
+                            })}
+                        </div>
+                    </div>
+                </div>
+                <div className='about-tech'>
+                    <div className='about-tech-title'>
+                        Tech Stack
+                    </div>
+                    <div className='tech-icon-container'>
+                        {TechIcon.map((item) => {
+                            return (
+                                <>
+                                    <img src={item} />
+                                </>
+                            )
+                        })}
+                    </div>
+                </div>
+            </div>
+        </section>
+    )
+}
+
+export default About;

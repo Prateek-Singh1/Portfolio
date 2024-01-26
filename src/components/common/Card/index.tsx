@@ -1,0 +1,36 @@
+import React, { useState } from 'react';
+import './Cards.css';
+import Button from '../Button';
+
+interface CardsProps {
+    image?: string;
+    title: string;
+    date: string;
+    description: string;
+    onClick: () => void;
+}
+
+const Cards: React.FunctionComponent<CardsProps> = ({ image, title, date, description, onClick }) => {
+    const [onHover, setOnHover] = useState(false);
+
+    return (
+        <div className='card-wrapper'
+            onMouseEnter={() => setOnHover(true)}
+            onMouseLeave={() => setOnHover(false)}
+        >
+            <div className='card-img-container'>
+                <img src={image} alt="Card" />
+            </div>
+            <div className={`card-description-container ${onHover ? 'card-description-hover' : 'card-description-not-hover'}`}>
+                <div className='card-title-container'>
+                    <p className='card-title'>{title}</p>
+                    <p className='card-date'>{date}</p>
+                    </div>
+                <div className='card-description'>{description}</div>
+                <Button text='Open' size='medium' color='orange' onClick={onClick}/>
+            </div>
+        </div>
+    );
+};
+
+export default Cards;

@@ -1,4 +1,4 @@
-.blog-wrapper {
+.blog-page-wrapper {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -7,7 +7,7 @@
     justify-content: center;
 }
 
-.blog-header {
+.blog-page-header {
     position: sticky;
     top: 0;
     z-index: 10;
@@ -23,12 +23,12 @@
     backdrop-filter: blur(3px);
 }
 
-.blog-header>img {
+.blog-page-header>img {
     width: 30px;
     cursor: pointer;
 }
 
-.blog-container {
+.blog-page-container {
     display: flex;
     justify-content: space-between;
     color: white;
@@ -37,31 +37,32 @@
     max-width: 1100px;
 }
 
-.blog-title {
+.blog-page-title {
     margin: 20px 0px;
     font-size: 40px;
     font-weight: 700;
 }
 
-.blog-hero-image {
+.blog-page-hero-image {
     background-color: rgb(31, 41, 55);
     width: 100%;
     border-radius: 8px;
 }
 
-.blog-question-answer-container {
+.blog-page-question-answer-container {
     display: flex;
     flex-direction: column;
-    width: 60%;
+    width: 70%;
 }
 
-.blog-info {
+.blog-page-info {
+    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 15px;
 }
 
-.blog-info-container {
+.blog-page-info-container {
     display: flex;
     flex-direction: column;
     gap: 70px;
@@ -75,19 +76,20 @@
 }
 
 .blogDescription {
+    white-space: break-spaces;
     font-size: 18px;
     font-weight: 400;
     line-height: 150%;
     opacity: 0.8;
 }
 
-.blog-question-container {
+.blog-page-question-container {
     display: flex;
     flex-direction: column;
     gap: 30px;
 }
 
-.blog-question {
+.blog-page-question {
     position: sticky;
     top: 100px;
     display: flex;
@@ -97,27 +99,27 @@
     font-weight: 600;
 }
 
-.blog-question>p {
+.blog-page-question>p {
     opacity: 0.7;
     cursor: pointer;
     width: fit-content;
 }
 
-.blog-question>p:hover {
+.blog-page-question>p:hover {
     opacity: 1;
 
 }
 
-@media screen and (max-width: 768px) {
-    .blog-question-container {
+@media screen and (max-width: 900px) {
+    .blog-page-question-container {
         display: none;
     }
 
-    .blog-question-answer-container {
+    .blog-page-question-answer-container {
         width: 100%;
     }
 
-    .blog-title {
+    .blog-page-title {
 
         font-size: 25px;
     }
@@ -125,13 +127,13 @@
         font-size: 15px;
     }
 
-    .blog-container{
+    .blog-page-container{
         padding: 40px 25px;
     }
     .blogTitle {
         font-size: 20px;
     }
-    .blog-info-container{
+    .blog-page-info-container{
         gap: 50px;
     }
 

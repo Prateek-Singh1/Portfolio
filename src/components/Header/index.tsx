@@ -73,10 +73,10 @@ const Header: React.FunctionComponent<HeaderProps> = () => {
               Resume
             </div>
             <div
-              className={`header-btn ${selectedButton === 'Projects' ? 'header-btn-selected' : ''}`}
-              onClick={() => handleButtonClick('Projects', -130)}
+              className={`header-btn ${selectedButton === 'Blogs' ? 'header-btn-selected' : ''}`}
+              onClick={() => handleButtonClick('Blogs', 0)}
             >
-              Projects
+              Blogs
             </div>
             <div
               className={`header-btn ${selectedButton === 'Contact' ? 'header-btn-selected' : ''}`}
@@ -99,7 +99,7 @@ const Header: React.FunctionComponent<HeaderProps> = () => {
               <div>About</div>
               <div>Experience</div>
               <div>Resume</div>
-              <div>Projects</div>
+              <div>Blogs</div>
               <div>Contacts</div>
             </div>
           </div>

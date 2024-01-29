@@ -11,7 +11,7 @@ p {
 }
 
 .home-main-screen {
-  height: calc(100vh - 108px);
+  height: calc(100vh - 105px);
   ;
   display: flex;
   align-items: center;
@@ -85,7 +85,7 @@ p {
 
 .page-heading-title>div>svg {
   position: absolute;
-  left: -13px;
+  left: -15px;
   z-index: -1;
   top: -11.5px;
   width: 60px;

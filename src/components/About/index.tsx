@@ -1,18 +1,27 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './About.css'
 import { TechIcon, TectRange } from '../../constants'
 import RangeSlider from '../common/RangeSlider/RangeSlider'
-import { AboutMeIcon } from '../../assets/svg/svg'
+import { AboutMeIcon, Ellipse } from '../../assets/svg/svg'
 
 
 const About = () => {
+    const [onHover, setOnHover] = useState(false);
     return (
         <section id='About' className='about-wrapper'>
             <div className='about-section'>
                 <p className='home-sub-title'>About me</p>
                 <div className='hire-me-container'>
                     <div className='hire-me-image-container'>
-                        <AboutMeIcon/>
+                        <div className='hire-me-picture'
+                            onMouseEnter={() => setOnHover(true)}
+                            onMouseLeave={() => setOnHover(false)}
+                        >
+                            <AboutMeIcon />
+                            <div className={`hire-me-ellipse ${onHover ? 'onhover-show' : 'onHover-hide'}`}>
+                                <Ellipse />
+                            </div>
+                        </div>
                     </div>
                     <div className='about-info'>
 

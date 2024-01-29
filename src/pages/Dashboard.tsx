@@ -4,7 +4,7 @@ import Header from '../components/Header'
 import About from '../components/About'
 import WorkExperience from '../components/WorkExperience'
 import Resume from '../components/Resume'
-import Projects from '../components/Projects'
+import Blogs from '../components/Blogs'
 import Contact from '../components/Contact'
 import Footer from '../components/Footer'
 
@@ -20,7 +20,7 @@ const Dashboard = () => {
             <About />
             <WorkExperience />
             <Resume />
-            <Projects />
+            <Blogs />
             <Contact />
             <Footer />
         </>

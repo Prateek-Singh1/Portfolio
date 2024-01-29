@@ -1,7 +1,6 @@
 import { Location } from "../assets/svg/svg"
-import digitalClock from '../assets/images/digital-clock.png'
 import SEOImage from '../assets/images/seo-hero-image.png'
-import todoList from '../assets/images/todo-list.png'
+import awardOne from '../assets/images/award-one.jpg'
 
 export const TechIcon = [
     'https://skillicons.dev/icons?i=html,css',
@@ -23,10 +22,10 @@ export const TectRange = [
         title: 'HTML/CSS',
         range: 90
     },
-    {
-        title: 'ReactJs',
-        range: 60
-    },
+    // {
+    //     title: 'ReactJs',
+    //     range: 60
+    // },
     // {
     //     title: 'JavaScript',
     //     range: 60
@@ -76,26 +75,19 @@ export const ContactInfo = [
     },
 ]
 
-export const GetProjects = [
+export const GetBlogs = [
     {
         img: SEOImage,
         title:'SEO',
-        date:'June 16, 2023',
+        type:'Blog',
         description:'SEO, or Search Engine Optimization, is a set of practices aimed at optimizing a website or web page to improve its visibility and ranking on search engine results pages (SERPs). ',
         link:'/blogs/seo',
     },
     {
-        img:todoList,
-        title:'ToDo List',
-        date:'Dec 23, 2021',
-        description:'Designed and implemented a dynamic To-Do List application using JavaScript, showcasing strong front-end development skills and proficiency in creating interactive user interfaces',
-        link:'/blogs/react',
-    },
-    {
-        img:digitalClock,
-        title:'Digital Clock',
-        date:'Nov 26, 2021',
-        description:'Created a dynamic digital clock application with automated wallpaper changes based on user-set mealtime preferences. Demonstrates strong front-end development skills, time management functionality, and creative problem-solving.',
-        link:'https://prateek-singh1.github.io/digital-clock/',
+        img: awardOne,
+        title:'Stress Reliever',
+        type:'Award',
+        description:'Problem solver, someone whose contributions help maintain a smooth workflow',
+        link: `${window.location.pathname}src/assets/images/award-one.jpg`,
     },
 ]

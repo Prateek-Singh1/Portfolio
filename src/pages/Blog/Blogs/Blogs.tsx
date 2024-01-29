@@ -34,26 +34,26 @@ const Blogs: React.FunctionComponent<BlogData> = () => {
     }, []);
 
     return (
-        <section id='seo' className='blog-wrapper'>
-            <div className='blog-header' onClick={() => navigate('/home')}>
-                <img src={leftArrow} />
+        <section id='seo' className='blog-page-wrapper'>
+            <div className='blog-page-header'>
+                <img src={leftArrow} onClick={() => navigate('/')}/>
             </div>
-            <div className='blog-container'>
-                <div className='blog-question-answer-container'>
-                    <img className='blog-hero-image' src={poster} alt='SEO Hero' />
-                    <h1 className='blog-title'>{blogData?.blog_title}</h1>
-                    <div className='blog-info-container'>
+            <div className='blog-page-container'>
+                <div className='blog-page-question-answer-container'>
+                    <img className='blog-page-hero-image' src={poster} alt='SEO Hero' />
+                    <h1 className='blog-page-title'>{blogData?.blog_title}</h1>
+                    <div className='blog-page-info-container'>
                         {blogData?.blog_content.map((seoData, index) => (
-                            <div id={seoData.question} className='blog-info' key={index}>
+                            <div id={seoData.question} className='blog-page-info' key={index}>
                                 <div className='blogTitle'>{seoData.question}</div>
                                 <div className='blogDescription'>{seoData.answer}</div>
-                                <code className='blog-hero-image'>{seoData.image}</code>
+                                <img className='blog-page-hero-image' src={seoData.image}/>
                             </div>
                         ))}
                     </div>
                 </div>
-                <div className='blog-question-container'>
-                    <div className='blog-question'>
+                <div className='blog-page-question-container'>
+                    <div className='blog-page-question'>
                         {blogData?.blog_content.map((que) => (
                             <p key={que.question} onClick={() => scrollToSection(que.question, -100)}>
                                 {que.question}

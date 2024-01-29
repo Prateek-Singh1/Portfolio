@@ -5,12 +5,14 @@ import Button from '../Button';
 interface CardsProps {
     image?: string;
     title?: string;
-    date?: string;
+    type?: string;
+    btnText?: string;
     description?: string;
     onClick?: () => void;
+    btn?: boolean;
 }
 
-const Cards: React.FunctionComponent<CardsProps> = ({ image, title, date, description, onClick }) => {
+const Cards: React.FunctionComponent<CardsProps> = ({ image, title, type, description, onClick, btn = true, btnText }) => {
     const [onHover, setOnHover] = useState(false);
 
     return (
@@ -24,10 +26,14 @@ const Cards: React.FunctionComponent<CardsProps> = ({ image, title, date, descri
             <div className={`card-description-container ${onHover ? 'card-description-hover' : 'card-description-not-hover'}`}>
                 <div className='card-title-container'>
                     <p className='card-title'>{title}</p>
-                    <p className='card-date'>{date}</p>
-                    </div>
+                    <p className='card-date'>{type}</p>
+                </div>
                 <div className='card-description'>{description}</div>
-                <Button text='Learn more' size='medium' color='orange' onClick={onClick}/>
+                {btn ?
+                    <Button svg={true} text={btnText} size='medium' color='orange' onClick={onClick} />
+                    :
+                    <></>
+                }
             </div>
         </div>
     );

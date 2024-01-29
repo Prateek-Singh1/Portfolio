@@ -9,9 +9,9 @@ const Header: React.FunctionComponent<HeaderProps> = () => {
   const [selectedButton, setSelectedButton] = useState('Home');
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const handleButtonClick = (buttonName: string) => {
+  const handleButtonClick = (buttonName: string, offSet: number) => {
     setSelectedButton(buttonName);
-    scrollToSection(buttonName)
+    scrollToSection(buttonName, offSet)
   };
 
   const [innerWidth, setInnerWidth] = useState(window.innerWidth);
@@ -41,7 +41,7 @@ const Header: React.FunctionComponent<HeaderProps> = () => {
               if (innerWidth <= 768) {
                 handleOpenMenu();
               } else {
-                handleButtonClick('Home');
+                handleButtonClick('Home', -110);
               }
             }}
           >
@@ -60,7 +60,7 @@ const Header: React.FunctionComponent<HeaderProps> = () => {
             >
               Experience
             </div>
-            <div className='logo-head' onClick={() => handleButtonClick('Home')}>
+            <div className='logo-head' onClick={() => handleButtonClick('Home', -110)}>
               <div className='header-title-container'>
                 <div className='header-logo'>Ps</div>
                 {/* <div className='header-logo-title'>Prateek</div> */}
@@ -68,13 +68,13 @@ const Header: React.FunctionComponent<HeaderProps> = () => {
             </div>
             <div
               className={`header-resume header-btn ${selectedButton === 'Resume' ? 'header-btn-selected' : ''}`}
-              onClick={() => handleButtonClick('Resume')}
+              onClick={() => handleButtonClick('Resume', -110)}
             >
               Resume
             </div>
             <div
               className={`header-btn ${selectedButton === 'Projects' ? 'header-btn-selected' : ''}`}
-              onClick={() => handleButtonClick('Projects')}
+              onClick={() => handleButtonClick('Projects', -130)}
             >
               Projects
             </div>
@@ -88,7 +88,7 @@ const Header: React.FunctionComponent<HeaderProps> = () => {
           <div className={`mobile-header-wrapper-start ${isMenuOpen ? 'open-mobile-menu' : 'close-mobile-menu'}`} >
             <div className={`mobile-header-wrapper`}>
               <div className='menuCloseIcon'>
-                <div className='' onClick={() => handleButtonClick('Home')}>
+                <div className='' onClick={() => handleButtonClick('Home', -110)}>
                   <div className='header-title-container'>
                     <div className='header-logo' style={{ color: 'white' }}>Ps</div>
                   </div>

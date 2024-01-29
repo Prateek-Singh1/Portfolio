@@ -22,6 +22,7 @@ const RangeSlider: React.FunctionComponent<RangeSliderProps> = ({ min = 0, max =
                     value={value}
                     style={{ width: `${value}%` }}
                     className={`w-full range-slider `}
+                    readOnly
                 />
             </div>
         </div>

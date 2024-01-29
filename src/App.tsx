@@ -1,30 +1,21 @@
 import React from 'react'
 import './App.css'
-import Home from './pages/Home'
-import About from './components/About'
-import Header from './components/Header'
-import Footer from './components/Footer'
-import WorkExperience from './components/WorkExperience'
-import Resume from './components/Resume'
-import Contact from './components/Contact'
-import Projects from './components/Projects'
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Dashboard from './pages/Dashboard';
+import Blogs from './pages/Blog/Blogs/Blogs';
+
 
 function App() {
 
   return (
     <>
-      <div className='home-header'>
-        <Header />
-      </div>
-      <div className='home-main-screen'>
-        <Home />
-      </div>
-      <About />
-      <WorkExperience />
-      <Resume />
-      <Projects />
-      <Contact />
-      <Footer />
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<Dashboard />} />
+          <Route path='/home' element={<Dashboard />} />
+          <Route path='/blogs/:blog-title' element={<Blogs />} />
+        </Routes>
+      </BrowserRouter>
     </>
   )
 }

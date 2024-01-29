@@ -50,6 +50,7 @@ const Home = () => {
                             onMouseEnter={onMouseEnterImage}
                             onMouseLeave={onMouseLeaveImage}
                             src={heroImage}
+                            loading="lazy"
                         />
                         <div className={`${showImageBackDrop ? 'home-hero-backdrop-style-show' : 'home-hero-backdrop-style-hide'}`}>
                             <HeroBannerStyle />
@@ -65,9 +66,9 @@ const Home = () => {
                     </div>
                     <div className='home-experience'>
                         <div>
-                            {[1, 2, 3, 4, 5].map(() => {
+                            {[1, 2, 3, 4, 5].map((index) => {
                                 return (
-                                    <Star />
+                                    <Star key={index}/>
                                 )
                             })}
                         </div>

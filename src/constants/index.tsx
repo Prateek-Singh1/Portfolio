@@ -1,6 +1,6 @@
 import { Location } from "../assets/svg/svg"
 import digitalClock from '../assets/images/digital-clock.png'
-import movieSite from '../assets/images/movie-site.png'
+import SEOImage from '../assets/images/seo-hero-image.png'
 import todoList from '../assets/images/todo-list.png'
 
 export const TechIcon = [
@@ -78,18 +78,18 @@ export const ContactInfo = [
 
 export const GetProjects = [
     {
-        img:movieSite,
-        title:'Movie Site',
+        img: SEOImage,
+        title:'SEO',
         date:'June 16, 2023',
-        description:'Successfully developed a responsive movie application using React.js and Redux, incorporating a dummy movie API, showcasing proficiency in front-end technologies and state management.',
-        link:'https://prateek-singh1.github.io/digital-clock/',
+        description:'SEO, or Search Engine Optimization, is a set of practices aimed at optimizing a website or web page to improve its visibility and ranking on search engine results pages (SERPs). ',
+        link:'/blogs/seo',
     },
     {
         img:todoList,
         title:'ToDo List',
         date:'Dec 23, 2021',
         description:'Designed and implemented a dynamic To-Do List application using JavaScript, showcasing strong front-end development skills and proficiency in creating interactive user interfaces',
-        link:'https://prateek-singh1.github.io/to-do-list-js/',
+        link:'/blogs/react',
     },
     {
         img:digitalClock,

@@ -8,9 +8,10 @@ interface ButtonProps {
     onClick?: () => void;
     loader?: Boolean;
     color?:string;
+    style?: any;
 }
 
-const Button: React.FunctionComponent<ButtonProps> = ({ size = 'medium', text = 'Button', loader = false, onClick, color }) => {
+const Button: React.FunctionComponent<ButtonProps> = ({ size = 'medium', text = 'Button', loader = false, onClick, color, style }) => {
     const btnSize = `btn-${size}`;
     const handleClick = () => {
         if (onClick) {
@@ -20,7 +21,11 @@ const Button: React.FunctionComponent<ButtonProps> = ({ size = 'medium', text = 
 
     return (
         <>
-            <button className={`btn btn-${color} ${btnSize}`} onClick={handleClick}>
+            <button 
+            className={`btn btn-${color} ${btnSize}`} 
+            onClick={handleClick}
+            style={style}
+            >
                 {loader ?
                     <Loader size={size} />
                     :

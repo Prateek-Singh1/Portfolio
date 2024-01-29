@@ -91,6 +91,13 @@ p {
   width: 60px;
   height: 60px;
 }
+.social-icon{
+fill: white;
+cursor: pointer;
+}
+.social-icon:hover {
+  fill: #FD853A;
+}
 
 @media screen and (max-width: 768px) {
   .header-title-container {

@@ -13,9 +13,9 @@ const Contact = () => {
           <div className='contact-description'>Feel free to use any of these channels to get in touch. I'm excited to connect with you!</div>
 
           <div className='contact-info-main'>
-            {ContactInfo.map((info) => {
+            {ContactInfo.map((info, index) => {
               return (
-                <div className='contact-info-contaier'>
+                <div key={index} className='contact-info-contaier'>
                   <div>{info.svg}</div>
                   <div>
                     <div className='info-title'>{info.title}</div>

@@ -40,7 +40,7 @@
 .home-hero-image>img {
     position: absolute;
     bottom: 4px;
-    left: 70px;
+    left: 16rem;
     height: 500px;
     filter: contrast(1.2);
     z-index: 5;
@@ -49,19 +49,19 @@
 .home-hero-backdrop-style-show {
     position: absolute;
     bottom: 0;
-    left: -105px;
-    width: 990px;
+    left: -55px;
+    width: 871px;
     z-index: 4;
-    transition: all 0.5s ease-in-out;
+    transition: all 0.4s ease-in-out;
 }
 
 .home-hero-backdrop-style-hide {
     position: absolute;
     bottom: 0px;
-    left: 280px;
+    left: 400px;
     width: 0px;
     z-index: 4;
-    transition: all 0.5s ease-in-out;
+    transition: all 0.4s ease-in-out;
 }
 
 .home-hello-title {
@@ -94,12 +94,12 @@
 
 .home-title-wrapper-hide {
     opacity: 0;
-    transition: all 0.5s ease-in-out;
+    transition: all 0.4s ease-in-out;
 }
 
 .home-title-wrapper-show {
     opacity: 1;
-    transition: all 0.5s ease-in-out;
+    transition: all 0.4s ease-in-out;
 }
 
 .home-title {
@@ -196,7 +196,6 @@
     }
 
     .home-hero-image>img {
-        left: 90px;
         height: 460px;
     }
 

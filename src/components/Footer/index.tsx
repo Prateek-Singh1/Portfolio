@@ -1,6 +1,6 @@
 import React from 'react'
 import './Footer.css'
-import { FaceBook, Instagram, Linkedin } from '../../assets/svg/svg'
+import { FaceBook, GitHub, Instagram, Linkedin } from '../../assets/svg/svg'
 import { scrollToSection } from '../../commonFunction'
 
 const Footer = () => {
@@ -14,10 +14,10 @@ const Footer = () => {
                     </div>
                 </div>
                 <div className='footer-about-section'>
-                    <div onClick={() => scrollToSection('Home')}>Home</div>
+                    <div onClick={() => scrollToSection('Home', -110)}>Home</div>
                     <div onClick={() => scrollToSection('About')}>About</div>
                     <div onClick={() => scrollToSection('Work')}>Experience</div>
-                    <div onClick={() => scrollToSection('Resume')}>Resume</div>
+                    <div onClick={() => scrollToSection('Resume', -130)}>Resume</div>
                     <div onClick={() => scrollToSection('Projects')}>Projects</div>
                     <div onClick={() => scrollToSection('Contact')}>Contact</div>
                 </div>
@@ -25,6 +25,9 @@ const Footer = () => {
                     <FaceBook />
                     <Instagram />
                     <Linkedin />
+                    <a href='https://github.com/Prateek-Singh1' target='_blank'>
+                        <GitHub />
+                    </a>
                 </div>
                 <div className='footer-reserved'>© 2024 <span>Prateek</span> All Rights Reserved , Inc.</div>
             </div>

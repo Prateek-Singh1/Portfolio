@@ -4,10 +4,10 @@ import Button from '../Button';
 
 interface CardsProps {
     image?: string;
-    title: string;
-    date: string;
-    description: string;
-    onClick: () => void;
+    title?: string;
+    date?: string;
+    description?: string;
+    onClick?: () => void;
 }
 
 const Cards: React.FunctionComponent<CardsProps> = ({ image, title, date, description, onClick }) => {
@@ -27,7 +27,7 @@ const Cards: React.FunctionComponent<CardsProps> = ({ image, title, date, descri
                     <p className='card-date'>{date}</p>
                     </div>
                 <div className='card-description'>{description}</div>
-                <Button text='Open' size='medium' color='orange' onClick={onClick}/>
+                <Button text='Learn more' size='medium' color='orange' onClick={onClick}/>
             </div>
         </div>
     );

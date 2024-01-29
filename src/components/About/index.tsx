@@ -25,9 +25,9 @@ const About = () => {
                             <li><strong>Adaptable Learner:</strong> Quick adoption of new technologies for innovative projects.</li>
                         </ul>
                         <div className='about-range-container'>
-                            {TectRange.map((range) => {
+                            {TectRange.map((range, index) => {
                                 return (
-                                    <div className='range-container'>
+                                    <div key={index} className='range-container'>
                                         <div className='range-title'>
                                             <div>{range.title}</div>
                                             <div>{range.range}%</div>
@@ -44,11 +44,11 @@ const About = () => {
                         Tech Stack
                     </div>
                     <div className='tech-icon-container'>
-                        {TechIcon.map((item) => {
+                        {TechIcon.map((item, index) => {
                             return (
-                                <>
-                                    <img src={item} />
-                                </>
+                                <div key={index}>
+                                    <img key={index} src={item} />
+                                </div>
                             )
                         })}
                     </div>

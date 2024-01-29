@@ -2,7 +2,6 @@ import React from 'react';
 import './Projects.css';
 import Cards from '../common/Card';
 import { GetProjects } from '../../constants';
-import { PageHeaderAlphabetHighlighter } from '../../assets/svg/svg';
 import { PageHeadings } from '../common/GenericeFunction';
 
 const Projects = () => {
@@ -15,7 +14,7 @@ const Projects = () => {
     return (
         <section id='Projects' className='project-wrapper'>
             <div className='project-container'>
-                <PageHeadings heading={'Projects'} subHeading={'Creations'}/>
+                <PageHeadings heading={''} subHeading={'Blogs'}/>
                 <div className='project-list-container'>
                     {GetProjects.map((project, index) => {
                         return (

@@ -1,0 +1,138 @@
+.blog-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: rgb(17, 24, 39);
+    align-items: center;
+    justify-content: center;
+}
+
+.blog-header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    width: 100%;
+    width: -webkit-fill-available;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    background: #070c17db;
+    -webkit-backdrop-filter: blur(3px);
+    backdrop-filter: blur(3px);
+}
+
+.blog-header>img {
+    width: 30px;
+    cursor: pointer;
+}
+
+.blog-container {
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    gap: 40px;
+    padding: 50px;
+    max-width: 1100px;
+}
+
+.blog-title {
+    margin: 20px 0px;
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.blog-hero-image {
+    background-color: rgb(31, 41, 55);
+    width: 100%;
+    border-radius: 8px;
+}
+
+.blog-question-answer-container {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+}
+
+.blog-info {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.blog-info-container {
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+    align-items: center;
+}
+
+.blogTitle {
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 130%;
+}
+
+.blogDescription {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 150%;
+    opacity: 0.8;
+}
+
+.blog-question-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.blog-question {
+    position: sticky;
+    top: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.blog-question>p {
+    opacity: 0.7;
+    cursor: pointer;
+    width: fit-content;
+}
+
+.blog-question>p:hover {
+    opacity: 1;
+
+}
+
+@media screen and (max-width: 768px) {
+    .blog-question-container {
+        display: none;
+    }
+
+    .blog-question-answer-container {
+        width: 100%;
+    }
+
+    .blog-title {
+
+        font-size: 25px;
+    }
+    .blogDescription {
+        font-size: 15px;
+    }
+
+    .blog-container{
+        padding: 40px 25px;
+    }
+    .blogTitle {
+        font-size: 20px;
+    }
+    .blog-info-container{
+        gap: 50px;
+    }
+
+}

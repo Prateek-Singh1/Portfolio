@@ -11,7 +11,7 @@ const WorkExperience = () => {
                 <div className='experience-main-container'>
                     {Experience.map((work, index) => {
                         return (
-                            <div className='experience-container'>
+                            <div key={index} className='experience-container'>
                                 <div className='experience-info-left' style={index === 0 ? { background: '#EE731B' } : { color: '#321A50' }}>
                                         <div className='experience-info-container experience-mobile'>
                                             <p className='experience-info-title'>{work.designation}</p>

@@ -19,7 +19,7 @@ const Blogs = () => {
     return (
         <section id='Blogs' className='blog-wrapper'>
             <div className='blog-container'>
-                <PageHeadings heading={'Blog and Reward'} subHeading={'Learn and grow'} />
+                <PageHeadings heading={'Blog and Rewards'} subHeading={'Learn and grow'} />
                 <div className='blog-list-container'>
                     {GetBlogs.map((blog, index) => {
                         const btnText = blog.type === 'Blog' ? 'Learn more' : 'View'

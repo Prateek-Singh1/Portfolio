@@ -43,4 +43,7 @@
     .blog-card-alignment {
         margin-top: 0px;
     }
+    .blog-container{
+        gap: 50px;
+    }
 }

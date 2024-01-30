@@ -9,18 +9,6 @@
     padding: 0px 25px;
 }
 
-/* .home-header {
-    position: sticky;
-    top: -1px;
-    z-index: 5;
-    width: 100%;
-    max-width: 1100px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 40px;
-} */
-
 .home-hero-wrapper {
     height: 100%;
     width: 100%;
@@ -39,11 +27,24 @@
 
 .home-hero-image>img {
     position: absolute;
-    bottom: 4px;
+    bottom: 3px;
     left: 16rem;
     height: 500px;
     filter: contrast(1.2);
     z-index: 5;
+}
+
+.home-hero-button {
+    position: absolute;
+    z-index: 6;
+    bottom: 40px;
+    left: 40%;
+
+    padding: 10px;
+    border-radius: 50px;
+    border: 2px solid #FFF;
+    background: rgba(255, 255, 255, 0.10);
+    backdrop-filter: blur(7.5px);
 }
 
 .home-hero-backdrop-style-show {

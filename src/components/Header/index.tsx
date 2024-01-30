@@ -9,9 +9,19 @@ const Header: React.FunctionComponent<HeaderProps> = () => {
   const [selectedButton, setSelectedButton] = useState('Home');
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.body.classList.add('disable-background-scroll');
+      return () => {
+        document.body.classList.remove('disable-background-scroll');
+      };
+    }
+  }, [isMenuOpen]);
+
   const handleButtonClick = (buttonName: string, offSet: number) => {
     setSelectedButton(buttonName);
     scrollToSection(buttonName, offSet)
+    setIsMenuOpen(false)
   };
 
   const [innerWidth, setInnerWidth] = useState(window.innerWidth);
@@ -95,12 +105,12 @@ const Header: React.FunctionComponent<HeaderProps> = () => {
                 </div>
                 <p onClick={handleOpenMenu}><MenuCloseIcon /></p>
               </div>
-              <div>Home</div>
-              <div>About</div>
-              <div>Experience</div>
-              <div>Resume</div>
-              <div>Blogs</div>
-              <div>Contacts</div>
+              <div onClick={() => handleButtonClick('Home', -110)}>Home</div>
+              <div onClick={() => handleButtonClick('About')}>About</div>
+              <div onClick={() => handleButtonClick('Work')}>Experience</div>
+              <div onClick={() => handleButtonClick('Resume', -110)}>Resume</div>
+              <div onClick={() => handleButtonClick('Blogs', 0)}>Blogs</div>
+              <div onClick={() => handleButtonClick('Contact')}>Contacts</div>
             </div>
           </div>
         </div>

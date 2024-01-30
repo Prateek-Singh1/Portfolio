@@ -1,6 +1,7 @@
 import { Location } from "../assets/svg/svg"
 import SEOImage from '../assets/images/seo-hero-image.png'
 import awardOne from '../assets/images/award-one.jpg'
+import awardTwo from '../assets/images/award-two.jpg'
 
 export const TechIcon = [
     'https://skillicons.dev/icons?i=html,css',
@@ -41,31 +42,31 @@ export const Experience = [
         designation: 'Frontend Developer',
         company: 'MyYogaTeacher',
         date: 'June 2023 - Current',
-        description: 'Experienced Frontend Engineer with 2 years of expertise crafting elegant solutions through clean code practices. Proficient in seamless Rest API integration for robust and responsive user interfaces. Recognized for collaborative teamwork, innovation, and adaptability. A dedicated learner, I bring value to forward-thinking organizations.',
+        description: '<ul><li>Experienced Frontend Engineer with 2 years of expertise</li><li>Craft elegant solutions through clean code practices</li><li>Proficient in seamless Rest API integration for robust and responsive user interfaces</li><li>Recognized for collaborative teamwork, innovation, and adaptability</li><li>Dedicated learner, bringing value to forward-thinking organizations</li></ul>',
     },
     {
         designation: 'UI Developer',
         company: 'MyYogaTeacher',
         date: 'April 2022 - Augst 2023',
-        description: 'Skilled UI Developer with a flair for creating attractive, responsive applications. Expert in building reusable components for efficiency and consistency. Known for crafting user-friendly interfaces that prioritize a seamless user experience. Ready to bring innovation and design excellence to your dynamic team.',
+        description: '<ul><li>Skilled UI Developer with a flair for creating attractive, responsive applications.</li><li>Expert in building reusable components for efficiency and consistency.</li><li>Known for crafting user-friendly interfaces that prioritize a seamless user experience.</li><li>Ready to bring innovation and design excellence to your dynamic team.</li></ul>',
     },
     {
         designation: 'Frontend Course',
         company: 'Prepbytes',
         date: 'September 2021 - January2022',
-        description: 'Familiar with HTML, CSS, and JavaScript, I prioritize clean code, responsive design, and cross-browser compatibility. Skilled in Git version control and familiar with front-end frameworks like React, Angular, and Vue.js. I focus on performance optimization and accessibility, showcasing my abilities in a diverse portfolio. Committed to continuous learning and effective communication in a team environment.',
+        description: '<ul><li>Familiar with HTML, CSS, and JavaScript, prioritizing clean code, responsive design, and cross-browser compatibility.</li><li>Skilled in Git version control and familiar with front-end frameworks React.</li><li>Focus on performance optimization and accessibility, showcasing abilities in a diverse portfolio.</li><li>Committed to continuous learning and effective communication in a team environment.</li></ul>',
     },
 ]
 
 export const ContactInfo = [
     {
         title: 'Address:',
-        description: 'HSR sector 2 Layout, Bangalore - 620102',
+        description: 'HSR sector 2 Layout, Bangalore - 560102',
         svg: <Location />
     },
     {
         title: 'My Email:',
-        description: 'prateeksingh1319@mail.com',
+        description: 'prateeksingh1319@gmail.com',
         svg: <Location />
     },
     {
@@ -86,8 +87,15 @@ export const GetBlogs = [
     {
         img: awardOne,
         title:'Stress Reliever',
-        type:'Award',
+        type:'Reward',
         description:'Problem solver, someone whose contributions help maintain a smooth workflow',
         link: `${window.location.pathname}src/assets/images/award-one.jpg`,
+    },
+    {
+        img: awardTwo,
+        title:'Strength builder',
+        type:'Reward',
+        description:'Significant contribution on a subject',
+        link: `${window.location.pathname}src/assets/images/award-two.jpg`,
     },
 ]

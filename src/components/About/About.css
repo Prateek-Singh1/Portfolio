@@ -166,11 +166,17 @@
     }
 
     .about-section {
-        gap: 50px;
+        gap: 30px;
     }
 
     .about-wrapper {
         padding: 50px 25px;
+    }
+    .about-description>li {
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 20px;
     }
 }
 

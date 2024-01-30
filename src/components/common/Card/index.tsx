@@ -19,6 +19,8 @@ const Cards: React.FunctionComponent<CardsProps> = ({ image, title, type, descri
         <div className='card-wrapper'
             onMouseEnter={() => setOnHover(true)}
             onMouseLeave={() => setOnHover(false)}
+            onTouchStart={() => setOnHover(true)}
+            onTouchEnd={() => setOnHover(false)}
         >
             <div className='card-img-container'>
                 <img src={image} alt="Card" />

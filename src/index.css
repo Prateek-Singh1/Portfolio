@@ -11,8 +11,7 @@ p {
 }
 
 .home-main-screen {
-  height: calc(100vh - 105px);
-  ;
+  height: calc(100vh - 90px);
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -24,13 +23,13 @@ p {
   width: 100%;
   max-width: -webkit-fill-available;
   position: sticky;
-  top: -1px;
+  top: 5px;
   z-index: 10;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 40px;
+  margin-top: 30px;
   padding: 0px 25px;
 }
 
@@ -98,8 +97,15 @@ cursor: pointer;
 .social-icon:hover {
   fill: #FD853A;
 }
-
+@media screen and (max-width: 1100px) {
+  .home-main-screen {
+    height: calc(100vh - 60px);
+  }
+}
 @media screen and (max-width: 768px) {
+  .home-main-screen {
+    height: calc(100vh - 90px);
+  }
   .header-title-container {
     padding-left: 0;
     padding-right: 0;

@@ -59,16 +59,22 @@
 }
 
 @media screen and (max-width: 768px) {
-    .resume-wrapper{
-padding: 50px 25px;
+    .resume-wrapper {
+        padding: 0px 25px 50px 25px;
     }
+
     .resume-content {
         flex-direction: column;
         align-items: flex-start;
         padding: 25px;
     }
+
     .resume-description>p {
         width: 100%;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 20px;
     }
 
     .resume-description>div {

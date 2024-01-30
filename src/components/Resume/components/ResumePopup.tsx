@@ -1,6 +1,7 @@
 import React from 'react'
 import PopupLayout from '../../common/PopupLayout'
 import Button from '../../common/Button'
+import resume from '../../../assets/docs/Prateek Kumar Singh.pdf'
 
 interface ResumePopupProps {
     heading: string;
@@ -10,12 +11,12 @@ interface ResumePopupProps {
 
 const ResumePopup: React.FC<ResumePopupProps> = ({ heading, subHeading, onClose }) => {
     const handleDownload = () => {
-        const downloadUrl = 'https://example.com/path/to/your/resume.pdf';
+        const downloadUrl = resume;
         window.open(downloadUrl, '_blank');
     };
 
     const handlePreview = () => {
-        const previewUrl = 'https://example.com/path/to/your/resume.pdf';
+        const previewUrl = resume;
         window.open(previewUrl, '_blank');
     };
     return (

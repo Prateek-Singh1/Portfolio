@@ -3,6 +3,8 @@ import './Home.css'
 import { CoatsSvg, EllipseStyle, HelloSvg, HeroBannerStyle, Star } from '../../assets/svg/svg'
 import heroImage from '../../assets/images/hero-image.png'
 import Typewriter from 'typewriter-effect';
+import Button from '../../components/common/Button';
+import { scrollToSection } from '../../commonFunction';
 
 const Home = () => {
 
@@ -10,12 +12,12 @@ const Home = () => {
 
 
     const onMouseEnterImage = () => {
-        if (innerWidth >= 1024) {
+        if (innerWidth >= 850) {
             setShowImageBackDrop(true);
         }
     }
     const onMouseLeaveImage = () => {
-        if (innerWidth >= 1024) {
+        if (innerWidth >= 850) {
             setShowImageBackDrop(false);
         }
     }
@@ -41,14 +43,19 @@ const Home = () => {
                         />
                     </div>
                 </div>
-                <div className='home-hero-container'>
+                <div
+                    className='home-hero-container'
+                    onMouseEnter={onMouseEnterImage}
+                    onMouseLeave={onMouseLeaveImage}
+                >
                     <div>
                         <EllipseStyle />
                     </div>
                     <div className='home-hero-image'>
+                        <div className='home-hero-button'>
+                            <Button text='Hire me' color='orange' size='large' style={{borderRadius:'50px'}} svg={true} onClick={() => scrollToSection('Contact')}/>
+                        </div>
                         <img
-                            onMouseEnter={onMouseEnterImage}
-                            onMouseLeave={onMouseLeaveImage}
                             src={heroImage}
                             loading="lazy"
                         />
@@ -68,7 +75,7 @@ const Home = () => {
                         <div>
                             {[1, 2, 3, 4, 5].map((index) => {
                                 return (
-                                    <Star key={index}/>
+                                    <Star key={index} />
                                 )
                             })}
                         </div>

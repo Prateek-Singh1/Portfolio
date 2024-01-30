@@ -12,11 +12,11 @@ const About = () => {
             <div className='about-section'>
                 <p className='home-sub-title'>About me</p>
                 <div className='hire-me-container'>
-                    <div className='hire-me-image-container'>
-                        <div className='hire-me-picture'
-                            onMouseEnter={() => setOnHover(true)}
-                            onMouseLeave={() => setOnHover(false)}
-                        >
+                    <div className='hire-me-image-container'
+                    onMouseEnter={() => setOnHover(true)}
+                    onMouseLeave={() => setOnHover(false)}
+                    >
+                        <div className='hire-me-picture'>
                             <AboutMeIcon />
                             <div className={`hire-me-ellipse ${onHover ? 'onhover-show' : 'onHover-hide'}`}>
                                 <Ellipse />

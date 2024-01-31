@@ -1,4 +1,4 @@
-import { Location } from "../assets/svg/svg"
+import { Call, Email, Location } from "../assets/svg/svg"
 import SEOImage from '../assets/images/seo-hero-image.png'
 import awardOne from '../assets/images/award-one.jpg'
 import awardTwo from '../assets/images/award-two.jpg'
@@ -61,41 +61,41 @@ export const Experience = [
 export const ContactInfo = [
     {
         title: 'Address:',
-        description: 'HSR sector 2 Layout, Bangalore - 560102',
-        svg: <Location />
+        description: 'HSR , Bangalore - 560102',
+        svg: <Location color='white' />
     },
     {
         title: 'My Email:',
         description: 'prateeksingh1319@gmail.com',
-        svg: <Location />
+        svg: <Email color='white' />
     },
     {
         title: 'Call Me On:',
         description: '+91 8016824920',
-        svg: <Location />
+        svg: <Call color='white' />
     },
 ]
 
 export const GetBlogs = [
     {
         img: SEOImage,
-        title:'SEO',
-        type:'Blog',
-        description:'SEO, or Search Engine Optimization, is a set of practices aimed at optimizing a website or web page to improve its visibility and ranking on search engine results pages (SERPs). ',
-        link:'/blogs/seo',
+        title: 'SEO',
+        type: 'Blog',
+        description: 'SEO, or Search Engine Optimization, is a set of practices aimed at optimizing a website or web page to improve its visibility and ranking on search engine results pages (SERPs). ',
+        link: '/blogs/seo',
     },
     {
         img: awardOne,
-        title:'Stress Reliever',
-        type:'Reward',
-        description:'Problem solver, someone whose contributions help maintain a smooth workflow',
+        title: 'Stress Reliever',
+        type: 'Reward',
+        description: 'Problem solver, someone whose contributions help maintain a smooth workflow',
         link: `${window.location.pathname}src/assets/images/award-one.jpg`,
     },
     {
         img: awardTwo,
-        title:'Strength builder',
-        type:'Reward',
-        description:'Significant contribution on a subject',
+        title: 'Strength builder',
+        type: 'Reward',
+        description: 'Significant contribution on a subject',
         link: `${window.location.pathname}src/assets/images/award-two.jpg`,
     },
 ]

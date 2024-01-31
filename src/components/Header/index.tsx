@@ -3,9 +3,8 @@ import './Header.css';
 import { scrollToSection } from '../../commonFunction';
 import { MenuCloseIcon } from '../../assets/svg/svg';
 
-interface HeaderProps { }
 
-const Header: React.FunctionComponent<HeaderProps> = () => {
+const Header: React.FunctionComponent = () => {
   const [selectedButton, setSelectedButton] = useState('Home');
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -60,13 +59,13 @@ const Header: React.FunctionComponent<HeaderProps> = () => {
           <div className='header-option-section'>
             <div
               className={`header-btn ${selectedButton === 'About' ? 'header-btn-selected' : ''}`}
-              onClick={() => handleButtonClick('About')}
+              onClick={() => handleButtonClick('About', 0)}
             >
               About
             </div>
             <div
               className={`header-btn ${selectedButton === 'Work' ? 'header-btn-selected' : ''}`}
-              onClick={() => handleButtonClick('Work')}
+              onClick={() => handleButtonClick('Work', 0)}
             >
               Experience
             </div>
@@ -90,33 +89,39 @@ const Header: React.FunctionComponent<HeaderProps> = () => {
             </div>
             <div
               className={`header-btn ${selectedButton === 'Contact' ? 'header-btn-selected' : ''}`}
-              onClick={() => handleButtonClick('Contact')}
+              onClick={() => handleButtonClick('Contact', 0)}
             >
               Contact
             </div>
           </div>
           <div className={`mobile-header-wrapper-start ${isMenuOpen ? 'open-mobile-menu' : 'close-mobile-menu'}`} >
-            <div className={`mobile-header-wrapper`}>
-              <div className='menuCloseIcon'>
-                <div className='' onClick={() => handleButtonClick('Home', -110)}>
-                  <div className='header-title-container'>
-                    <div className='header-logo' style={{ color: 'white' }}>Ps</div>
-                  </div>
-                </div>
-                <p onClick={handleOpenMenu}><MenuCloseIcon /></p>
-              </div>
-              <div onClick={() => handleButtonClick('Home', -110)}>Home</div>
-              <div onClick={() => handleButtonClick('About')}>About</div>
-              <div onClick={() => handleButtonClick('Work')}>Experience</div>
-              <div onClick={() => handleButtonClick('Resume', -110)}>Resume</div>
-              <div onClick={() => handleButtonClick('Blogs', 0)}>Blogs</div>
-              <div onClick={() => handleButtonClick('Contact')}>Contacts</div>
-            </div>
+            {MobileHeader()}
           </div>
         </div>
       </header>
     );
   };
+
+  const MobileHeader = () => {
+    return (
+      <div className={`mobile-header-wrapper`}>
+        <div className='menuCloseIcon'>
+          <div className='' onClick={() => handleButtonClick('Home', -110)}>
+            <div className='header-title-container'>
+              <div className='header-logo' style={{ color: 'white' }}>Ps</div>
+            </div>
+          </div>
+          <p onClick={handleOpenMenu}><MenuCloseIcon /></p>
+        </div>
+        <div onClick={() => handleButtonClick('Home', -110)}>Home</div>
+        <div onClick={() => handleButtonClick('About', 0)}>About</div>
+        <div onClick={() => handleButtonClick('Work', 0)}>Experience</div>
+        <div onClick={() => handleButtonClick('Resume', -110)}>Resume</div>
+        <div onClick={() => handleButtonClick('Blogs', 0)}>Blogs</div>
+        <div onClick={() => handleButtonClick('Contact', 0)}>Contacts</div>
+      </div>
+    )
+  }
 
   return (
     <>

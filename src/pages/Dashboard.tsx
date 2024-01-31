@@ -8,7 +8,7 @@ import Blogs from '../components/Blogs'
 import Contact from '../components/Contact'
 import Footer from '../components/Footer'
 
-const Dashboard = () => {
+const Dashboard: React.FunctionComponent = () => {
     return (
         <>
             <div className='home-header'>

@@ -6,10 +6,9 @@ import Typewriter from 'typewriter-effect';
 import Button from '../../components/common/Button';
 import { scrollToSection } from '../../commonFunction';
 
-const Home = () => {
+const Home: React.FunctionComponent = () => {
 
     const [showImageBackDrop, setShowImageBackDrop] = useState(false);
-
 
     const onMouseEnterImage = () => {
         if (innerWidth >= 850) {
@@ -53,7 +52,7 @@ const Home = () => {
                     </div>
                     <div className='home-hero-image'>
                         <div className='home-hero-button'>
-                            <Button text='Hire me' color='orange' size='large' style={{borderRadius:'50px'}} svg={true} onClick={() => scrollToSection('Contact')}/>
+                            <Button text='Hire me' color='orange' size='large' style={{ borderRadius: '50px' }} svg={true} onClick={() => scrollToSection('Contact')} />
                         </div>
                         <img
                             src={heroImage}

@@ -1,22 +1,20 @@
 import React from 'react'
 import './Contact.css'
-import { ContactHeroIcon, FaceBook, Location } from '../../assets/svg/svg'
 import { ContactInfo } from '../../constants'
 import contactImage from '../../assets/images/contact-image.png'
 
-const Contact = () => {
+const Contact: React.FunctionComponent = () => {
   return (
     <section id='Contact' className='contact-wrapper'>
       <div className='contact-container'>
         <div className='contact-content'>
           <div className='contact-title'><span>Contact</span> information</div>
           <div className='contact-description'>Feel free to use any of these channels to get in touch. I'm excited to connect with you!</div>
-
           <div className='contact-info-main'>
             {ContactInfo.map((info, index) => {
               return (
                 <div key={index} className='contact-info-contaier'>
-                  <div>{info.svg}</div>
+                  <div className='contact-info-svg'>{info.svg}</div>
                   <div>
                     <div className='info-title'>{info.title}</div>
                     <div className='info-description'>{info.description}</div>

@@ -1,9 +1,30 @@
-import React from 'react'
-import './Footer.css'
-import { FaceBook, GitHub, Instagram, Linkedin } from '../../assets/svg/svg'
-import { scrollToSection } from '../../commonFunction'
+import React from 'react';
+import './Footer.css';
+import { GitHub, Linkedin } from '../../assets/svg/svg';
+import { scrollToSection } from '../../commonFunction';
 
-const Footer = () => {
+interface FooterLinkProps {
+    section: string;
+    offset?: number;
+    children: React.ReactNode;
+}
+
+const FooterLink: React.FunctionComponent<FooterLinkProps> = ({ section, offset = 0, children }) => (
+    <div onClick={() => scrollToSection(section, offset)}>{children}</div>
+);
+
+interface ExternalLinkProps {
+    href: string;
+    children: React.ReactNode;
+}
+
+const ExternalLink: React.FunctionComponent<ExternalLinkProps> = ({ href, children }) => (
+    <a href={href} target='_blank' rel='noopener noreferrer'>
+        {children}
+    </a>
+);
+
+const Footer: React.FunctionComponent = () => {
     return (
         <section id='footer' className='footer-main'>
             <div className='footer-wrapper'>
@@ -14,31 +35,25 @@ const Footer = () => {
                     </div>
                 </div>
                 <div className='footer-about-section'>
-                    <div onClick={() => scrollToSection('Home', -110)}>Home</div>
-                    <div onClick={() => scrollToSection('About')}>About</div>
-                    <div onClick={() => scrollToSection('Work')}>Experience</div>
-                    <div onClick={() => scrollToSection('Resume', -130)}>Resume</div>
-                    <div onClick={() => scrollToSection('Blogs', 0)}>Blogs</div>
-                    <div onClick={() => scrollToSection('Contact')}>Contact</div>
+                    <FooterLink section='Home' offset={-110}>Home</FooterLink>
+                    <FooterLink section='About'>About</FooterLink>
+                    <FooterLink section='Work'>Experience</FooterLink>
+                    <FooterLink section='Resume' offset={-130}>Resume</FooterLink>
+                    <FooterLink section='Blogs' offset={0}>Blogs</FooterLink>
+                    <FooterLink section='Contact'>Contact</FooterLink>
                 </div>
                 <div className='footer-social'>
-                    <a href='https://www.facebook.com/profile.php?id=100002690421229' target='_blank'>
-                        <FaceBook />
-                    </a>
-                    <a href='https://www.instagram.com/prateek_singh_11' target='_blank'>
-                        <Instagram />
-                    </a>
-                    <a href='https://www.linkedin.com/in/prateek-singh-36b38a186' target='_blank'>
+                    <ExternalLink href='https://www.linkedin.com/in/prateek-singh-36b38a186'>
                         <Linkedin />
-                    </a>
-                    <a href='https://github.com/Prateek-Singh1' target='_blank'>
+                    </ExternalLink>
+                    <ExternalLink href='https://github.com/Prateek-Singh1'>
                         <GitHub />
-                    </a>
+                    </ExternalLink>
                 </div>
-                <div className='footer-reserved'>© 2024 <span>Prateek</span> All Rights Reserved , Inc.</div>
+                <div className='footer-reserved'>© {new Date().getFullYear()} <span>Prateek</span> All Rights Reserved, Inc.</div>
             </div>
         </section>
-    )
+    );
 }
 
-export default Footer
+export default Footer;

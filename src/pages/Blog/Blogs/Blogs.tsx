@@ -5,15 +5,7 @@ import poster from '../../../assets/images/seo-hero-image.png';
 import { useLocation, useNavigate } from 'react-router-dom';
 import leftArrow from '../../../assets/images/left-arrow.png'
 
-interface BlogData {
-    blog_title: string;
-    blog_content: {
-        question: string;
-        answer: string;
-    }[];
-}
-
-const Blogs: React.FunctionComponent<BlogData> = () => {
+const Blogs: React.FunctionComponent = () => {
     const navigate = useNavigate()
     const [blogData, setBlogData] = useState(null);
 
@@ -24,7 +16,7 @@ const Blogs: React.FunctionComponent<BlogData> = () => {
         const fetchData = async () => {
             try {
                 const response = await fetch(`../../../../JSON/${blogPostSlug}.json`);
-                const data: BlogData = await response.json();
+                const data = await response.json();
                 setBlogData(data);
             } catch (e) {
                 console.error('Error fetching data', e);
@@ -36,7 +28,7 @@ const Blogs: React.FunctionComponent<BlogData> = () => {
     return (
         <section id='seo' className='blog-page-wrapper'>
             <div className='blog-page-header'>
-                <img src={leftArrow} onClick={() => navigate('/')}/>
+                <img src={leftArrow} onClick={() => navigate('/')} />
             </div>
             <div className='blog-page-container'>
                 <div className='blog-page-question-answer-container'>
@@ -47,7 +39,7 @@ const Blogs: React.FunctionComponent<BlogData> = () => {
                             <div id={seoData.question} className='blog-page-info' key={index}>
                                 <div className='blogTitle'>{seoData.question}</div>
                                 <div className='blogDescription'>{seoData.answer}</div>
-                                <img className='blog-page-hero-image' src={seoData.image}/>
+                                <img className='blog-page-hero-image' src={seoData.image} />
                             </div>
                         ))}
                     </div>

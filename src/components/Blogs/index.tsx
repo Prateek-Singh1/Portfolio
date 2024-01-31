@@ -5,10 +5,18 @@ import { GetBlogs } from '../../constants';
 import { PageHeadings } from '../common/GenericeFunction';
 import { useNavigate } from 'react-router-dom';
 
-const Blogs = () => {
+interface Blog {
+    img: string;
+    title: string;
+    type: string;
+    description: string;
+    link: string;
+}
+
+const Blogs: React.FunctionComponent = () => {
     const navigate = useNavigate();
 
-    const onClickHandler = (link, type) => {
+    const onClickHandler = (link: string, type: string) => {
         if (type === 'Blog') {
             navigate(link)
         } else {
@@ -21,7 +29,7 @@ const Blogs = () => {
             <div className='blog-container'>
                 <PageHeadings heading={'Blog and Rewards'} subHeading={'Learn and grow'} />
                 <div className='blog-list-container'>
-                    {GetBlogs.map((blog, index) => {
+                    {GetBlogs.map((blog: Blog, index: number) => {
                         const btnText = blog.type === 'Blog' ? 'Learn more' : 'View'
                         return (
                             <div className={`${index % 2 === 0 ? '' : 'blog-card-alignment'}`} key={index}>

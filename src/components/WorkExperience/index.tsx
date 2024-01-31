@@ -4,7 +4,7 @@ import { Experience } from '../../constants'
 import { PageHeadings } from '../common/GenericeFunction'
 import Button from '../common/Button'
 
-const WorkExperience = () => {
+const WorkExperience: React.FunctionComponent = () => {
 
     const [showExperience, setShowExperience] = useState(false);
 

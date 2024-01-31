@@ -5,8 +5,7 @@ import Dashboard from './pages/Dashboard';
 import Blogs from './pages/Blog/Blogs/Blogs';
 
 
-function App() {
-
+const App: React.FunctionComponent = () => {
   return (
     <>
       <BrowserRouter>
@@ -20,4 +19,4 @@ function App() {
   )
 }
 
-export default App
+export default App;

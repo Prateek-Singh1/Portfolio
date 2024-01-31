@@ -3,8 +3,7 @@ import './Resume.css'
 import Button from '../common/Button'
 import ResumePopup from './components/ResumePopup';
 
-const Resume = () => {
-
+const Resume: React.FunctionComponent = () => {
     const [isResumePopupOpen, setIsResumePopupOpen] = useState(false);
     const openResumeOption = () => {
         setIsResumePopupOpen(!isResumePopupOpen);

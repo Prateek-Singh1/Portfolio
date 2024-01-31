@@ -43,18 +43,18 @@ const Header: React.FunctionComponent = () => {
   const desktopHeader = () => {
     return (
       <header className='header-wrapper'>
-        <div className={`header-container ${innerWidth > 768 ? 'bigger-header' : 'smaller-header'}`}>
+        <div className={`header-container ${innerWidth >= 768 ? 'bigger-header' : 'smaller-header'}`}>
           <div
             className={`header-btn ${innerWidth < 768 && 'header-btn-selected'} ${selectedButton === 'Home' ? 'header-btn-selected' : ''}`}
             onClick={() => {
-              if (innerWidth <= 768) {
+              if (innerWidth < 768) {
                 handleOpenMenu();
               } else {
                 handleButtonClick('Home', -110);
               }
             }}
           >
-            {innerWidth > 768 ? 'Home' : 'Menu'}
+            {innerWidth >= 768 ? 'Home' : 'Menu'}
           </div>
           <div className='header-option-section'>
             <div

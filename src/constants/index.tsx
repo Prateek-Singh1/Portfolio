@@ -5,9 +5,8 @@ import awardTwo from '../assets/images/award-two.jpg'
 
 export const TechIcon = [
     'https://skillicons.dev/icons?i=html,css',
-    'https://skillicons.dev/icons?i=react',
-    'https://skillicons.dev/icons?i=js,ts',
-    'https://skillicons.dev/icons?i=tailwind,scss'
+    'https://skillicons.dev/icons?i=react,ts',
+    'https://skillicons.dev/icons?i=js,tailwind',
 ]
 
 export const TectRange = [
@@ -41,19 +40,19 @@ export const Experience = [
     {
         designation: 'Frontend Developer',
         company: 'MyYogaTeacher',
-        date: 'June 2023 - Current',
-        description: '<ul><li>Experienced Frontend Engineer with 2 years of expertise</li><li>Craft elegant solutions through clean code practices</li><li>Proficient in seamless Rest API integration for robust and responsive user interfaces</li><li>Recognized for collaborative teamwork, innovation, and adaptability</li><li>Dedicated learner, bringing value to forward-thinking organizations</li></ul>',
+        date: 'July 2023 - Current',
+        description: '<ul><li>As a Frontend Engineer with ongoing experience, I&#39;ve been crafting user-friendly websites for the past 2 years.</li><li>Craft elegant solutions through clean code practices</li><li>Proficient in seamless Rest API integration for robust and responsive user interfaces</li><li>Recognized for collaborative teamwork, innovation, and adaptability</li><li>Dedicated learner, bringing value to forward-thinking organizations</li></ul>',
     },
     {
         designation: 'UI Developer',
         company: 'MyYogaTeacher',
-        date: 'April 2022 - Augst 2023',
+        date: 'April 2022 - June 2023',
         description: '<ul><li>Skilled UI Developer with a flair for creating attractive, responsive applications.</li><li>Expert in building reusable components for efficiency and consistency.</li><li>Known for crafting user-friendly interfaces that prioritize a seamless user experience.</li><li>Ready to bring innovation and design excellence to your dynamic team.</li></ul>',
     },
     {
         designation: 'Frontend Course',
         company: 'Prepbytes',
-        date: 'September 2021 - January2022',
+        date: 'September 2021 - January 2022',
         description: '<ul><li>Familiar with HTML, CSS, and JavaScript, prioritizing clean code, responsive design, and cross-browser compatibility.</li><li>Skilled in Git version control and familiar with front-end frameworks React.</li><li>Focus on performance optimization and accessibility, showcasing abilities in a diverse portfolio.</li><li>Committed to continuous learning and effective communication in a team environment.</li></ul>',
     },
 ]

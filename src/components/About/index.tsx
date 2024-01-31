@@ -5,7 +5,7 @@ import RangeSlider from '../common/RangeSlider/RangeSlider'
 import { AboutMeIcon, Ellipse } from '../../assets/svg/svg'
 
 
-const About = () => {
+const About: React.FunctionComponent = () => {
     const [onHover, setOnHover] = useState(false);
     return (
         <section id='About' className='about-wrapper'>
@@ -13,8 +13,8 @@ const About = () => {
                 <p className='home-sub-title'>About me</p>
                 <div className='hire-me-container'>
                     <div className='hire-me-image-container'
-                    onMouseEnter={() => setOnHover(true)}
-                    onMouseLeave={() => setOnHover(false)}
+                        onMouseEnter={() => setOnHover(true)}
+                        onMouseLeave={() => setOnHover(false)}
                     >
                         <div className='hire-me-picture'>
                             <AboutMeIcon />

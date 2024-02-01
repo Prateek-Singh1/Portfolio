@@ -125,7 +125,7 @@ export const PageHeaderAlphabetHighlighter = () => {
 export const Location = ({ color = '#35383F' }) => {
     return (
         <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M2.99311 9.10625C2.36096 9.67518 2 10.4857 2 11.3361V19C2 20.6569 3.34315 22 5 22H19C20.6569 22 22 20.6569 22 19V11.3361C22 10.4857 21.639 9.67518 21.0069 9.10625L14.0069 2.80625C12.866 1.77943 11.134 1.77943 9.9931 2.80625L2.99311 9.10625ZM11 13C9.89543 13 9 13.8955 9 15V19C9 19.5523 9.44772 20 10 20H14C14.5523 20 15 19.5523 15 19V15C15 13.8955 14.1046 13 13 13H11Z" fill={color} />
+            <path fillRule="evenodd" clipRule="evenodd" d="M2.99311 9.10625C2.36096 9.67518 2 10.4857 2 11.3361V19C2 20.6569 3.34315 22 5 22H19C20.6569 22 22 20.6569 22 19V11.3361C22 10.4857 21.639 9.67518 21.0069 9.10625L14.0069 2.80625C12.866 1.77943 11.134 1.77943 9.9931 2.80625L2.99311 9.10625ZM11 13C9.89543 13 9 13.8955 9 15V19C9 19.5523 9.44772 20 10 20H14C14.5523 20 15 19.5523 15 19V15C15 13.8955 14.1046 13 13 13H11Z" fill={color} />
         </svg>
     )
 }
@@ -719,11 +719,11 @@ export const Ellipse = () => {
     return (
         <svg viewBox="0 0 624 692" fill="none" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
             <circle cx="312" cy="312" r="311.5" stroke="#FD853A" />
-            <circle cx="312" cy="312" r="294" stroke="#FD853A" stroke-width="2" />
-            <circle cx="312" cy="312" r="274.5" stroke="#FD853A" stroke-width="3" />
-            <circle cx="312" cy="312" r="251" stroke="#FD853A" stroke-width="4" />
-            <circle cx="312" cy="312" r="230" stroke="#FD853A" stroke-width="5" />
-            <circle cx="312" cy="312" r="205" stroke="#FD853A" stroke-width="6" />
+            <circle cx="312" cy="312" r="294" stroke="#FD853A" strokeWidth="2" />
+            <circle cx="312" cy="312" r="274.5" stroke="#FD853A" strokeWidth="3" />
+            <circle cx="312" cy="312" r="251" stroke="#FD853A" strokeWidth="4" />
+            <circle cx="312" cy="312" r="230" stroke="#FD853A" strokeWidth="5" />
+            <circle cx="312" cy="312" r="205" stroke="#FD853A" strokeWidth="6" />
             <rect x="21" y="92" width="603" height="600" fill="url(#pattern0)" />
             <defs>
                 <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">

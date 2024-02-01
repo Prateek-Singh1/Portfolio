@@ -178,6 +178,7 @@
     .home-title-wrapper {
         gap: 15px;
         margin-top: 0;
+        padding-top: 30px;
     }
 
     .home-hello-title {

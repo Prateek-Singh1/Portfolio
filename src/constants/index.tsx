@@ -1,7 +1,5 @@
 import { Call, Email, Location } from "../assets/svg/svg"
 import SEOImage from '../assets/images/seo-hero-image.png'
-import awardOne from '../assets/images/award-one.jpg'
-import awardTwo from '../assets/images/award-two.jpg'
 
 export const TechIcon = [
     'https://skillicons.dev/icons?i=html,css',
@@ -84,17 +82,17 @@ export const GetBlogs = [
         link: '/blogs/seo',
     },
     {
-        img: awardOne,
+        img: 'https://res.cloudinary.com/dpyrylw7s/image/upload/v1706883706/Blogs/award-one_d7zhdt.jpg',
         title: 'Stress Reliever',
         type: 'Reward',
         description: 'Problem solver, someone whose contributions help maintain a smooth workflow',
-        link: `${window.location.pathname}src/assets/images/award-one.jpg`,
+        link: 'https://res.cloudinary.com/dpyrylw7s/image/upload/v1706883706/Blogs/award-one_d7zhdt.jpg',
     },
     {
-        img: awardTwo,
+        img: 'https://res.cloudinary.com/dpyrylw7s/image/upload/v1706883707/Blogs/award-two_ihrf7l.jpg',
         title: 'Strength builder',
         type: 'Reward',
         description: 'Significant contribution on a subject',
-        link: `${window.location.pathname}src/assets/images/award-two.jpg`,
+        link: 'https://res.cloudinary.com/dpyrylw7s/image/upload/v1706883707/Blogs/award-two_ihrf7l.jpg',
     },
 ]

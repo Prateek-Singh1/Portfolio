@@ -23,7 +23,7 @@
             "answer": "Images play a significant role in user engagement and can impact SEO. Optimize image sizes to improve page loading speed, and use descriptive alt attributes. Leverage lazy loading for images that are not initially visible."
         },
         {
-            "image": "../../src/assets/images/FCP.png",
+            "image": "https://res.cloudinary.com/dpyrylw7s/image/upload/v1706884126/Blogs/FCP_syxpw7.png",
             "question": "First Contentful Paint",
             "answer": "First Contentful Paint (FCP) is one of six metrics tracked in the Performance section of the Lighthouse report. Each metric captures some aspect of page load speed."
         },
@@ -33,7 +33,7 @@
             "answer": "FCP measures how long it takes the browser to render the first piece of DOM content after a user navigates to your page. Images, non-white <canvas> elements, and SVGs on your page are considered DOM content; anything inside an iframe isn't included."
         },
         {
-            "image": "../../src/assets/images/LCP.png",
+            "image": "https://res.cloudinary.com/dpyrylw7s/image/upload/v1706884126/Blogs/LCP_ipp51j.png",
             "question": "Largest Contentful Paint",
             "answer": "Largest Contentful Paint (LCP) is one of the metrics tracked in the Performance section of the Lighthouse report. Each metric captures some aspect of page load speed."
         },
@@ -43,7 +43,7 @@
             "answer": "LCP measures when the largest content element in the viewport is rendered to the screen. This approximates when the main content of the page is visible to users."
         },
         {
-            "image": "../../src/assets/images/lcp-picture.png",
+            "image": "https://res.cloudinary.com/dpyrylw7s/image/upload/v1706884303/Blogs/lcp-picture_ywdxyv.png",
             "question": "What is a good LCP score?",
             "answer": "To provide a good user experience, sites should strive to have Largest Contentful Paint of 2.5 seconds or less. To ensure you're hitting this target for most of your users, a good threshold to measure is the 75th percentile of page loads, segmented across mobile and desktop devices."
         },

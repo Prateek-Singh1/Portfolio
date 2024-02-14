@@ -52,7 +52,7 @@ const Home: React.FunctionComponent = () => {
                     </div>
                     <div className='home-hero-image'>
                         <div className='home-hero-button'>
-                            <Button text='Hire me' color='orange' size='large' style={{ borderRadius: '50px' }} svg={true} onClick={() => scrollToSection('Contact')} />
+                            <Button text='Contact' color='orange' size='large' style={{ borderRadius: '50px' }} svg={true} onClick={() => scrollToSection('Contact')} />
                         </div>
                         <img
                             src={heroImage}

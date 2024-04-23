@@ -2,9 +2,38 @@ import { Call, Email, Location } from "../assets/svg/svg"
 import SEOImage from '../assets/images/seo-hero-image.png'
 
 export const TechIcon = [
-    'https://skillicons.dev/icons?i=html,css',
-    'https://skillicons.dev/icons?i=react,ts',
-    'https://skillicons.dev/icons?i=js,tailwind',
+    // 'https://skillicons.dev/icons?i=html,css',
+    // 'https://skillicons.dev/icons?i=react,ts',
+    // 'https://skillicons.dev/icons?i=js,tailwind',
+    // 'https://skillicons.dev/icons?i=sass',
+    {
+        title: 'HTML',
+        logo: 'https://skillicons.dev/icons?i=html',
+    },
+    {
+        title: 'CSS',
+        logo: 'https://skillicons.dev/icons?i=css',
+    },
+    {
+        title: 'JavaScript',
+        logo: 'https://skillicons.dev/icons?i=js',
+    },
+    {
+        title: 'React',
+        logo: 'https://skillicons.dev/icons?i=react',
+    },
+    {
+        title: 'TypeScript',
+        logo: 'https://skillicons.dev/icons?i=ts',
+    },
+    {
+        title: 'TailwindCSS',
+        logo: 'https://skillicons.dev/icons?i=tailwind',
+    },
+    {
+        title: 'SASS',
+        logo: 'https://skillicons.dev/icons?i=sass',
+    }
 ]
 
 export const TectRange = [

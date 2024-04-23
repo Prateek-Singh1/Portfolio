@@ -3,6 +3,7 @@ import './About.css'
 import { TechIcon, TectRange } from '../../constants'
 import RangeSlider from '../common/RangeSlider/RangeSlider'
 import { AboutMeIcon, Ellipse } from '../../assets/svg/svg'
+import MyToolTip from '../common/ToolTip'
 
 
 const About: React.FunctionComponent = () => {
@@ -56,7 +57,14 @@ const About: React.FunctionComponent = () => {
                         {TechIcon.map((item, index) => {
                             return (
                                 <div key={index}>
-                                    <img key={index} src={item} />
+                                    <img
+                                        id={item.title}
+                                        key={index}
+                                        src={item.logo}
+                                        data-tooltip-id={item.title} 
+                                        data-tooltip-content={item.title}
+                                    />
+                                    <MyToolTip id={item.title} />
                                 </div>
                             )
                         })}

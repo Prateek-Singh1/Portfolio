@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 import './About.css'
 import { TechIcon, TectRange } from '../../constants'
-import RangeSlider from '../common/RangeSlider/RangeSlider'
+import RangeSlider from '../../common/RangeSlider/RangeSlider'
 import { AboutMeIcon, Ellipse } from '../../assets/svg/svg'
-import MyToolTip from '../common/ToolTip'
+import MyToolTip from '../../common/ToolTip'
 
 
 const About: React.FunctionComponent = () => {

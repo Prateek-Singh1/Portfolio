@@ -1,6 +1,6 @@
 import React from 'react'
-import PopupLayout from '../../common/PopupLayout'
-import Button from '../../common/Button'
+import PopupLayout from '../../../common/PopupLayout'
+import Button from '../../../common/Button'
 import resume from '../../../assets/docs/Prateek Kumar Singh.pdf'
 
 interface ResumePopupProps {

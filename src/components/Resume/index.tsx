@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import './Resume.css'
-import Button from '../common/Button'
+import Button from '../../common/Button'
 import ResumePopup from './components/ResumePopup';
 
 const Resume: React.FunctionComponent = () => {

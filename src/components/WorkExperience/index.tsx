@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import './WorkExperience.css'
 import { Experience } from '../../constants'
-import { PageHeadings } from '../common/GenericeFunction'
-import Button from '../common/Button'
+import { PageHeadings } from '../../common/GenericeFunction'
+import Button from '../../common/Button'
 
 const WorkExperience: React.FunctionComponent = () => {
 

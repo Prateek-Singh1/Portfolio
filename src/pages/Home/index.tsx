@@ -3,7 +3,7 @@ import './Home.css'
 import { CoatsSvg, EllipseStyle, HelloSvg, HeroBannerStyle, Star } from '../../assets/svg/svg'
 import heroImage from '../../assets/images/hero-image.png'
 import Typewriter from 'typewriter-effect';
-import Button from '../../components/common/Button';
+import Button from '../../common/Button';
 import { scrollToSection } from '../../commonFunction';
 
 const Home: React.FunctionComponent = () => {

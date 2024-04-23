@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import './Blogs.css';
-import Cards from '../common/Card';
+import Cards from '../../common/Card';
 import { GetBlogs } from '../../constants';
-import { PageHeadings } from '../common/GenericeFunction';
+import { PageHeadings } from '../../common/GenericeFunction';
 import { useNavigate } from 'react-router-dom';
-import Toggle from '../common/Toggle';
+import Toggle from '../../common/Toggle';
 
 interface Blog {
     img: string;

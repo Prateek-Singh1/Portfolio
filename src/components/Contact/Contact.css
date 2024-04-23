@@ -48,7 +48,7 @@
     gap: 12px;
 }
 
-.contact-info-main .contact-info-contaier:nth-child(even) {
+.contact-info-main .contact-info-contaier:hover {
     border-radius: 10px;
     background: #FFF;
     box-shadow: 0px 12px 64px 0px rgba(28, 25, 25, 0.12);

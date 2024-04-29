@@ -95,12 +95,12 @@
 
 .home-title-wrapper-hide {
     opacity: 0;
-    transition: all 0.4s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
 .home-title-wrapper-show {
     opacity: 1;
-    transition: all 0.4s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
 .home-title {

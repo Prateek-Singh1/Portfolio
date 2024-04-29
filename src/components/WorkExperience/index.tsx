@@ -3,13 +3,16 @@ import './WorkExperience.css'
 import { Experience } from '../../constants'
 import { PageHeadings } from '../../common/GenericeFunction'
 import Button from '../../common/Button'
+import ScrollAnimation from '../../common/ScrollAnimation'
 
 const WorkExperience: React.FunctionComponent = () => {
 
     const [showExperience, setShowExperience] = useState(false);
 
     return (
+        <>
         <section id='Work' className='experience-wrapper'>
+            <ScrollAnimation>
             <div className='experience-section'>
                 <PageHeadings heading={'Experience'} subHeading={'Work Experience'} />
                 <div className={`experience-main-container ${showExperience ? 'show-experience' : 'hide-experience'}`}>
@@ -48,7 +51,9 @@ const WorkExperience: React.FunctionComponent = () => {
                     <></>
                 }
             </div>
+            </ScrollAnimation>
         </section>
+        </>
     )
 }
 

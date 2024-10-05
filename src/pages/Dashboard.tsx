@@ -15,7 +15,7 @@ const Dashboard: React.FunctionComponent = () => {
     useEffect(() => {
         const timer = setTimeout(() => {
             setIsLoading(false);
-        }, 3000);
+        }, 1000);
         document.body.classList.add('disable-background-scroll');
         return () => clearTimeout(timer);
     }, []);

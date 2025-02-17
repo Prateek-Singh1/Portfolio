@@ -79,7 +79,7 @@ const Home: React.FunctionComponent = () => {
                             })}
                         </div>
                         <div className='home-experience-title'>
-                            <p>2 Years</p>
+                            <p>3 Years</p>
                             <span>Experience</span>
                         </div>
                     </div>

@@ -3,8 +3,12 @@ import './Header.css';
 import { scrollToSection } from '../../commonFunction';
 import { MenuCloseIcon } from '../../assets/svg/svg';
 
+interface HeaderProps {
+  activeSection: string;
+}
 
-const Header: React.FunctionComponent = () => {
+
+const Header: React.FunctionComponent<HeaderProps> = ({activeSection}) => {
   const [selectedButton, setSelectedButton] = useState('Home');
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -16,6 +20,13 @@ const Header: React.FunctionComponent = () => {
       };
     }
   }, [isMenuOpen]);
+
+  useEffect(() => {
+    if(activeSection){
+      setSelectedButton(activeSection)
+    }
+  }, [activeSection])
+  
 
   const handleButtonClick = (buttonName: string, offSet: number) => {
     setSelectedButton(buttonName);

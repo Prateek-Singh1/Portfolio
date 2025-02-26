@@ -107,20 +107,20 @@ export const Loader = ({ size = 'medium' }) => {
         </svg>
     );
 };
-export const PageHeaderAlphabetHighlighter = () => {
-    return (
-        <svg width="60" height="60" viewBox="0 0 55 55" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="27.5" cy="27.5" r="27.5" fill="url(#paint0_linear_128_273)" />
-            <defs>
-                <linearGradient id="paint0_linear_128_273" x1="-25.3516" y1="11.6016" x2="58.4375" y2="39.9609" gradientUnits="userSpaceOnUse">
-                    <stop stopColor="#FC4A1A" />
-                    <stop offset="1" stopColor="#F7B733" />
-                </linearGradient>
-            </defs>
-        </svg>
+// export const PageHeaderAlphabetHighlighter = () => {
+//     return (
+//         <svg width="60" height="60" viewBox="0 0 55 55" fill="none" xmlns="http://www.w3.org/2000/svg">
+//             <circle cx="27.5" cy="27.5" r="27.5" fill="url(#paint0_linear_128_273)" />
+//             <defs>
+//                 <linearGradient id="paint0_linear_128_273" x1="-25.3516" y1="11.6016" x2="58.4375" y2="39.9609" gradientUnits="userSpaceOnUse">
+//                     <stop stopColor="#FC4A1A" />
+//                     <stop offset="1" stopColor="#F7B733" />
+//                 </linearGradient>
+//             </defs>
+//         </svg>
 
-    )
-}
+//     )
+// }
 
 export const Location = ({ color = '#35383F' }) => {
     return (

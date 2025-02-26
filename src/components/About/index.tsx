@@ -5,6 +5,7 @@ import RangeSlider from '../../common/RangeSlider/RangeSlider'
 import { AboutMeIcon, Ellipse } from '../../assets/svg/svg'
 import MyToolTip from '../../common/ToolTip'
 import ScrollAnimation from '../../common/ScrollAnimation'
+import { PageHeadings } from '../../common/GenericeFunction'
 
 
 const About: React.FunctionComponent = () => {
@@ -14,7 +15,7 @@ const About: React.FunctionComponent = () => {
             <section id='About' className='about-wrapper'>
                 <ScrollAnimation>
                     <div className='about-section'>
-                        <p className='home-sub-title'>About me</p>
+                        <PageHeadings heading='About me' subHeading='My Skills & Approach'/>
                         <div className='hire-me-container'>
                             <div className='hire-me-image-container'
                                 onMouseEnter={() => setOnHover(true)}
@@ -28,14 +29,12 @@ const About: React.FunctionComponent = () => {
                                 </div>
                             </div>
                             <div className='about-info'>
-
-                                <div className='about-title'>Why <span>Hire me?</span></div>
                                 <ul className='about-description'>
-                                    <li><strong>Responsive Design:</strong> Ensures visually appealing websites across all devices.</li>
-                                    <li><strong>Clean Code Advocate:</strong> Writes maintainable, scalable code for polished results.</li>
-                                    <li><strong>Problem Solving Skills:</strong> Swift issue resolution for smooth project development.</li>
-                                    <li><strong>Team Player:</strong> Collaborative and communicative within cross-functional teams.</li>
-                                    <li><strong>Adaptable Learner:</strong> Quick adoption of new technologies for innovative projects.</li>
+                                    <li><strong>Responsive & User-Centric Design:</strong> Ensures visually appealing websites across all devices.</li>
+                                    <li><strong>Clean, Efficient, and Maintainable Code:</strong> Writes maintainable, scalable code for polished results.</li>
+                                    <li><strong>Strong Problem-Solving & Debugging Skills:</strong> Swift issue resolution for smooth project development.</li>
+                                    <li><strong>Collaborative & Communicative Team Player:</strong> Collaborative and communicative within cross-functional teams.</li>
+                                    <li><strong>Continuous Learner & Technology Enthusiast:</strong> Quick adoption of new technologies for innovative projects.</li>
                                 </ul>
                                 <div className='about-range-container'>
                                     {TectRange.map((range, index) => {
@@ -59,7 +58,7 @@ const About: React.FunctionComponent = () => {
                             <div className='tech-icon-container'>
                                 {TechIcon.map((item, index) => {
                                     return (
-                                        <div key={index}>
+                                        <a key={index} href={item.link} target='_blank' className='tech-icon-child'>
                                             <img
                                                 id={item.title}
                                                 key={index}
@@ -68,7 +67,7 @@ const About: React.FunctionComponent = () => {
                                                 data-tooltip-content={item.title}
                                             />
                                             <MyToolTip id={item.title} />
-                                        </div>
+                                        </a>
                                     )
                                 })}
                             </div>

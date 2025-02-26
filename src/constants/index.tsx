@@ -2,37 +2,45 @@ import { Call, Email, Location } from "../assets/svg/svg"
 import SEOImage from '../assets/images/seo-hero-image.png'
 
 export const TechIcon = [
-    // 'https://skillicons.dev/icons?i=html,css',
-    // 'https://skillicons.dev/icons?i=react,ts',
-    // 'https://skillicons.dev/icons?i=js,tailwind',
-    // 'https://skillicons.dev/icons?i=sass',
-    {
-        title: 'HTML',
-        logo: 'https://skillicons.dev/icons?i=html',
-    },
-    {
-        title: 'CSS',
-        logo: 'https://skillicons.dev/icons?i=css',
-    },
-    {
-        title: 'JavaScript',
-        logo: 'https://skillicons.dev/icons?i=js',
-    },
     {
         title: 'React',
         logo: 'https://skillicons.dev/icons?i=react',
+        link: 'https://react.dev/'
+    },
+    {
+        title: 'Vite',
+        logo: 'https://skillicons.dev/icons?i=vite',
+        link: 'https://vite.dev/'
     },
     {
         title: 'TypeScript',
         logo: 'https://skillicons.dev/icons?i=ts',
+        link: 'https://www.typescriptlang.org/'
+    },
+    {
+        title: 'JavaScript',
+        logo: 'https://skillicons.dev/icons?i=js',
+        link: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript'
     },
     {
         title: 'TailwindCSS',
         logo: 'https://skillicons.dev/icons?i=tailwind',
+        link: 'https://tailwindcss.com/'
+    },
+    {
+        title: 'HTML',
+        logo: 'https://skillicons.dev/icons?i=html',
+        link: 'https://developer.mozilla.org/en-US/docs/Web/HTML'
+    },
+    {
+        title: 'CSS',
+        logo: 'https://skillicons.dev/icons?i=css',
+        link: 'https://developer.mozilla.org/en-US/docs/Web/CSS'
     },
     {
         title: 'SASS',
         logo: 'https://skillicons.dev/icons?i=sass',
+        link: 'https://sass-lang.com/'
     }
 ]
 

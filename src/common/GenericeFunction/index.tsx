@@ -1,4 +1,4 @@
-import { PageHeaderAlphabetHighlighter } from "../../assets/svg/svg"
+// import { PageHeaderAlphabetHighlighter } from "../../assets/svg/svg"
 
 interface PageHeadingProps {
     heading: string;
@@ -12,7 +12,7 @@ export const PageHeadings: React.FunctionComponent<PageHeadingProps> = ({ headin
             <div className='page-heading-title'>
                 <div>
                     {subHeading}
-                    <PageHeaderAlphabetHighlighter />
+                    {/* <PageHeaderAlphabetHighlighter /> */}
                 </div>
             </div>
         </div>

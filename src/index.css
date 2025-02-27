@@ -1,13 +1,39 @@
-@import url('https://fonts.googleapis.com/css?family=Inter');
+@import url("https://fonts.googleapis.com/css?family=Inter");
 
 body,
 p {
-  font-family: 'Inter';
+  font-family: "Inter";
   margin: 0;
 }
 
 .disable-background-scroll {
   overflow: hidden;
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    overflow-y: scroll;
+  }
+
+  body::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  body::-webkit-scrollbar-track {
+    background: none;
+  }
+
+  body::-webkit-scrollbar-thumb {
+    background-color: #c4c4c4;
+    /* outline: 0px solid #C4C4C4; */
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+
+    border: 1px solid #c4c4c4;
+    box-shadow: 0px 2px 4px rgba(188, 188, 188, 0.12);
+  }
 }
 
 .home-main-screen {
@@ -47,7 +73,7 @@ p {
   justify-content: center;
   height: 45px;
   width: 45px;
-  background: #FD853A;
+  background: #fd853a;
   border-radius: 50%;
   font-size: 20px;
   font-weight: 700;
@@ -59,14 +85,14 @@ p {
 }
 
 .home-sub-title {
-  color: #FD853A;
+  color: #fd853a;
   font-size: 20px;
   font-weight: 500;
   text-align: center;
 }
 
 .page-heading-title {
-  color: #321A50;
+  color: #321a50;
   font-size: 40px;
   font-weight: 600;
   line-height: 100%;
@@ -77,12 +103,12 @@ p {
   justify-content: center;
 }
 
-.page-heading-title>div {
+.page-heading-title > div {
   position: relative;
   z-index: 2;
 }
 
-.page-heading-title>div>svg {
+.page-heading-title > div > svg {
   position: absolute;
   left: -15px;
   z-index: -1;
@@ -90,12 +116,12 @@ p {
   width: 60px;
   height: 60px;
 }
-.social-icon{
-fill: white;
-cursor: pointer;
+.social-icon {
+  fill: white;
+  cursor: pointer;
 }
 .social-icon:hover {
-  fill: #FD853A;
+  fill: #fd853a;
 }
 @media screen and (max-width: 1100px) {
   .home-main-screen {
@@ -115,7 +141,7 @@ cursor: pointer;
     font-size: 31px;
   }
 
-  .page-heading-title>div>svg {
+  .page-heading-title > div > svg {
     width: 50px;
     height: 50px;
     top: -7.5px;

@@ -107,8 +107,8 @@ export const ContactInfo = [
         title: 'My Email:',
         description: 'prateeksingh1319@gmail.com',
         svg: <Email color='white' />,
-        icon: '/src/assets/images/copy-icon.gif',
-        iconThumb: '/src/assets/images/thumbsup-icon.gif'
+        icon: 'https://res.cloudinary.com/dpyrylw7s/image/upload/v1740774110/Blogs/grq4wsxkn4rjq9jc3eo6.gif',
+        iconThumb: 'https://res.cloudinary.com/dpyrylw7s/image/upload/v1740774110/Blogs/oh7eoieqvurhk4kv5nej.gif'
     },
     {
         title: 'Call Me On:',

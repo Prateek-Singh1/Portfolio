@@ -1,32 +1,67 @@
-/* eslint-disable no-unused-vars */
-import React, { InputHTMLAttributes } from 'react';
-import '../RangeSlider/style.css';
-
+import React, { useEffect, useState } from "react";
+import "./style.css";
 
 interface RangeSliderProps {
-    value?: number;
-    min?: number;
-    max?: number;
-    step?: InputHTMLAttributes<HTMLInputElement>['step'];
+  title: string;
+  min: number;
+  max: number;
+  value: number;
+  step: number;
 }
 
-const RangeSlider: React.FunctionComponent<RangeSliderProps> = ({ min = 0, max = 10, value, step, }) => {
-    return (
-        <div className='relative w-full'>
-            <div>
-                <input
-                    type='range'
-                    min={min}
-                    max={max}
-                    step={step}
-                    value={value}
-                    style={{ width: `${value}%` }}
-                    className={`w-full range-slider `}
-                    readOnly
-                />
-            </div>
+const RangeSlider: React.FC<RangeSliderProps> = ({
+  title,
+  min,
+  max,
+  value,
+  step,
+}) => {
+  const [animatedValue, setAnimatedValue] = useState(0);
+
+  useEffect(() => {
+    let start = 0;
+    const duration = 2000;
+    const stepTime = 10;
+    const increment = (value - start) / (duration / stepTime);
+
+    const animate = setInterval(() => {
+      start += increment;
+      if (start >= value) {
+        setAnimatedValue(value);
+        clearInterval(animate);
+      } else {
+        setAnimatedValue(Math.round(start)); // Ensure rounded values
+      }
+    }, stepTime);
+
+    return () => clearInterval(animate);
+  }, [value]);
+
+  // Ensure the percentage calculation does not include decimals
+  const percentage = Math.round((animatedValue / max) * 100);
+
+  return (
+    <>
+      <div className="range-title">
+        <div>{title}</div>
+        <div>{percentage}%</div>
+      </div>
+      <div className="relative w-full">
+        <div>
+          <input
+            type="range"
+            min={min}
+            max={percentage}
+            step={step}
+            value={animatedValue}
+            style={{ width: `${percentage}%` }}
+            className="w-full range-slider"
+            readOnly
+          />
         </div>
-    );
+      </div>
+    </>
+  );
 };
 
 export default RangeSlider;

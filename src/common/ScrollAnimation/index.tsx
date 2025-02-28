@@ -15,7 +15,7 @@ const ScrollAnimation: React.FunctionComponent<ScrollAnimationProps> = ({ childr
         const top = ref.current.getBoundingClientRect().top;
         const windowHeight = window.innerHeight;
         // Check if element is in the viewport
-        if (top < windowHeight * 0.75) {
+        if (top < windowHeight * 0.9) {
           setIsVisible(true);
         }
       }

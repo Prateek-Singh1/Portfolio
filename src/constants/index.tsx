@@ -18,6 +18,11 @@ export const TechIcon = [
         link: 'https://www.typescriptlang.org/'
     },
     {
+        title: 'Redux',
+        logo: 'https://skillicons.dev/icons?i=redux',
+        link: 'https://redux.js.org/'
+    },
+    {
         title: 'JavaScript',
         logo: 'https://skillicons.dev/icons?i=js',
         link: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript'
@@ -101,7 +106,9 @@ export const ContactInfo = [
     {
         title: 'My Email:',
         description: 'prateeksingh1319@gmail.com',
-        svg: <Email color='white' />
+        svg: <Email color='white' />,
+        icon: '/src/assets/images/copy-icon.gif',
+        iconThumb: '/src/assets/images/thumbsup-icon.gif'
     },
     {
         title: 'Call Me On:',

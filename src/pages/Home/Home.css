@@ -201,5 +201,8 @@
     .home-hero-image>img {
         height: 460px;
     }
+    .home-hero-image>img {
+        filter: unset;
+    }
 
 }

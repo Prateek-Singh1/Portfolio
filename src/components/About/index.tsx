@@ -34,7 +34,7 @@ const About: React.FunctionComponent = () => {
         <section id="About" className="about-wrapper">
             <ScrollAnimation>
                 <div className="about-section">
-                    <PageHeadings heading="About me" subHeading="My Skills & Approach" />
+                    <PageHeadings heading="About me" subHeading="Skills & Approach" />
                     <div className="hire-me-container">
                         <div
                             className="hire-me-image-container"
@@ -70,7 +70,7 @@ const About: React.FunctionComponent = () => {
                         <div className="tech-icon-container">
                             {TechIcon.map((item, index) => (
                                 <a key={index} href={item.link} target="_blank" className="tech-icon-child">
-                                    <img id={item.title} key={index} src={item.logo} data-tooltip-id={item.title} data-tooltip-content={item.title} />
+                                    <img loading="lazy" id={item.title} key={index} src={item.logo} data-tooltip-id={item.title} data-tooltip-content={item.title} alt="icon"/>
                                     <MyToolTip id={item.title} />
                                 </a>
                             ))}

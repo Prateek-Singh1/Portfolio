@@ -37,11 +37,11 @@ const Blogs: React.FunctionComponent = () => {
     return (
         <section id='seo' className='blog-page-wrapper'>
             <div className='blog-page-header'>
-                <img src={leftArrow} alt='Back' onClick={() => navigate('/')} />
+                <img loading="lazy" src={leftArrow} alt='Back' onClick={() => navigate('/')} />
             </div>
             <div className='blog-page-container'>
                 <div className='blog-page-question-answer-container'>
-                    <img className='blog-page-hero-image' src={poster} alt='SEO Hero' />
+                    <img loading="lazy" className='blog-page-hero-image' src={poster} alt='SEO Hero' />
                     <h1 className='blog-page-title'>{blogData?.blog_title}</h1>
                     <div className='blog-page-info-container'>
                         {blogData?.blog_content.map((seoData, index) => (
@@ -49,7 +49,7 @@ const Blogs: React.FunctionComponent = () => {
                                 <div className='blogTitle'>{seoData.question}</div>
                                 <div className='blogDescription'>{seoData.answer}</div>
                                 {seoData.image ?
-                                    <img className='blog-page-hero-image' src={seoData.image} alt={seoData.question} />
+                                    <img loading="lazy" className='blog-page-hero-image' src={seoData.image} alt={seoData.question} />
                                     :
                                     <></>
                                 }

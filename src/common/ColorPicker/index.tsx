@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./Style.css";
+import { ColorIcon } from "../../assets/svg/svg";
 
 const ColorPicker: React.FC = () => {
   const savedColor = localStorage.getItem("primaryColor") || "#FD853A";
@@ -21,8 +22,12 @@ const ColorPicker: React.FC = () => {
 
   return (
     <section className="color-picker-wrapper">
+      <div className="color-picker-icon" style={{ position: "absolute" }}>
+        <ColorIcon />
+      </div>
       <input
-      className="color-picker-container"
+        className="color-picker-container"
+        style={{ opacity: 0 }}
         type="color"
         id="colorPicker"
         value={color}

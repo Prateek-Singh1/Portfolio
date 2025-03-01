@@ -7,11 +7,13 @@ import Resume from "../components/Resume";
 import Blogs from "../components/Blogs";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
-import LoadingScreen from "../common/LoadingScreen";
+// import LoadingScreen from "../common/LoadingScreen";
 import ColorPicker from "../common/ColorPicker";
+import { LightMode, SettingIcon } from "../assets/svg/svg";
+import Tools from "../common/Tools/Tools";
 
 const Dashboard: React.FunctionComponent = () => {
-  const [isLoading, setIsLoading] = useState<boolean>(true);
+  // const [isLoading, setIsLoading] = useState<boolean>(true);
   const [activeComponent, setActiveComponent] = useState<string>("");
 
   const sections = {
@@ -23,19 +25,19 @@ const Dashboard: React.FunctionComponent = () => {
     Contact: useRef<HTMLDivElement>(null),
   };
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsLoading(false);
-    }, 1000);
-    document.body.classList.add("disable-background-scroll");
-    return () => clearTimeout(timer);
-  }, []);
+  // useEffect(() => {
+  //   const timer = setTimeout(() => {
+  //     setIsLoading(false);
+  //   }, 500);
+  //   document.body.classList.add("disable-background-scroll");
+  //   return () => clearTimeout(timer);
+  // }, []);
 
-  useEffect(() => {
-    if (!isLoading) {
-      document.body.classList.remove("disable-background-scroll");
-    }
-  }, [isLoading]);
+  // useEffect(() => {
+  //   if (!isLoading) {
+  //     document.body.classList.remove("disable-background-scroll");
+  //   }
+  // }, [isLoading]);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -63,7 +65,7 @@ const Dashboard: React.FunctionComponent = () => {
 
   return (
     <>
-      {isLoading && <LoadingScreen />}
+      {/* {isLoading && <LoadingScreen />} */}
       <div className="home-header">
         <Header activeSection={activeComponent} />
       </div>
@@ -86,7 +88,7 @@ const Dashboard: React.FunctionComponent = () => {
         <Contact />
       </div>
       <Footer />
-      <ColorPicker/>
+      <Tools/>
     </>
   );
 };

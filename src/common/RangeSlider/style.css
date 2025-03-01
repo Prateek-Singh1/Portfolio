@@ -19,6 +19,7 @@
     box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.15), 0px 3px 1px rgba(0, 0, 0, 0.06);
     border-radius: 50px;
     cursor: pointer;
+    margin-bottom: 3px;
 }
 
 .range-slider.touched::-webkit-slider-thumb {

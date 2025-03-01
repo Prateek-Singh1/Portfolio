@@ -45,6 +45,7 @@ const Contact: React.FunctionComponent = () => {
                           </div>
                           {copiedIndex === index ? (
                             <img
+                            loading="lazy"
                             src={info.iconThumb}
                             alt="Copy Icon"
                             onClick={() =>
@@ -56,6 +57,7 @@ const Contact: React.FunctionComponent = () => {
                           ) : (
                             info.icon && (
                               <img
+                                loading="lazy"
                                 src={info.icon}
                                 alt="Copy Icon"
                                 onClick={() =>
@@ -73,7 +75,7 @@ const Contact: React.FunctionComponent = () => {
                 })}
               </div>
               <div className="contact-image">
-                <img src={contactImage} />
+                <img loading="lazy" src={contactImage} alt="Contact Image"/>
               </div>
             </div>
           </ScrollAnimation>

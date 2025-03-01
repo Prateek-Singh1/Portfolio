@@ -57,6 +57,7 @@ const Home: React.FunctionComponent = () => {
                         <img
                             src={heroImage}
                             loading="lazy"
+                            alt='Hero Image'
                         />
                         <div className={`${showImageBackDrop ? 'home-hero-backdrop-style-show' : 'home-hero-backdrop-style-hide'}`}>
                             <HeroBannerStyle />

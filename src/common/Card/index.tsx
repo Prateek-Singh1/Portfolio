@@ -23,7 +23,7 @@ const Cards: React.FunctionComponent<CardsProps> = ({ image, title, type, descri
             onTouchEnd={() => setOnHover(false)}
         >
             <div className='card-img-container'>
-                <img src={image} alt="Card" />
+                <img loading='lazy' src={image} alt="Card" />
             </div>
             <div className={`card-description-container ${onHover ? 'card-description-hover' : 'card-description-not-hover'}`}>
                 <div className='card-title-container'>

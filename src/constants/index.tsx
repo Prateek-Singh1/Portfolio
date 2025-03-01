@@ -52,28 +52,28 @@ export const TechIcon = [
 export const TectRange = [
     {
         title: 'Web Design',
-        range: 90
+        range: 93
     },
     {
         title: 'Responsive Web Design',
-        range: 90
-    },
-    {
-        title: 'HTML/CSS',
-        range: 90
+        range: 95
     },
     // {
+    //     title: 'HTML/CSS',
+    //     range: 95
+    // },
+    // {
     //     title: 'ReactJs',
-    //     range: 60
+    //     range: 93
     // },
     // {
     //     title: 'JavaScript',
-    //     range: 60
+    //     range: 89
     // },
-    {
-        title: 'TailWindCSS',
-        range: 90
-    },
+    // {
+    //     title: 'TailWindCSS',
+    //     range: 91
+    // },
 ]
 
 export const Experience = [
@@ -81,19 +81,19 @@ export const Experience = [
         designation: 'Frontend Developer',
         company: 'MyYogaTeacher',
         date: 'July 2023 - Current',
-        description: '<ul><li>As a Frontend Engineer with ongoing experience, I&#39;ve been crafting user-friendly websites for the past 2 years.</li><li>Craft elegant solutions through clean code practices</li><li>Proficient in seamless Rest API integration for robust and responsive user interfaces</li><li>Recognized for collaborative teamwork, innovation, and adaptability</li><li>Dedicated learner, bringing value to forward-thinking organizations</li></ul>',
+        description: '<ul><li>Develop and maintain <b>user-friendly, high-performance web applications</b> using modern frontend technologies.</li><li>Write <b>clean, efficient, and maintainable code</b> following industry best practices.</li><li><b>Seamlessly integrate REST APIs</b>, ensuring robust and responsive user experiences.</li><li>Recognized for <b>collaborative teamwork, innovation, and adaptability</b> in dynamic environments.</li><li>Passionate about <b>continuous learning, problem-solving, and delivering scalable solutions</b>.</li></ul>',
     },
     {
         designation: 'UI Developer',
         company: 'MyYogaTeacher',
         date: 'April 2022 - June 2023',
-        description: '<ul><li>Skilled UI Developer with a flair for creating attractive, responsive applications.</li><li>Expert in building reusable components for efficiency and consistency.</li><li>Known for crafting user-friendly interfaces that prioritize a seamless user experience.</li><li>Ready to bring innovation and design excellence to your dynamic team.</li></ul>',
+        description: '<ul><li><b>Skilled UI Developer</b> with expertise in creating <b>visually appealing and highly responsive applications</b>.</li><li><b>Expert in building reusable components</b> to enhance efficiency, maintainability, and design consistency.</li><li><b>Passionate about crafting intuitive user interfaces</b> that deliver a seamless and engaging user experience.</li><li>Adept at <b>translating design concepts into high-performance, pixel-perfect implementations</b>.</li></ul>',
     },
     {
         designation: 'Frontend Course',
         company: 'Prepbytes',
         date: 'September 2021 - January 2022',
-        description: '<ul><li>Familiar with HTML, CSS, and JavaScript, prioritizing clean code, responsive design, and cross-browser compatibility.</li><li>Skilled in Git version control and familiar with front-end frameworks React.</li><li>Focus on performance optimization and accessibility, showcasing abilities in a diverse portfolio.</li><li>Committed to continuous learning and effective communication in a team environment.</li></ul>',
+        description: '<ul><li>Familiar with <b>HTML, CSS, and JavaScript</b>, focusing on <b>clean code, responsive design, and cross-browser compatibility</b>.</li><li>Skilled in <b>Git version control</b> and familiar with front-end frameworks like <b>React</b>.</li><li>Emphasized <b>performance optimization and accessibility</b>, showcasing abilities through a diverse portfolio.</li><li>Committed to <b>continuous learning, problem-solving, and effective communication</b> in team environments.</li></ul>',
     },
 ]
 

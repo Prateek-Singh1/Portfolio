@@ -46,6 +46,8 @@
     border: 2px solid #FFF;
     background: rgba(255, 255, 255, 0.10);
     backdrop-filter: blur(7.5px);
+
+    animation: slideInFromBottom 0.8s ease-out forwards;
 }
 
 .home-hero-backdrop-style-show {
@@ -105,7 +107,7 @@
 }
 
 .home-title {
-    color: #171717;
+    color: #000;
     text-align: center;
     font-size: 65px;
     font-weight: 600;
@@ -138,6 +140,9 @@
 
 .home-about {
     width: 300px;
+
+    animation: slideInFromLeft 0.8s ease-out forwards;
+
 }
 
 .home-about>p {
@@ -152,10 +157,12 @@
 .home-experience {
     width: 169px;
     text-align: end;
+
+    animation: slideInFromRightBottom 0.8s ease-out forwards;
 }
 
 .home-experience-title {
-    color: #171717;
+    color: #344054;
     font-size: 30px;
     font-weight: 700;
     line-height: 100%;

@@ -1,0 +1,87 @@
+.tool-icon {
+  width: 35px;
+  height: 35px;
+}
+
+.tools-wrapper {
+  position: fixed;
+  display: inline-block;
+  cursor: pointer;
+  bottom: 15px;
+  right: 15px;
+  z-index: 5;
+  animation: slideInFromRightBottom 0.8s ease-out forwards;
+}
+
+.tools-wrapper > p {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid white;
+  animation: rotate360 10s linear infinite;
+}
+
+@keyframes rotate360 {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Common styles for tools */
+.color-tool,
+.dark-light-tool {
+  position: absolute;
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  opacity: 1;
+  z-index: -1;
+  width: 35px;
+}
+
+/* COLOR TOOL - Moves Up */
+.color-tool {
+  top: 15px;
+  right: -40px;
+  transform: translate(-50%, 50px);
+}
+
+.move-up {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+
+/* DARK-LIGHT TOOL - Moves Left */
+.dark-light-tool {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  top: 23px;
+  left: -50px;
+  transform: translate(50px, -50%); 
+}
+
+.move-left {
+  opacity: 1;
+  transform: translate(0, -50%);
+}
+
+@media screen and (max-width: 768px) {
+    .tool-icon {
+      width: 25px;
+      height: 25px;
+    }
+    .tools-wrapper > p {
+      width: 40px;
+      height: 40px;
+    }
+    .color-tool {
+      top: -5px;
+      right: -23px;
+    }
+  }

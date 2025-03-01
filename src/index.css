@@ -40,6 +40,84 @@ p {
   }
 }
 
+body {
+  background-color: #ffffff;
+  color: #201c1c;
+  transition: background 0.5s ease, color 0.3s ease;
+}
+
+body.dark {
+  background-color: #201c1c;
+}
+
+@keyframes slideInFromTop {
+  from {
+    transform: translateY(-500%);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.1;
+  }
+  70% {
+    opacity: 0.5;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromRightBottom {
+  from {
+    transform: translateX(500%);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.1;
+  }
+  70% {
+    opacity: 0.5;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromBottom {
+  from {
+    transform: translateY(500%);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.1;
+  }
+  70% {
+    opacity: 0.5;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromLeft {
+  from {
+    transform: translateX(-500%);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.1;
+  }
+  70% {
+    opacity: 0.5;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
 .home-main-screen {
   height: calc(100vh - 90px);
   display: flex;
@@ -61,6 +139,8 @@ p {
   justify-content: space-between;
   margin-top: 30px;
   padding: 0px 25px;
+
+  animation: slideInFromTop 0.8s ease-out forwards;
 }
 
 .header-title-container {
@@ -142,7 +222,7 @@ p {
   }
 
   .page-heading-title {
-    font-size: 31px;
+    font-size: 32px;
   }
 
   .page-heading-title > div > svg {

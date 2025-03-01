@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+
 export const scrollToSection = (sectionId: string, yOffset = 0) => {
     const element = document.getElementById(sectionId);
 
@@ -10,4 +12,20 @@ export const scrollToSection = (sectionId: string, yOffset = 0) => {
         window.history.pushState({ path: newUrl }, '', newUrl);
 
     }
+};
+
+
+export const useOutsideClick = (ref: React.RefObject<HTMLElement>, callback: () => void) => {
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (ref.current && !ref.current.contains(event.target as Node)) {
+        callback();
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [ref, callback]);
 };

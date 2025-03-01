@@ -8,8 +8,6 @@ import Blogs from "../components/Blogs";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 // import LoadingScreen from "../common/LoadingScreen";
-import ColorPicker from "../common/ColorPicker";
-import { LightMode, SettingIcon } from "../assets/svg/svg";
 import Tools from "../common/Tools/Tools";
 
 const Dashboard: React.FunctionComponent = () => {

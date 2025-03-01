@@ -30,7 +30,7 @@
 }
 
 .contact-title>span {
-    color: #FD853A;
+    color: var(--primary-color);
 }
 
 .contact-description {
@@ -114,7 +114,7 @@
     padding-left: 10px;
     padding-right: 10px;
     height: 50px;
-    background-color: #FD853A;
+    background-color: var(--primary-color);
     border-radius: 8px;
     display: flex;
     align-items: center;

@@ -64,7 +64,7 @@
     display: flex;
     justify-content: flex-end;
     border-radius: 10px;
-    /* background: #EE731B; */
+    /* background: var(--primary-color); */
     /* box-shadow: 0px 2px 4px 0px rgba(248, 102, 36, 0.15); */
     color: white;
     border: 1px solid #F2F2F2;
@@ -105,7 +105,7 @@
 
 .experience-designation,
 .experience-date {
-    color: #EE731B;
+    color: var(--primary-color);
     font-size: 14px;
     font-weight: 500;
     line-height: normal;
@@ -120,7 +120,7 @@
     position: absolute;
     top: 0;
     right: 50%;
-    background-color: #EE731B;
+    background-color: var(--primary-color);
     width: 2.5px;
     height: 100%;
 }
@@ -132,7 +132,7 @@
     left: -18px;
     width: 36px;
     height: 36px;
-    background-color: #EE731B;
+    background-color: var(--primary-color);
     border-radius: 50%;
 
     display: flex;
@@ -185,7 +185,7 @@
     .experience-info-dot-one{
         background-color: white;
         color: black;
-        border: 2px solid #EE731B;
+        border: 2px solid var(--primary-color);
     }
 
     .experience-mobile {

@@ -8,6 +8,7 @@ import Blogs from "../components/Blogs";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 import LoadingScreen from "../common/LoadingScreen";
+import ColorPicker from "../common/ColorPicker";
 
 const Dashboard: React.FunctionComponent = () => {
   const [isLoading, setIsLoading] = useState<boolean>(true);
@@ -85,6 +86,7 @@ const Dashboard: React.FunctionComponent = () => {
         <Contact />
       </div>
       <Footer />
+      <ColorPicker/>
     </>
   );
 };

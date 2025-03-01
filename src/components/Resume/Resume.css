@@ -11,7 +11,7 @@
 
 .resume-container {
     max-width: 1100px;
-    background-color: #FD853A;
+    background-color: var(--primary-color);
     border-radius: 10px;
 }
 

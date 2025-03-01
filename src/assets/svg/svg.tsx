@@ -1,7 +1,7 @@
 export const EllipseStyle = () => {
     return (
         <svg width="813" height="406" viewBox="0 0 813 406" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M812.673 406C542.08 406 271.487 406 0.894409 406C0.894409 181.833 182.617 0.110565 406.784 0.110565C630.95 0.110565 812.673 181.833 812.673 406Z" fill="#FEB273" />
+            <path d="M812.673 406C542.08 406 271.487 406 0.894409 406C0.894409 181.833 182.617 0.110565 406.784 0.110565C630.95 0.110565 812.673 181.833 812.673 406Z" fill="var(--primary-color)" />
         </svg>
 
     )
@@ -9,7 +9,7 @@ export const EllipseStyle = () => {
 export const HelloSvg = () => {
     return (
         <svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M2.74512 20C2.74512 17 5.74512 11 2.74512 2M10.2451 23.5C14.5785 19.3333 23.4451 9.2 24.2451 2M13.2451 30.5C15.9118 30.5 23.0451 29.1 30.2451 23.5" stroke="#FEB273" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" />
+            <path d="M2.74512 20C2.74512 17 5.74512 11 2.74512 2M10.2451 23.5C14.5785 19.3333 23.4451 9.2 24.2451 2M13.2451 30.5C15.9118 30.5 23.0451 29.1 30.2451 23.5" stroke="var(--primary-color)" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" />
         </svg>
 
     )
@@ -25,7 +25,7 @@ export const CoatsSvg = () => {
     )
 }
 
-export const Star = ({color='#EE731B'}) => {
+export const Star = ({color='var(--primary-color)'}) => {
     return (
         <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M23.8912 19.0933C23.5459 19.428 23.3872 19.912 23.4659 20.3867L24.6512 26.9467C24.7512 27.5027 24.5165 28.0653 24.0512 28.3867C23.5952 28.72 22.9885 28.76 22.4912 28.4933L16.5858 25.4133C16.3805 25.304 16.1525 25.2453 15.9192 25.2387H15.5578C15.4325 25.2573 15.3099 25.2973 15.1979 25.3587L9.29118 28.4533C8.99918 28.6 8.66852 28.652 8.34452 28.6C7.55518 28.4507 7.02852 27.6987 7.15785 26.9053L8.34452 20.3453C8.42318 19.8667 8.26452 19.38 7.91918 19.04L3.10452 14.3733C2.70185 13.9827 2.56185 13.396 2.74585 12.8667C2.92452 12.3387 3.38052 11.9533 3.93118 11.8667L10.5578 10.9053C11.0619 10.8533 11.5045 10.5467 11.7312 10.0933L14.6512 4.10668C14.7205 3.97334 14.8099 3.85068 14.9179 3.74668L15.0378 3.65334C15.1005 3.58401 15.1725 3.52668 15.2525 3.48001L15.3979 3.42668L15.6245 3.33334H16.1859C16.6872 3.38534 17.1285 3.68534 17.3592 4.13334L20.3179 10.0933C20.5312 10.5293 20.9459 10.832 21.4245 10.9053L28.0512 11.8667C28.6112 11.9467 29.0792 12.3333 29.2645 12.8667C29.4392 13.4013 29.2885 13.988 28.8779 14.3733L23.8912 19.0933Z" fill={color} />
@@ -718,12 +718,12 @@ export const HeroBannerStyle = () => {
 export const Ellipse = () => {
     return (
         <svg viewBox="0 0 624 692" fill="none" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
-            <circle cx="312" cy="312" r="311.5" stroke="#FD853A" />
-            <circle cx="312" cy="312" r="294" stroke="#FD853A" strokeWidth="2" />
-            <circle cx="312" cy="312" r="274.5" stroke="#FD853A" strokeWidth="3" />
-            <circle cx="312" cy="312" r="251" stroke="#FD853A" strokeWidth="4" />
-            <circle cx="312" cy="312" r="230" stroke="#FD853A" strokeWidth="5" />
-            <circle cx="312" cy="312" r="205" stroke="#FD853A" strokeWidth="6" />
+            <circle cx="312" cy="312" r="311.5" stroke="var(--primary-color)" />
+            <circle cx="312" cy="312" r="294" stroke="var(--primary-color)" strokeWidth="2" />
+            <circle cx="312" cy="312" r="274.5" stroke="var(--primary-color)" strokeWidth="3" />
+            <circle cx="312" cy="312" r="251" stroke="var(--primary-color)" strokeWidth="4" />
+            <circle cx="312" cy="312" r="230" stroke="var(--primary-color)" strokeWidth="5" />
+            <circle cx="312" cy="312" r="205" stroke="var(--primary-color)" strokeWidth="6" />
             <rect x="21" y="92" width="603" height="600" fill="url(#pattern0)" />
             <defs>
                 <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">

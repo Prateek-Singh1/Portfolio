@@ -52,7 +52,7 @@
 }
 
 .is-toggle {
-    color: #FD853A;
+    color: var(--primary-color);
 }
 
 .not-toggle {

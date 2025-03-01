@@ -45,7 +45,7 @@ const Blogs: React.FunctionComponent = () => {
                                 <Toggle
                                     isChecked={isToggle}
                                     onChange={handleToggleClicked}
-                                    backgroundColor={isToggle ? '#FD853A' : '#321A50'}
+                                    backgroundColor={isToggle ? 'var(--primary-color)' : '#321A50'}
                                 />
                                 <div className={`blog-toggled-text ${isToggle ? 'is-toggle' : ''}`} onClick={() => setIsToggle(true)}>Blog</div>
                             </div>

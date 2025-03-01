@@ -21,7 +21,7 @@
 }
 
 .btn-orange {
-    background: #EE731B;
+    background: var(--primary-color);
     color: #FFF;
     box-shadow: 0px 2px 4px 0px rgba(248, 102, 36, 0.15);
 }
@@ -48,7 +48,7 @@
 } */
 
 .btn-orange:hover {
-    background: #CC4B11;
+    filter: brightness(85%);;
 }
 
 /* .btn-orange:focus {

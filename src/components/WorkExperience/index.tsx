@@ -19,7 +19,7 @@ const WorkExperience: React.FunctionComponent = () => {
                     {Experience.map((work, index) => {
                         return (
                             <div key={index} className='experience-container'>
-                                <div className='experience-info-left' style={index === 0 ? { background: '#EE731B' } : { color: '#321A50' }}>
+                                <div className='experience-info-left' style={index === 0 ? { background: 'var(--primary-color)' } : { color: '#321A50' }}>
                                     <div className='experience-info-container experience-mobile'>
                                         <p className='experience-info-title'>{work.designation}</p>
                                         <p className='experience-designation' style={index === 0 ? { color: 'white' } : {}}>{work.company}</p>

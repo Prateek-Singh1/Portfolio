@@ -23,6 +23,8 @@
 
 .home-hero-container {
     position: relative;
+
+    animation: slideInFromBottom 0.8s ease-out forwards;
 }
 
 .home-hero-image>img {
@@ -33,6 +35,8 @@
     filter: contrast(1.2);
     z-index: 5;
     filter: drop-shadow(0 0 1000px white);
+
+    animation: slideInFromBottom 1.5s ease-out forwards;
 }
 
 .home-hero-button {
@@ -47,7 +51,7 @@
     background: rgba(255, 255, 255, 0.10);
     backdrop-filter: blur(7.5px);
 
-    animation: slideInFromBottom 0.8s ease-out forwards;
+    animation: slideInFromBottom 1s ease-out forwards;
 }
 
 .home-hero-backdrop-style-show {
@@ -141,7 +145,7 @@
 .home-about {
     width: 300px;
 
-    animation: slideInFromLeft 0.8s ease-out forwards;
+    animation: slideInFromLeft 1.5s ease-out forwards;
 
 }
 
@@ -158,7 +162,7 @@
     width: 169px;
     text-align: end;
 
-    animation: slideInFromRightBottom 0.8s ease-out forwards;
+    animation: slideInFromRightBottom 1.5s ease-out forwards;
 }
 
 .home-experience-title {

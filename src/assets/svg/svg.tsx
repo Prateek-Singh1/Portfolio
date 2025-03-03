@@ -2178,11 +2178,7 @@ export const RightTiltedArrow: React.FunctionComponent<RightTiltedArrowProps> = 
 
 export const LightMode = () => {
   return (
-    <svg
-      viewBox="0 0 164 164"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
+    <svg viewBox="0 0 164 164" fill="none" xmlns="http://www.w3.org/2000/svg">
       <rect width="164" height="164" rx="82" fill="white" fill-opacity="0.8" />
       <path
         fill-rule="evenodd"
@@ -2196,11 +2192,7 @@ export const LightMode = () => {
 
 export const DarkMode = () => {
   return (
-    <svg
-      viewBox="0 0 164 164"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
+    <svg viewBox="0 0 164 164" fill="none" xmlns="http://www.w3.org/2000/svg">
       <rect width="164" height="164" rx="82" fill="black" fill-opacity="0.6" />
       <path
         fill-rule="evenodd"

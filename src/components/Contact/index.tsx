@@ -26,7 +26,7 @@ const Contact: React.FunctionComponent = () => {
           <ScrollAnimation>
             <div className="contact-content">
               <div className="contact-title">
-                <span>Contact</span> information
+              Get in<span> Touch </span>
               </div>
               <div className="contact-description">
                 Feel free to use any of these channels to get in touch. I'm

@@ -140,7 +140,7 @@ body.dark {
   margin-top: 30px;
   padding: 0px 25px;
 
-  animation: slideInFromTop 0.8s ease-out forwards;
+  animation: slideInFromTop 1.5s ease-out forwards;
 }
 
 .header-title-container {

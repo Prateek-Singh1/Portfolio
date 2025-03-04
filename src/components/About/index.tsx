@@ -70,7 +70,7 @@ const About: React.FunctionComponent = () => {
                         <div className="tech-icon-container">
                             {TechIcon.map((item, index) => (
                                 <a key={index} href={item.link} target="_blank" className="tech-icon-child">
-                                    <img loading="lazy" id={item.title} key={index} src={item.logo} data-tooltip-id={item.title} data-tooltip-content={item.title} alt="icon"/>
+                                    <img className="tech-icon-child-icon" id={item.title} key={index} src={item.logo} data-tooltip-id={item.title} data-tooltip-content={item.title} alt="icon"/>
                                     <MyToolTip id={item.title} />
                                 </a>
                             ))}

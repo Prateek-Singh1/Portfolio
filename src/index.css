@@ -121,7 +121,7 @@ body.dark {
 }
 
 .home-main-screen {
-  height: calc(100vh - 90px);
+  height: calc(100vh - 100px);
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -211,12 +211,12 @@ body.dark {
 }
 @media screen and (max-width: 1100px) {
   .home-main-screen {
-    height: calc(100vh - 60px);
+    height: calc(100vh - 100px);
   }
 }
 @media screen and (max-width: 768px) {
   .home-main-screen {
-    height: calc(100vh - 90px);
+    height: calc(100vh - 75px);
   }
   .header-title-container {
     padding-left: 0;

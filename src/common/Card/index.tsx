@@ -25,7 +25,7 @@ const Cards: React.FunctionComponent<CardsProps> = ({ image, title, type, descri
             <div className='card-img-container'>
                 <img loading='lazy' src={image} alt="Card" />
             </div>
-            <div className={`card-description-container ${onHover ? 'card-description-hover' : 'card-description-not-hover'}`}>
+            <div className={`card-description-container ${onHover ? 'card-description-hover p-[25px]' : 'card-description-not-hover p-[25px]'}`}>
                 <div className='card-title-container'>
                     <p className='card-title'>{title}</p>
                     <p className='card-date'>{type}</p>

@@ -1,17 +1,17 @@
-import React, { useState, useEffect, useRef } from "react";
-import Home from "./Home";
+import React, { useState, useEffect, useRef, lazy, Suspense } from "react";
 import Header from "../components/Header";
-import About from "../components/About";
-import WorkExperience from "../components/WorkExperience";
-import Resume from "../components/Resume";
-import Blogs from "../components/Blogs";
-import Contact from "../components/Contact";
 import Footer from "../components/Footer";
-// import LoadingScreen from "../common/LoadingScreen";
-import Tools from "../common/Tools/Tools";
+
+const Home = lazy(() => import("./Home"));
+const About = lazy(() => import("../components/About"));
+const WorkExperience = lazy(() => import("../components/WorkExperience"));
+const Resume = lazy(() => import("../components/Resume"));
+const Blogs = lazy(() => import("../components/Blogs"));
+const Contact = lazy(() => import("../components/Contact"));
+const Tools = lazy(() => import("../common/Tools/Tools"));
+import LoadingScreen from "../common/LoadingScreen";
 
 const Dashboard: React.FunctionComponent = () => {
-  // const [isLoading, setIsLoading] = useState<boolean>(true);
   const [activeComponent, setActiveComponent] = useState<string>("");
 
   const sections = {
@@ -23,24 +23,11 @@ const Dashboard: React.FunctionComponent = () => {
     Contact: useRef<HTMLDivElement>(null),
   };
 
-  // useEffect(() => {
-  //   const timer = setTimeout(() => {
-  //     setIsLoading(false);
-  //   }, 500);
-  //   document.body.classList.add("disable-background-scroll");
-  //   return () => clearTimeout(timer);
-  // }, []);
-
-  // useEffect(() => {
-  //   if (!isLoading) {
-  //     document.body.classList.remove("disable-background-scroll");
-  //   }
-  // }, [isLoading]);
-
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         const visibleSection = entries.find((entry) => entry.isIntersecting);
+        
         if (visibleSection) {
           setActiveComponent(
             visibleSection.target.getAttribute("data-section") || ""
@@ -63,30 +50,35 @@ const Dashboard: React.FunctionComponent = () => {
 
   return (
     <>
-      {/* {isLoading && <LoadingScreen />} */}
-      <div className="home-header">
-        <Header activeSection={activeComponent} />
-      </div>
-      <div ref={sections.Home} data-section="Home" className="home-main-screen">
-        <Home />
-      </div>
-      <div ref={sections.About} data-section="About">
-        <About />
-      </div>
-      <div ref={sections.Work} data-section="Work">
-        <WorkExperience />
-      </div>
-      <div ref={sections.Resume} data-section="Resume">
-        <Resume />
-      </div>
-      <div ref={sections.Blogs} data-section="Blogs">
-        <Blogs />
-      </div>
-      <div ref={sections.Contact} data-section="Contact">
-        <Contact />
-      </div>
-      <Footer />
-      <Tools/>
+      <Suspense fallback={<LoadingScreen />}>
+        <div className="home-header">
+          <Header activeSection={activeComponent} />
+        </div>
+        <div
+          ref={sections.Home}
+          data-section="Home"
+          className="home-main-screen"
+        >
+          <Home />
+        </div>
+        <div ref={sections.About} data-section="About">
+          <About />
+        </div>
+        <div ref={sections.Work} data-section="Work">
+          <WorkExperience />
+        </div>
+        <div ref={sections.Resume} data-section="Resume">
+          <Resume />
+        </div>
+        <div ref={sections.Blogs} data-section="Blogs">
+          <Blogs />
+        </div>
+        <div ref={sections.Contact} data-section="Contact">
+          <Contact />
+        </div>
+        <Footer />
+        <Tools />
+      </Suspense>
     </>
   );
 };

@@ -21,7 +21,7 @@ const Tools: React.FC = () => {
   });
   return (
     <>
-      <div className="tools-wrapper" ref={toolsRef}>
+      <section id="tools-wrapper" className="tools-wrapper" ref={toolsRef}>
         <p onClick={() => setShowTools(!showTools)}>
           <SettingIcon />
         </p>
@@ -38,7 +38,7 @@ const Tools: React.FC = () => {
         >
           {!isLightMode ? <LightMode /> : <DarkMode />}
         </div>
-      </div>
+      </section>
     </>
   );
 };

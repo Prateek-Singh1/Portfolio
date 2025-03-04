@@ -75,7 +75,7 @@ const Contact: React.FunctionComponent = () => {
                 })}
               </div>
               <div className="contact-image">
-                <img loading="lazy" src={contactImage} alt="Contact Image"/>
+                {/* <img loading="lazy" src={contactImage} alt="Contact Image"/> */}
               </div>
             </div>
           </ScrollAnimation>

@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Inter");
+@import "tailwindcss";
+
 
 :root {
   --primary-color: #FD853A;

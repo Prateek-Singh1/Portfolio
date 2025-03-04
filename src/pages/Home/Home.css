@@ -159,7 +159,7 @@
 }
 
 .home-experience {
-    width: 169px;
+    width: 300px;
     text-align: end;
 
     animation: slideInFromRightBottom 1.5s ease-out forwards;
@@ -171,6 +171,15 @@
     font-weight: 700;
     line-height: 100%;
     letter-spacing: -0.705px;
+}
+
+.home-experience-title > p{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+.home-experience-title > p :nth-child(2){
+    font-size: 16px;
 }
 
 .home-experience-title>span {

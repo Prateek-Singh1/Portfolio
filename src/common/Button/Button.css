@@ -48,7 +48,7 @@
 } */
 
 .btn-orange:hover {
-    filter: brightness(85%);;
+    filter: brightness(85%);
 }
 
 /* .btn-orange:focus {
@@ -63,11 +63,10 @@
     background: #BFBFBF;
 } */
 .btnSvg{
-    margin-left: 10px
+    margin-left: 10px;
 }
 .btn:disabled {
     opacity: 0.5;
-    ;
 }
 
 .btn-large {

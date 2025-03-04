@@ -2145,10 +2145,9 @@ interface RightTiltedArrowProps {
   className: string;
 }
 
-export const RightTiltedArrow: React.FunctionComponent<RightTiltedArrowProps> = ({
-  color,
-  className,
-}) => {
+export const RightTiltedArrow: React.FunctionComponent<
+  RightTiltedArrowProps
+> = ({ color, className }) => {
   return (
     <svg
       className={className}
@@ -2179,10 +2178,10 @@ export const RightTiltedArrow: React.FunctionComponent<RightTiltedArrowProps> = 
 export const LightMode = () => {
   return (
     <svg viewBox="0 0 164 164" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <rect width="164" height="164" rx="82" fill="white" fill-opacity="0.8" />
+      <rect width="164" height="164" rx="82" fill="white" fillOpacity="0.8" />
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M82 115C100.225 115 115 100.225 115 82C115 63.7746 100.225 49 82 49V66C73.1634 66 66 73.1634 66 82C66 90.8366 73.1634 98 82 98V115ZM82 122C104.091 122 122 104.091 122 82C122 59.9086 104.091 42 82 42C59.9086 42 42 59.9086 42 82C42 104.091 59.9086 122 82 122ZM82 98V66C90.8366 66 98 73.1634 98 82C98 90.8366 90.8366 98 82 98Z"
         fill="black"
       />
@@ -2193,10 +2192,10 @@ export const LightMode = () => {
 export const DarkMode = () => {
   return (
     <svg viewBox="0 0 164 164" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <rect width="164" height="164" rx="82" fill="black" fill-opacity="0.6" />
+      <rect width="164" height="164" rx="82" fill="black" fillOpacity="0.6" />
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M82 49C63.7746 49 49 63.7746 49 82C49 100.225 63.7746 115 82 115L82 98C90.8366 98 98 90.8366 98 82C98 73.1634 90.8366 66 82 66L82 49ZM82 42C59.9086 42 42 59.9086 42 82C42 104.091 59.9086 122 82 122C104.091 122 122 104.091 122 82C122 59.9086 104.091 42 82 42ZM82 66L82 98C73.1634 98 66 90.8366 66 82C66 73.1634 73.1634 66 82 66Z"
         fill="white"
       />

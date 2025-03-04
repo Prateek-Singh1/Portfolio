@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Contact.css";
 import { ContactInfo } from "../../constants";
-import contactImage from "../../assets/images/contact-image.png";
+import contactImage from "../../assets/images/contact-image3.png";
 import ScrollAnimation from "../../common/ScrollAnimation";
 
 const Contact: React.FunctionComponent = () => {
@@ -75,7 +75,7 @@ const Contact: React.FunctionComponent = () => {
                 })}
               </div>
               <div className="contact-image">
-                {/* <img loading="lazy" src={contactImage} alt="Contact Image"/> */}
+                <img loading="lazy" src={contactImage} alt="Contact Image"/>
               </div>
             </div>
           </ScrollAnimation>

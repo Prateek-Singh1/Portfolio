@@ -60,7 +60,7 @@ const Home: React.FunctionComponent = () => {
   };
 
   return (
-    <section className="home-wrapper" id="Home">
+    <section className="home-wrapper overflow-hidden" id="Home">
       <div className="home-hero-wrapper">
         <div
           className={`home-title-wrapper ${
@@ -84,43 +84,12 @@ const Home: React.FunctionComponent = () => {
                 strings: [
                   "Frontend Developer",
                   "UI Developer",
-                  "Responsive Web Developer",
+                  "Web Developer",
                 ],
                 autoStart: true,
                 loop: true,
               }}
             />
-          </div>
-        </div>
-        <div
-          className="home-hero-container"
-          onMouseEnter={onMouseEnterImage}
-          onMouseLeave={onMouseLeaveImage}
-        >
-          <div>
-            <EllipseStyle />
-          </div>
-          <div className="home-hero-image">
-            <div className="home-hero-button">
-              <Button
-                text="Contact"
-                color="orange"
-                size="large"
-                style={{ borderRadius: "50px" }}
-                svg={true}
-                onClick={() => scrollToSection("Contact")}
-              />
-            </div>
-            <img src={heroImage} loading="lazy" alt="Hero Image" />
-            <div
-              className={`${
-                showImageBackDrop
-                  ? "home-hero-backdrop-style-show"
-                  : "home-hero-backdrop-style-hide"
-              }`}
-            >
-              <HeroBannerStyle />
-            </div>
           </div>
         </div>
         <div
@@ -143,7 +112,7 @@ const Home: React.FunctionComponent = () => {
                 return <Star key={index} />;
               })}
             </div>
-            <div className="home-experience-title">
+            <div className="home-experience-title mt-[10px]">
               <p>
                 <span style={{ color: "var(--primary-color)" }}>
                   {timeSpent.years}&nbsp;Years
@@ -155,6 +124,42 @@ const Home: React.FunctionComponent = () => {
               <span>Experience</span>
             </div>
           </div>
+        </div>
+      </div>
+      <div
+        className="home-hero-button"
+        onMouseEnter={onMouseEnterImage}
+        onMouseLeave={onMouseLeaveImage}
+      >
+        <Button
+          text="Contact"
+          color="orange"
+          size="large"
+          style={{ borderRadius: "50px" }}
+          svg={true}
+          onClick={() => scrollToSection("Contact")}
+        />
+      </div>
+      <img
+        src={heroImage}
+        className="home-hero-image"
+        loading="lazy"
+        alt="Hero Image"
+        onMouseEnter={onMouseEnterImage}
+        onMouseLeave={onMouseLeaveImage}
+      />
+      <div
+        className={`${
+          showImageBackDrop
+            ? "home-hero-backdrop-style-show"
+            : "home-hero-backdrop-style-hide"
+        }`}
+      >
+        <HeroBannerStyle />
+      </div>
+      <div className="home-hero-container w-full overflow-hidden absolute bottom-0 flex justify-center">
+        <div>
+          <EllipseStyle />
         </div>
       </div>
     </section>

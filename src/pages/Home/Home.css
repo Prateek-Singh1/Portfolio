@@ -22,15 +22,13 @@
 }
 
 .home-hero-container {
-    position: relative;
-
     animation: slideInFromBottom 0.8s ease-out forwards;
 }
 
-.home-hero-image>img {
+.home-hero-image {
     position: absolute;
-    bottom: -10px;
-    left: 16rem;
+    bottom: -1px;
+    /* left: 16rem; */
     height: 500px;
     filter: contrast(1.2);
     z-index: 5;
@@ -43,7 +41,7 @@
     position: absolute;
     z-index: 6;
     bottom: 40px;
-    left: 40%;
+    /* left: 40%; */
 
     padding: 10px;
     border-radius: 50px;
@@ -57,7 +55,7 @@
 .home-hero-backdrop-style-show {
     position: absolute;
     bottom: 0;
-    left: -55px;
+    /* left: -55px; */
     width: 871px;
     z-index: 4;
     transition: all 0.4s ease-in-out;
@@ -66,7 +64,7 @@
 .home-hero-backdrop-style-hide {
     position: absolute;
     bottom: 0px;
-    left: 400px;
+    /* left: 400px; */
     width: 0px;
     z-index: 4;
     transition: all 0.4s ease-in-out;
@@ -98,16 +96,30 @@
     justify-content: center;
     margin-top: 50px;
     gap: 5px;
+    --bounce-distance: -15px;
+    animation: moveUpDownInfinity 5s ease-in-out infinite;
 }
 
+@keyframes slideInFromTopo {
+    from {
+      margin-top: 0%;
+      opacity: 0;
+    }
+    70% {
+      opacity: 0.7;
+    }
+    to {
+      margin-top: 30%;
+      opacity: 1;
+    }
+  }
+
 .home-title-wrapper-hide {
-    opacity: 0;
-    transition: all 0.3s ease-in-out;
+    animation: slideInFromTopo 0.4s ease-out forwards;
 }
 
 .home-title-wrapper-show {
-    opacity: 1;
-    transition: all 0.3s ease-in-out;
+    animation: slideInFromBottom 0.4s ease-out forwards;
 }
 
 .home-title {
@@ -198,7 +210,7 @@
 
     .home-title-wrapper {
         gap: 15px;
-        margin-top: 0;
+        margin-top: 20px;
         padding-top: 30px;
     }
 
@@ -218,10 +230,10 @@
         height: 100%;
     }
 
-    .home-hero-image>img {
+    .home-hero-image {
         height: 460px;
     }
-    .home-hero-image>img {
+    .home-hero-image {
         filter: unset;
     }
 

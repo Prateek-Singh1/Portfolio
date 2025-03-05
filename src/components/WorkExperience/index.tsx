@@ -64,7 +64,7 @@ const WorkExperience: React.FunctionComponent = () => {
                     </div>
                     <div className="experience-info-seperator">
                       <a href={work.link} target="_blank" className="experience-info-dot">
-                        <img src={work.icon} />
+                        <img src={work.icon} alt="work-icon"/>
                       </a>
                     </div>
                   </div>

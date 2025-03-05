@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, lazy } from "react";
 import "./Home.css";
 import {
   CoatsSvg,
@@ -8,9 +8,9 @@ import {
   Star,
 } from "../../assets/svg/svg";
 import heroImage from "../../assets/images/hero-image.png";
-import Typewriter from "typewriter-effect";
 import Button from "../../common/Button";
 import { scrollToSection } from "../../commonFunction";
+const Typewriter = lazy(() => import ("typewriter-effect"));
 
 const Home: React.FunctionComponent = () => {
   const [showImageBackDrop, setShowImageBackDrop] = useState(false);
@@ -76,7 +76,7 @@ const Home: React.FunctionComponent = () => {
               <HelloSvg />
             </div>
           </div>
-            <div className="home-title my-10px">
+            <div className="home-title">
               I’m <span>Prateek</span>,
             </div>
             <div className="home-title">

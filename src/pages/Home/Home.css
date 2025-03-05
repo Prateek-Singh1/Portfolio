@@ -19,6 +19,7 @@
     align-items: center;
     gap: 60px;
     justify-content: space-between;
+    margin-top: 50px;
 }
 
 .home-hero-container {
@@ -94,8 +95,10 @@
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    margin-top: 50px;
     gap: 5px;
+}
+
+.home-text-bounce{
     --bounce-distance: -15px;
     animation: moveUpDownInfinity 5s ease-in-out infinite;
 }
@@ -103,14 +106,14 @@
 @keyframes slideInFromTopo {
     from {
       margin-top: 0%;
-      opacity: 0;
+      opacity: 1;
     }
     70% {
       opacity: 0.7;
     }
     to {
       margin-top: 30%;
-      opacity: 1;
+      opacity: 0;
     }
   }
 
@@ -129,6 +132,7 @@
     font-weight: 600;
     line-height: 100%;
     letter-spacing: -1.433px;
+    margin: 3px 0px;
 }
 
 .home-title>span {
@@ -210,8 +214,6 @@
 
     .home-title-wrapper {
         gap: 15px;
-        margin-top: 20px;
-        padding-top: 30px;
     }
 
     .home-hello-title {

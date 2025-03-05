@@ -69,27 +69,29 @@ const Home: React.FunctionComponent = () => {
               : "home-title-wrapper-show"
           }`}
         >
-          <div className="home-hello-title">
+          <div className="flex justify-center items-center flex-col home-text-bounce">
+          <div className="home-hello-title w-fit">
             <p>Hello!</p>
             <div>
               <HelloSvg />
             </div>
           </div>
-          <div className="home-title">
-            I’m <span>Prateek</span>,
-          </div>
-          <div className="home-title">
-            <Typewriter
-              options={{
-                strings: [
-                  "Frontend Developer",
-                  "UI Developer",
-                  "Web Developer",
-                ],
-                autoStart: true,
-                loop: true,
-              }}
-            />
+            <div className="home-title my-10px">
+              I’m <span>Prateek</span>,
+            </div>
+            <div className="home-title">
+              <Typewriter
+                options={{
+                  strings: [
+                    "Frontend Developer",
+                    "UI Developer",
+                    "Web Developer",
+                  ],
+                  autoStart: true,
+                  loop: true,
+                }}
+              />
+            </div>
           </div>
         </div>
         <div

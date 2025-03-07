@@ -16,7 +16,7 @@
     background: #171717;
     backdrop-filter: blur(7.5px);
     color: white;
-    gap: 10px;
+    gap: 40px;
     font-size: 15px;
     font-weight: 500;
     line-height: normal;
@@ -90,6 +90,12 @@
 }
 
 @media screen and (max-width: 768px) {
+    .header-btn{
+        padding: 8px 15px;
+    }
+    .smaller-header{
+        height: 50px;
+    }
     .mobile-header-wrapper-start {
         display: flex;
     }
@@ -100,10 +106,6 @@
 
     .header-mobile {
         display: flex;
-    }
-
-    .header-container {
-        height: 50px;
     }
 
     .mobile-header-wrapper-start {
@@ -163,8 +165,6 @@
     }
 }
 
-@media screen and ( max-width: 500px ) {
-    .header-btn{
-        padding: 12px 25px;
-    }
+@media screen and ( max-width: 600px ) {
+    
 }

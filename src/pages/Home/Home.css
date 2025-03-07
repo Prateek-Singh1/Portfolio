@@ -159,7 +159,7 @@
 }
 
 .home-about {
-    width: 300px;
+    width: 220px;
 
     animation: slideInFromLeft 1.5s ease-out forwards;
 
@@ -175,7 +175,7 @@
 }
 
 .home-experience {
-    width: 300px;
+    width: 250px;
     text-align: end;
 
     animation: slideInFromRightBottom 1.5s ease-out forwards;

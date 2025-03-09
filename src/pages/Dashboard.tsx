@@ -1,4 +1,5 @@
-import React, { useState, useEffect, useRef, lazy, Suspense } from "react";
+import React, { useState, useEffect, lazy, Suspense } from "react";
+import { useInView } from "react-intersection-observer";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
@@ -15,38 +16,22 @@ const Dashboard: React.FunctionComponent = () => {
   const [activeComponent, setActiveComponent] = useState<string>("");
 
   const sections = {
-    Home: useRef<HTMLDivElement>(null),
-    About: useRef<HTMLDivElement>(null),
-    Work: useRef<HTMLDivElement>(null),
-    Resume: useRef<HTMLDivElement>(null),
-    Blogs: useRef<HTMLDivElement>(null),
-    Contact: useRef<HTMLDivElement>(null),
+    Home: useInView({ threshold: 0.5 }),
+    About: useInView({ threshold: 0.5 }),
+    Work: useInView({ threshold: 0.5 }),
+    Resume: useInView({ threshold: 0.5 }),
+    Blogs: useInView({ threshold: 0.5 }),
+    Contact: useInView({ threshold: 0.5 }),
   };
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        const visibleSection = entries.find((entry) => entry.isIntersecting);
-        
-        if (visibleSection) {
-          setActiveComponent(
-            visibleSection.target.getAttribute("data-section") || ""
-          );
-        }
-      },
-      { threshold: 0.5 }
-    );
-
-    Object.values(sections).forEach((sectionRef) => {
-      if (sectionRef.current) observer.observe(sectionRef.current);
-    });
-
-    return () => {
-      Object.values(sections).forEach((sectionRef) => {
-        if (sectionRef.current) observer.unobserve(sectionRef.current);
-      });
-    };
-  }, []);
+    for (const [key, { inView }] of Object.entries(sections)) {
+      if (inView) {
+        setActiveComponent(key);
+        break;
+      }
+    }
+  }, [sections]);
 
   return (
     <>
@@ -54,26 +39,22 @@ const Dashboard: React.FunctionComponent = () => {
         <div className="home-header">
           <Header activeSection={activeComponent} />
         </div>
-        <div
-          ref={sections.Home}
-          data-section="Home"
-          className="home-main-screen"
-        >
+        <div ref={sections.Home.ref} className="home-main-screen">
           <Home />
         </div>
-        <div ref={sections.About} data-section="About">
+        <div ref={sections.About.ref} >
           <About />
         </div>
-        <div ref={sections.Work} data-section="Work">
+        <div ref={sections.Work.ref}>
           <WorkExperience />
         </div>
-        <div ref={sections.Resume} data-section="Resume">
+        <div ref={sections.Resume.ref}>
           <Resume />
         </div>
-        <div ref={sections.Blogs} data-section="Blogs">
+        <div ref={sections.Blogs.ref}>
           <Blogs />
         </div>
-        <div ref={sections.Contact} data-section="Contact">
+        <div ref={sections.Contact.ref}>
           <Contact />
         </div>
         <Footer />

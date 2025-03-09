@@ -4,6 +4,7 @@ import { Experience } from "../../constants";
 import { PageHeadings } from "../../common/GenericeFunction";
 import Button from "../../common/Button";
 import ScrollAnimation from "../../common/ScrollAnimation";
+import HtmlReactParser from 'html-react-parser';
 
 const WorkExperience: React.FunctionComponent = () => {
   const [showExperience, setShowExperience] = useState(false);
@@ -49,9 +50,9 @@ const WorkExperience: React.FunctionComponent = () => {
                         </p>
                         <p className="experience-date">{work.date}</p>
                       </div>
-                      <p
-                        dangerouslySetInnerHTML={{ __html: work.description }}
-                      />
+                      <p>
+                        {HtmlReactParser(work.description)}
+                        </p>
                     </div>
                     <div className="experience-info-right">
                       <div className="experience-info-container">

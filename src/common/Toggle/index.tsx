@@ -11,6 +11,7 @@ const Toggle: React.FunctionComponent<ToggleProps> = ({ isChecked = false, onCha
     return (
         <label className="switch">
             <input
+                aria-label='Check Box'
                 type="checkbox"
                 checked={isChecked}
                 onChange={onChange}

@@ -15,11 +15,12 @@ const FooterLink: React.FunctionComponent<FooterLinkProps> = ({ section, offset 
 
 interface ExternalLinkProps {
     href: string;
+    title: string;
     children: React.ReactNode;
 }
 
-const ExternalLink: React.FunctionComponent<ExternalLinkProps> = ({ href, children }) => (
-    <a href={href} target='_blank' rel='noopener noreferrer'>
+const SocialLinks: React.FunctionComponent<ExternalLinkProps> = ({ href, children , title}) => (
+    <a href={href} target='_blank' aria-label={title} rel='noopener noreferrer'>
         {children}
     </a>
 );
@@ -43,12 +44,12 @@ const Footer: React.FunctionComponent = () => {
                     <FooterLink section='Contact'>Contact</FooterLink>
                 </div>
                 <div className='footer-social'>
-                    <ExternalLink href='https://www.linkedin.com/in/prateek-singh-36b38a186'>
+                    <SocialLinks href='https://www.linkedin.com/in/prateek-singh-36b38a186' title='Linkedin'>
                         <Linkedin />
-                    </ExternalLink>
-                    <ExternalLink href='https://github.com/Prateek-Singh1'>
+                    </SocialLinks>
+                    <SocialLinks href='https://github.com/Prateek-Singh1' title='GitHub'>
                         <GitHub />
-                    </ExternalLink>
+                    </SocialLinks>
                 </div>
                 <div className='footer-reserved'>© {new Date().getFullYear()} <span>Prateek</span> All Rights Reserved, Inc.</div>
             </div>

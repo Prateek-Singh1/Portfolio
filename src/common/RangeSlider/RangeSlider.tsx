@@ -48,16 +48,17 @@ const RangeSlider: React.FC<RangeSliderProps> = ({
       </div>
       <div className="relative w-full">
         <div>
-          <input
-            type="range"
-            min={min}
-            max={percentage}
-            step={step}
-            value={animatedValue}
-            style={{ width: `${percentage}%` }}
-            className="w-full range-slider"
-            readOnly
-          />
+            <input
+              aria-label="Range slider"
+              type="range"
+              min={min}
+              max={percentage}
+              step={step}
+              value={animatedValue}
+              style={{ width: `${percentage}%` }}
+              className="w-full range-slider"
+              readOnly
+            />
         </div>
       </div>
     </>

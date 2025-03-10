@@ -25,14 +25,15 @@ const ColorPicker: React.FC = () => {
       <div className="color-picker-icon" style={{ position: "absolute" }}>
         <ColorIcon />
       </div>
-      <input
-        className="color-picker-container"
-        style={{ opacity: 0 }}
-        type="color"
-        id="colorPicker"
-        value={color}
-        onChange={handleColorChange}
-      />
+        <input
+          aria-label="Color Picker"
+          className="color-picker-container"
+          style={{ opacity: 0 }}
+          type="color"
+          id="colorPicker"
+          value={color}
+          onChange={handleColorChange}
+        />
     </section>
   );
 };

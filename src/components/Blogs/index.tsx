@@ -33,9 +33,9 @@ const Blogs: React.FunctionComponent = () => {
           />
           <div className="blog-list-toggle-container">
             <div className="mb-4 border-b border-gray-200 dark:border-gray-700">
-              <ul className="flex flex-wrap -mb-px text-sm font-medium text-center gap-[20px]">
+              <div className="flex flex-wrap -mb-px text-sm font-medium text-center gap-[20px]">
                 {["all", "reward", "blog"].map((tab) => (
-                  <li key={tab} className="" role="presentation">
+                  <div key={tab} className="" role="presentation">
                     <button
                       className={`zm:text-[15px] md:text-[20px] font-medium cursor-pointer inline-block p-4 rounded-t-lg ${
                         selectedTab === tab
@@ -56,9 +56,9 @@ const Blogs: React.FunctionComponent = () => {
                         ? "All"
                         : tab.charAt(0).toUpperCase() + tab.slice(1)}
                     </button>
-                  </li>
+                  </div>
                 ))}
-              </ul>
+              </div>
             </div>
 
             <div className="blog-list-container">

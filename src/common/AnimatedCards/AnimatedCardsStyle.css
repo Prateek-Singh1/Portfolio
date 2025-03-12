@@ -1,0 +1,81 @@
+/* From Uiverse.io by ayman-ashine */ 
+.animated-card-wrapper {
+    width: 100%;
+    max-width: 450px;
+    height: 285px;
+    background: #313131;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    transition: 0.2s ease-in-out;
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .img {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    transition: 0.2s ease-in-out;
+    z-index: 1;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  .animated-card-textBox {
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: end;
+    width: 100%;
+    height: 100%;
+    gap: 10px;
+    padding: 25px;
+    z-index: 5;
+    transition: 0.2s ease-in-out;
+    background: rgb(2,0,36);
+    background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(0,0,0,0.8140523787640056) 60%, rgba(0,212,255,0) 100%); 
+    border-radius: 10px;
+  }
+  
+  .animated-card-textBox > .title {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .animated-card-textBox > .price {
+    font-size: 1em;
+    font-weight: bold;
+  }
+  
+  .animated-card-textBox > .discription {
+    font-size: 10px;
+    color: lightgrey;
+    font-weight: light;
+    line-height: 14px;
+  }
+  
+  .animated-card-wrapper:hover > .animated-card-textBox {
+    opacity: 1;
+    gap: 10px;
+  }
+  
+  .animated-card-wrapper:hover > .img {
+    /* filter: blur(1px); */
+    animation: anim 2s infinite ease-in-out;
+  }
+  
+  @keyframes anim {
+    50% {
+      transform: translateY(-5%) rotate(5deg);
+    }
+  }
+  
+  .animated-card-wrapper:hover {
+    transform: scale(1.04);
+  }
+  

@@ -15,7 +15,7 @@ const HoverCards: React.FC<HoverCardsProps> = ({
 
   return (
     <div
-      className={`relative overflow-hidden rounded-lg shadow-md transition-all duration-500 border-1 border-[#E7E7E7] group ${
+      className={`relative overflow-hidden rounded-lg shadow-md transition-all duration-500 border-1 border-[#E7E7E7] bg-white group ${
         isHovered ? "shadow-xl transform -translate-y-1" : ""
       }`}
       onMouseEnter={() => setIsHovered(true)}

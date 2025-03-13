@@ -1,5 +1,6 @@
 import { Call, Email, Location } from "../assets/svg/svg"
 import SEOImage from '../assets/images/seo-hero-image.png'
+import { Code, Cpu, Layout, OpenBook, Profile, Search } from "../assets/svg/icons"
 
 export const TechIcon = [
     {
@@ -146,3 +147,37 @@ export const GetBlogs = [
         link: 'https://res.cloudinary.com/dpyrylw7s/image/upload/v1706883707/Blogs/award-two_ihrf7l.jpg',
     },
 ]
+
+export const AboutMe = [
+    {
+      skill: "Responsive & User-Centric Design",
+      description: "Develops pixel-perfect, accessible, and high-performance UIs that provide seamless user experiences across all devices.",
+      icon: Layout,
+    },
+    {
+      skill: "Clean, Efficient, and Scalable Code",
+      description: "Writes modular, reusable, and optimized code following industry best practices to ensure maintainability and scalability.",
+      icon: Code,
+    },
+    {
+      skill: "Advanced Debugging & Problem-Solving",
+      description: "Effectively identifies, troubleshoots, and resolves complex frontend issues, optimizing performance and user experience.",
+      icon: Cpu,
+    },
+    {
+      skill: "SEO-Friendly Development",
+      description: "Implements SEO best practices, including semantic HTML, structured data, and performance optimizations to improve search visibility.",
+      icon: Search,
+    },
+    {
+      skill: "Strong Collaboration & Communication",
+      description: "Works seamlessly within cross-functional teams, translating business needs into elegant frontend solutions while ensuring clear communication.",
+      icon: Profile,
+    },
+    {
+      skill: "Continuous Learning & Technology Adaptation",
+      description: "Stays ahead of industry trends, rapidly adapting to new frameworks, tools, and best practices to enhance development workflows.",
+      icon: OpenBook,
+    },
+  ];
+  

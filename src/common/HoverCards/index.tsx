@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 
 interface HoverCardsProps {
-  skill: string;
+  title: string;
   description: string;
   icon: React.ElementType;
 }
 
 const HoverCards: React.FC<HoverCardsProps> = ({
-  skill,
+  title,
   description,
   icon: Icon,
 }) => {
@@ -37,10 +37,10 @@ const HoverCards: React.FC<HoverCardsProps> = ({
           }`}
         >
           <Icon size={20} className="mr-2" />
-          <h3 className="font-bold text-[12px] md:text-sm">{skill}</h3>
+          <h3 className="font-bold text-[13px]">{title}</h3>
         </div>
         <p
-          className={`text-xs transition-colors duration-500 ${
+          className={`text-[13px] transition-colors duration-500 ${
             isHovered ? "text-white" : "text-gray-600"
           }`}
         >

@@ -42,7 +42,7 @@ const About: React.FunctionComponent = () => {
               {AboutMe.map((item, index) => (
                 <HoverCards
                   key={index}
-                  skill={item.skill}
+                  title={item.skill}
                   description={item.description}
                   icon={item.icon}
                 />

@@ -3,7 +3,7 @@ import "./Style.css";
 import { ColorIcon } from "../../assets/svg/svg";
 
 const ColorPicker: React.FC = () => {
-  const savedColor = localStorage.getItem("primaryColor") || "#f76b14";
+  const savedColor = localStorage.getItem("primaryColor") || "#ff5200";
   const [color, setColor] = useState(savedColor);
 
   const handleColorChange = (event: React.ChangeEvent<HTMLInputElement>) => {

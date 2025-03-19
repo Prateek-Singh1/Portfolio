@@ -132,7 +132,7 @@ const Header: React.FunctionComponent<HeaderProps> = ({ activeSection }) => {
                 className={`header-btn ${
                   selectedButton === "Contact" ? "header-btn-selected" : ""
                 }`}
-                onClick={() => handleButtonClick("Contact", 0)}
+                onClick={() => handleButtonClick("Contact", -90)}
               >
                 Contact
               </div>

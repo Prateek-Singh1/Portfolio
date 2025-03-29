@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import Debouncing from "../../../playground/uiComponents/Debouncing";
 import InfiniteScrolling from "../../../playground/uiComponents/InfiniteScrolling";
@@ -24,6 +24,10 @@ const MainContainer = () => {
 
   const SelectedComponent =
     componentMap[componentName || ""] || (() => <p>Component Not Found</p>);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [componentName]);
 
   return (
     <section id="main-container">

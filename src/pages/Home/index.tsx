@@ -143,9 +143,11 @@ const Home: React.FunctionComponent = () => {
         />
       </div>
       <img
+        loading="lazy"
+        width="316"
+        height="500"
         src={heroImage}
         className="home-hero-image"
-        loading="lazy"
         alt="Hero Image"
         onMouseEnter={onMouseEnterImage}
         onMouseLeave={onMouseLeaveImage}

@@ -64,7 +64,7 @@ const WorkExperience: React.FunctionComponent = () => {
                         target="_blank"
                         className="experience-info-dot"
                       >
-                        <img src={work.icon} alt="work-icon" />
+                        <img loading="lazy" width="35" height="20" src={work.icon} alt="work-icon" />
                       </a>
                     </div>
                   </div>

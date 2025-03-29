@@ -20,7 +20,7 @@ const AnimatedCard: React.FC<AnimatedCardProps> = ({
   return (
     <>
       <section id="animated-card" className="animated-card-wrapper">
-        <img className="img" src={image} alt={title}/>
+        <img loading="lazy" width="345" height="285" className="img" src={image} alt={title}/>
         <div className="animated-card-textBox">
           <p className="title">{title}</p>
           <p className="description">{description}</p>

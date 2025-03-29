@@ -23,6 +23,9 @@ const Cards: React.FunctionComponent<CardsProps> = ({
     <div className="relative w-[inherit] bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-[#181818] dark:border-[#383737] group">
       <div className="overflow-hidden rounded-t-lg">
         <img
+          loading="lazy"
+          width="345"
+          height="175"
           className="rounded-t-lg transform transition-transform duration-300 group-hover:scale-110"
           src={image}
           alt="Blog Cover"

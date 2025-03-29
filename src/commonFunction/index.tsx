@@ -36,7 +36,7 @@ export const LogoMain: React.FC<LogoProps> = ({ onClick }) => {
   const getRoute = window.location.href.includes("/components");
   
   return (
-    <div className="logo-head" onClick={() => onClick("Home", -140)}>
+    <div className="logo-head" onClick={() => onClick?.("Home", -140)}>
       <div className="header-title-container">
         <div className="header-logo text-white">P</div>
         <b className={`text-[18px] font-[600] hidden lg:block ${getRoute ? 'text-[#321a50]' : 'text-white'} dark:text-white`}>Singh</b>

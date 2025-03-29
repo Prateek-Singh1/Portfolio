@@ -52,7 +52,7 @@ const MainContainer = () => {
                 Code
               </div>
               <code className="code-base w-full text-black dark:text-white bg-[#f9fafb;] dark:bg-[#1c2029] px-5 py-5 overflow-x-scroll">
-                <SyntaxHighlighter language="jsx" style="">
+                <SyntaxHighlighter language="jsx" style={{}}>
                   {data?.codeSnippet}
                 </SyntaxHighlighter>
               </code>

@@ -1,11 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Cards.css";
 import Button from "../Button";
 
 interface CardsProps {
   image?: string;
   title?: string;
-  type?: string;
   btnText?: string;
   description?: string;
   onClick?: () => void;
@@ -15,7 +14,6 @@ interface CardsProps {
 const Cards: React.FunctionComponent<CardsProps> = ({
   image,
   title = "Noteworthy technology acquisitions 2021",
-  type,
   description = "Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.",
   onClick,
   btn = true,

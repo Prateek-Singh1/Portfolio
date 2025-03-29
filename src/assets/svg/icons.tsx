@@ -15,16 +15,16 @@ export const Layout = () => {
       <g
         id="Page-1"
         fill="none"
-        fill-rule="evenodd"
+        fillRule="evenodd"
         stroke="none"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        stroke-width="1"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="1"
       >
         <g
           id="Artboard"
           stroke="var(--primary-color)"
-          stroke-width="2"
+          strokeWidth="2"
           transform="translate(-1746 -1691)"
           className={onHoverStrokeColor}
         >
@@ -81,9 +81,9 @@ export const Cpu = () => {
         y="100"
         fill="none"
         stroke="var(--primary-color)"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        stroke-width="24"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="24"
         className={onHoverStrokeColor}
       ></rect>
       <rect
@@ -93,9 +93,9 @@ export const Cpu = () => {
         y="48"
         fill="none"
         stroke="var(--primary-color)"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        stroke-width="24"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="24"
         rx="8"
         className={onHoverStrokeColor}
       ></rect>
@@ -106,9 +106,9 @@ export const Cpu = () => {
         y2="104"
         fill="none"
         stroke="var(--primary-color)"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        stroke-width="24"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="24"
         className={onHoverStrokeColor}
       ></line>
       <line
@@ -118,9 +118,9 @@ export const Cpu = () => {
         y2="152"
         fill="none"
         stroke="var(--primary-color)"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        stroke-width="24"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="24"
         className={onHoverStrokeColor}
       ></line>
       <line
@@ -130,9 +130,9 @@ export const Cpu = () => {
         y2="104"
         fill="none"
         stroke="var(--primary-color)"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        stroke-width="24"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="24"
         className={onHoverStrokeColor}
       ></line>
       <line
@@ -142,9 +142,9 @@ export const Cpu = () => {
         y2="152"
         fill="none"
         stroke="var(--primary-color)"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        stroke-width="24"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="24"
         className={onHoverStrokeColor}
       ></line>
       <line
@@ -154,9 +154,9 @@ export const Cpu = () => {
         y2="232"
         fill="none"
         stroke="var(--primary-color)"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        stroke-width="24"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="24"
         className={onHoverStrokeColor}
       ></line>
       <line
@@ -166,9 +166,9 @@ export const Cpu = () => {
         y2="232"
         fill="none"
         stroke="var(--primary-color)"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        stroke-width="24"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="24"
         className={onHoverStrokeColor}
       ></line>
       <line
@@ -178,9 +178,9 @@ export const Cpu = () => {
         y2="48"
         fill="none"
         stroke="var(--primary-color)"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        stroke-width="24"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="24"
         className={onHoverStrokeColor}
       ></line>
       <line
@@ -190,9 +190,9 @@ export const Cpu = () => {
         y2="48"
         fill="none"
         stroke="var(--primary-color)"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        stroke-width="24"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="24"
         className={onHoverStrokeColor}
       ></line>
     </svg>
@@ -215,9 +215,9 @@ export const Profile = () => {
       ></path>
       <path
         fill="var(--primary-color)"
-        fill-rule="evenodd"
+        fillRule="evenodd"
         d="M7 14.75A3.25 3.25 0 0 0 3.75 18v2a.75.75 0 0 1-1.5 0v-2A4.75 4.75 0 0 1 7 13.25h6A4.75 4.75 0 0 1 17.75 18v2a.75.75 0 0 1-1.5 0v-2A3.25 3.25 0 0 0 13 14.75H7Z"
-        clip-rule="evenodd"
+        clipRule="evenodd"
         className={onHoverFillColor}
       ></path>
       <path
@@ -227,9 +227,9 @@ export const Profile = () => {
       ></path>
       <path
         fill="var(--primary-color)"
-        fill-rule="evenodd"
+        fillRule="evenodd"
         d="M10 9.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Zm0 1.5a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z"
-        clip-rule="evenodd"
+        clipRule="evenodd"
         className={onHoverFillColor}
       ></path>
     </svg>
@@ -268,9 +268,27 @@ export const Search = () => {
       height="20"
       viewBox="0 0 50 50"
     >
-      <path d="M 21 3 C 11.6 3 4 10.6 4 20 C 4 29.4 11.6 37 21 37 C 24.354553 37 27.47104 36.01984 30.103516 34.347656 L 42.378906 46.621094 L 46.621094 42.378906 L 34.523438 30.279297 C 36.695733 27.423994 38 23.870646 38 20 C 38 10.6 30.4 3 21 3 z M 21 7 C 28.2 7 34 12.8 34 20 C 34 27.2 28.2 33 21 33 C 13.8 33 8 27.2 8 20 C 8 12.8 13.8 7 21 7 z"
-      className={onHoverFillColor}
+      <path
+        d="M 21 3 C 11.6 3 4 10.6 4 20 C 4 29.4 11.6 37 21 37 C 24.354553 37 27.47104 36.01984 30.103516 34.347656 L 42.378906 46.621094 L 46.621094 42.378906 L 34.523438 30.279297 C 36.695733 27.423994 38 23.870646 38 20 C 38 10.6 30.4 3 21 3 z M 21 7 C 28.2 7 34 12.8 34 20 C 34 27.2 28.2 33 21 33 C 13.8 33 8 27.2 8 20 C 8 12.8 13.8 7 21 7 z"
+        className={onHoverFillColor}
       ></path>
+    </svg>
+  );
+};
+
+export const SearchBarIcon = () => {
+  return (
+    <svg
+      className="w-5 h-5 text-gray-500 dark:text-gray-400"
+      fill="currentColor"
+      viewBox="0 0 20 20"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        fillRule="evenodd"
+        clipRule="evenodd"
+        d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+      />
     </svg>
   );
 };

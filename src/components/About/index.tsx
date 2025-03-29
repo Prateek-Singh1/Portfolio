@@ -65,7 +65,7 @@ const About: React.FunctionComponent = () => {
             </div>
           </div>
           <div className="about-tech">
-            <div className="about-tech-title">Tech Stack</div>
+            <div className="about-tech-title text-[#2d2e32] dark:text-white border-r-[2px] border-r-rgba(45, 46, 50, 0.5) dark:border-r-white">Tech Stack</div>
             <div className="tech-icon-container">
               {TechIcon.map((item, index) => (
                 <a

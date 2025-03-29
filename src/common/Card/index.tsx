@@ -1,44 +1,58 @@
-import React, { useState } from 'react';
-import './Cards.css';
-import Button from '../Button';
+import React, { useState } from "react";
+import "./Cards.css";
+import Button from "../Button";
 
 interface CardsProps {
-    image?: string;
-    title?: string;
-    type?: string;
-    btnText?: string;
-    description?: string;
-    onClick?: () => void;
-    btn?: boolean;
+  image?: string;
+  title?: string;
+  type?: string;
+  btnText?: string;
+  description?: string;
+  onClick?: () => void;
+  btn?: boolean;
 }
 
-const Cards: React.FunctionComponent<CardsProps> = ({ image, title, type, description, onClick, btn = true, btnText }) => {
-    const [onHover, setOnHover] = useState(false);
-
-    return (
-        <div className='card-wrapper'
-            onMouseEnter={() => setOnHover(true)}
-            onMouseLeave={() => setOnHover(false)}
-            onTouchStart={() => setOnHover(true)}
-            onTouchEnd={() => setOnHover(false)}
-        >
-            <div className='card-img-container'>
-                <img loading='lazy' src={image} alt="Card" />
-            </div>
-            <div className={`card-description-container ${onHover ? 'card-description-hover p-[25px]' : 'card-description-not-hover p-[25px]'}`}>
-                <div className='card-title-container'>
-                    <p className='card-title'>{title}</p>
-                    <p className='card-date'>{type}</p>
-                </div>
-                <div className='card-description'>{description}</div>
-                {btn ?
-                    <Button svg={true} text={btnText} size='medium' color='orange' onClick={onClick} />
-                    :
-                    <></>
-                }
-            </div>
+const Cards: React.FunctionComponent<CardsProps> = ({
+  image,
+  title = "Noteworthy technology acquisitions 2021",
+  type,
+  description = "Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.",
+  onClick,
+  btn = true,
+  btnText = "Read more",
+}) => {
+  return (
+    <div className="relative w-[inherit] bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-[#181818] dark:border-[#383737] group">
+      <div className="overflow-hidden rounded-t-lg">
+        <img
+          className="rounded-t-lg transform transition-transform duration-300 group-hover:scale-110"
+          src={image}
+          alt="Blog Cover"
+        />
+      </div>
+      <div className="p-5 flex flex-col gap-[10px] dark:border-x dark:border-b dark:border-[#383737] rounded-x-lg rounded-b-lg">
+        <div>
+          <h5 className="mb-2 text-[18px] lg:text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+            {title}
+          </h5>
         </div>
-    );
+        <p className="mb-3 font-normal text-gray-700 dark:text-gray-400 custom-line-clamp">
+          {description}
+        </p>
+        {btn ? (
+          <Button
+            svg={true}
+            text={btnText}
+            size="medium"
+            color="orange"
+            onClick={onClick}
+          />
+        ) : null}
+        <div className="h-2 w-full bg-gradient-to-l group-hover:via-[var(--primary-color)] group-hover:blur-xl blur-2xl m-auto rounded transition-all absolute bottom-0"></div>
+        <div className="h-0.5 group-hover:w-full bg-gradient-to-l group-hover:via-[var(--primary-color)] w-[70%] m-auto rounded transition-all absolute bottom-[-1px] left-0"></div>
+      </div>
+    </div>
+  );
 };
 
 export default Cards;

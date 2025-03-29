@@ -71,15 +71,15 @@ const Home: React.FunctionComponent = () => {
         >
           <div className="flex justify-center items-center flex-col home-text-bounce">
           <div className="home-hello-title w-fit">
-            <p>Hello!</p>
+            <p className="text-black dark:text-white">Hello!</p>
             <div>
               <HelloSvg />
             </div>
           </div>
-            <div className="home-title">
+            <div className="home-title text-black dark:text-white">
               I’m <span>Prateek</span>,
             </div>
-            <div className="home-title">
+            <div className="home-title text-black dark:text-white">
               <Typewriter
                 options={{
                   strings: [
@@ -95,7 +95,7 @@ const Home: React.FunctionComponent = () => {
           </div>
         </div>
         <div
-          className={`home-info ${
+          className={`home-info text-#344054 dark:text-white ${
             showImageBackDrop ? "home-info-final" : "home-info-initial"
           }`}
         >
@@ -114,7 +114,7 @@ const Home: React.FunctionComponent = () => {
                 return <Star key={index} />;
               })}
             </div>
-            <div className="home-experience-title mt-[10px]">
+            <div className="home-experience-title mt-[10px] text-[#344054] dark:text-white">
               <p>
                 <span style={{ color: "var(--primary-color)" }}>
                   {timeSpent.years}&nbsp;Years

@@ -15,8 +15,8 @@ const Resume: React.FunctionComponent = () => {
                 <ScrollAnimation>
                     <div className='resume-container'>
                         <div className='resume-content'>
-                            <div className='resume-description'>
-                                <div className='resume-title'>Know More</div>
+                            <div className='resume-description text-white'>
+                                <div className='resume-title text-white'>Know More</div>
                                 <p>Explore my professional journey and qualifications by clicking the 'Resume' button. A preview popup provides a glimpse of my resume, and you can also choose to download the complete document for a detailed overview of my skills and experience.
 
                                 </p>

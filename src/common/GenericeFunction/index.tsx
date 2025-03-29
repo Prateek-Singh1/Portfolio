@@ -1,20 +1,20 @@
-// import { PageHeaderAlphabetHighlighter } from "../../assets/svg/svg"
-
 interface PageHeadingProps {
-    heading: string;
-    subHeading: string;
+  heading: string;
+  subHeading: string;
 }
 
-export const PageHeadings: React.FunctionComponent<PageHeadingProps> = ({ heading = 'Blogs', subHeading = 'Creations' }) => {
-    return (
+export const PageHeadings: React.FunctionComponent<PageHeadingProps> = ({
+  heading = "Blogs",
+  subHeading = "Creations",
+}) => {
+  return (
+    <div>
+      <p className="home-sub-title">{heading}</p>
+      <div className="page-heading-title text-[#321a50] dark:text-white">
         <div>
-            <p className='home-sub-title'>{heading}</p>
-            <div className='page-heading-title'>
-                <div>
-                    {subHeading}
-                    {/* <PageHeaderAlphabetHighlighter /> */}
-                </div>
-            </div>
+          {subHeading}
         </div>
-    )
-}
+      </div>
+    </div>
+  );
+};

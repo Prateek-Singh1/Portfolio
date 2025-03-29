@@ -10,7 +10,7 @@ const LoadingScreen: React.FunctionComponent = () => {
         <div className="loading-text">Loading...</div>
       </div>
       <div className="hidden md:block h-screen">
-        <div className="min-h-screen bg-white p-4 h-full">
+        <div className="min-h-screen bg-white p-4 h-full dark:bg-black">
           {/* Nav Skeleton */}
           <div className="flex justify-center items-center mb-12">
             <div className="hidden bg-gray-200 md:flex max-w-[1100px] w-full justify-between p-[10px] rounded-[50px] h-[66px] items-center">

@@ -4,7 +4,7 @@ import { Experience } from "../../constants";
 import { PageHeadings } from "../../common/GenericeFunction";
 import Button from "../../common/Button";
 import ScrollAnimation from "../../common/ScrollAnimation";
-import HtmlReactParser from 'html-react-parser';
+import HtmlReactParser from "html-react-parser";
 
 const WorkExperience: React.FunctionComponent = () => {
   const [showExperience, setShowExperience] = useState(false);
@@ -27,16 +27,11 @@ const WorkExperience: React.FunctionComponent = () => {
                 return (
                   <div key={index} className="experience-container">
                     <div
-                      className="experience-info-left"
-                      style={
+                      className={`experience-info-left  ${
                         index === 0
-                          ? {
-                              background: "var(--primary-color)",
-                              boxShadow:
-                                "rgba(255, 112, 36, 0.09) 0px 3px 12px",
-                            }
-                          : { color: "#321A50" }
-                      }
+                          ? "bg-[var(--primary-color)] shadow-[rgba(255, 112, 36, 0.09) 0px 3px 12px] text-white"
+                          : "text-[#321A50] dark:text-[#808080] border border-gray-200 shadow-md dark:bg-[#181818] dark:border-[#383737] dark:border-x dark:border-b "
+                      }`}
                     >
                       <div className="experience-info-container experience-mobile">
                         <p className="experience-info-title">
@@ -50,22 +45,26 @@ const WorkExperience: React.FunctionComponent = () => {
                         </p>
                         <p className="experience-date">{work.date}</p>
                       </div>
-                      <p>
-                        {HtmlReactParser(work.description)}
-                        </p>
+                      <p>{HtmlReactParser(work.description)}</p>
                     </div>
                     <div className="experience-info-right">
                       <div className="experience-info-container">
-                        <p className="experience-info-title">
+                        <p className="experience-info-title text-[#344054] dark:text-white">
                           {work.designation}
                         </p>
                         <p className="experience-designation">{work.company}</p>
-                        <p className="experience-date">{work.date}</p>
+                        <p className="experience-date text-[#344054] dark:text-white">
+                          {work.date}
+                        </p>
                       </div>
                     </div>
                     <div className="experience-info-seperator">
-                      <a href={work.link} target="_blank" className="experience-info-dot">
-                        <img src={work.icon} alt="work-icon"/>
+                      <a
+                        href={work.link}
+                        target="_blank"
+                        className="experience-info-dot"
+                      >
+                        <img src={work.icon} alt="work-icon" />
                       </a>
                     </div>
                   </div>

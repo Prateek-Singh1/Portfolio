@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./Header.css";
-import { scrollToSection } from "../../commonFunction";
+import { LogoMain, scrollToSection } from "../../commonFunction";
 import { DownloadIcon, MenuCloseIcon } from "../../assets/svg/svg";
 import Button from "../../common/Button";
 import resume from '../../assets/docs/Prateek Kumar Singh.pdf'
@@ -79,14 +79,7 @@ const Header: React.FunctionComponent<HeaderProps> = ({ activeSection }) => {
             {innerWidth >= 768 ? "Home" : "Menu"}
           </div>
           <div className="header-option-section">
-            <div
-              className="logo-head"
-              onClick={() => handleButtonClick("Home", -140)}
-            >
-              <div className="header-title-container">
-                <div className="header-logo">P</div><b className="text-[18px] font-[600] hidden lg:block">Singh</b>
-              </div>
-            </div>
+            <LogoMain onClick={() => handleButtonClick("Home", -140)}/>
             <div className="flex gap-[16px]">
               <div
                 className={`header-btn ${
@@ -113,12 +106,12 @@ const Header: React.FunctionComponent<HeaderProps> = ({ activeSection }) => {
                 Experience
               </div>
               <div
-                className={`header-resume header-btn ${
-                  selectedButton === "Resume" ? "header-btn-selected" : ""
+                className={`header-btn ${
+                  selectedButton === "Experiments" ? "header-btn-selected" : ""
                 }`}
-                onClick={() => handleButtonClick("Resume", -110)}
+                onClick={() => handleButtonClick("Experiments", 0)}
               >
-                Resume
+                Experiments
               </div>
               <div
                 className={`header-btn ${
@@ -138,7 +131,7 @@ const Header: React.FunctionComponent<HeaderProps> = ({ activeSection }) => {
               </div>
             </div>
             <div className="w-fit">
-              <Button color="" onClick={handleDownload} text="Download CV" btnType='round' svg={true} icon={<DownloadIcon/>}/>
+              <Button color="" onClick={handleDownload} text="Resume" btnType='round' svg={true} icon={<DownloadIcon/>}/>
             </div>
             <div
               className={`mobile-header-wrapper-start ${
@@ -170,8 +163,8 @@ const Header: React.FunctionComponent<HeaderProps> = ({ activeSection }) => {
         </div>
         <div onClick={() => handleButtonClick("Home", -110)}>Home</div>
         <div onClick={() => handleButtonClick("About", 0)}>About</div>
+        <div onClick={() => handleButtonClick("Experiments", 0)}>Experiments</div>
         <div onClick={() => handleButtonClick("Work", 0)}>Experience</div>
-        <div onClick={() => handleButtonClick("Resume", -110)}>Resume</div>
         <div onClick={() => handleButtonClick("Blogs", 0)}>Blogs</div>
         <div onClick={() => handleButtonClick("Contact", 0)}>Contacts</div>
       </div>

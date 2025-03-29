@@ -1,0 +1,39 @@
+.code-base > pre {
+  width: 100%;
+  background-color: transparent !important;
+}
+.token.tag {
+  color: #a800b7;
+}
+.token.punctuation {
+  color: #a2a8b4;
+}
+
+.token.attr-name {
+  color: #059669;
+}
+
+.token.attr-value {
+  color: rgb(175, 175, 1);
+}
+.token.token.template-string.string {
+  color: rgb(175, 175, 1);
+}
+.token.token.keyword{
+  color: #5da0f4;
+}
+.token.token.function{
+  color: #059669;
+}
+.token.token.keyword.control-flow{
+  color: rgb(132, 1, 65);
+}
+
+.component-details > p > ul{
+  list-style-type: disc;
+  padding-left: 16px;
+}
+
+.component-details > p > ul > li::marker {
+  color: var(--primary-color);
+}

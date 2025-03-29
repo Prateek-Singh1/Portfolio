@@ -27,8 +27,8 @@ const SocialLinks: React.FunctionComponent<ExternalLinkProps> = ({ href, childre
 
 const Footer: React.FunctionComponent = () => {
     return (
-        <section id='footer' className='footer-main'>
-            <div className='footer-wrapper'>
+        <section id='footer' className='footer-main bg-gray-200/30 dark:bg-black'>
+            <div className='footer-wrapper bg-black'>
                 <div>
                     <div className="header-title-container">
                         <div className="header-logo" style={{ color: 'white' }}>Ps</div>

@@ -1,0 +1,26 @@
+{
+  "title": "Debouncing",
+  "description": [
+    {
+      "question": "What is Debouncing?",
+      "answer": "Debouncing is a programming technique that prevents a function from being called too frequently within a short time frame. It ensures that the function executes only after a specified delay when the event is no longer being triggered repeatedly."
+    },
+    {
+      "question": "Use Case:",
+      "answer": "<ul><li>Used in search bars to prevent excessive API calls.</li><li>Improves performance by limiting repeated execution of costly operations.</li><li>Prevents unnecessary event handling in UI interactions.</li></ul>"
+    },
+    {
+      "question": "How Does Debouncing Work?",
+      "answer": "Debouncing works by setting a timer whenever an event is triggered. If the event occurs again before the timer expires, the previous timer is cleared, and a new one starts. The function executes only if no new events occur within the delay period."
+    },
+    {
+      "question": "Example:",
+      "answer": "<ul><li>A user types in a search box → A function triggers to fetch search results.</li><li>Without debouncing: The function runs on every keystroke, making too many API calls.</li><li>With debouncing: The function waits until the user stops typing for a certain period before making an API call.</li></ul>"
+    },
+    {
+      "question": "Basic Steps:",
+      "answer": "<ul><li>Wrap the function inside a debounce function.</li><li>Use setTimeout to delay execution.</li><li>Clear the previous timer when a new event occurs before the delay ends.</li><li>Execute the function only when the delay period completes without further triggers.</li></ul>"
+    }
+  ],
+  "codeSnippet": "function debounce(func, delay) {\n  let timer;\n  return function (...args) {\n    clearTimeout(timer);\n    timer = setTimeout(() => func(...args), delay);\n  };\n}\n\n// Search function with debounce\nconst handleSearchChange = debounce((query) => {\n  console.log('Fetching results for:', query.toLowerCase());\n}, 1000);"
+}

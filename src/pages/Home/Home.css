@@ -19,7 +19,7 @@
     align-items: center;
     gap: 60px;
     justify-content: space-between;
-    margin-top: 50px;
+    margin-top: 130px;
 }
 
 .home-hero-container {
@@ -28,7 +28,7 @@
 
 .home-hero-image {
     position: absolute;
-    bottom: -1px;
+    bottom: -2px;
     /* left: 16rem; */
     height: 500px;
     filter: contrast(1.2);
@@ -126,7 +126,7 @@
 }
 
 .home-title {
-    color: #000;
+    /* color: #000; */
     text-align: center;
     font-size: 65px;
     font-weight: 600;
@@ -166,7 +166,7 @@
 }
 
 .home-about>p {
-    color: #344054;
+    /* color: #344054; */
     font-size: 17px;
     font-style: normal;
     font-weight: 400;
@@ -182,7 +182,7 @@
 }
 
 .home-experience-title {
-    color: #344054;
+    /* color: #344054; */
     font-size: 30px;
     font-weight: 700;
     line-height: 100%;

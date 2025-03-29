@@ -1,0 +1,18 @@
+{
+  "title": "Infinite Scrolling",
+  "description": [
+    {
+      "question": "What is Infinite Scrolling?",
+      "answer": "Infinite scrolling is a web design pattern where more content loads automatically as the user scrolls down a page, instead of requiring pagination or manual actions like clicking 'Next'. It is widely used in social media platforms, news websites, and e-commerce applications to create a seamless user experience."
+    },
+    {
+      "question": "How Does Infinite Scrolling Work?",
+      "answer": "Infinite scrolling is typically implemented using JavaScript with event listeners on the scroll event. However, a more efficient approach is using the Intersection Observer API, which detects when an element (like a 'Load More' trigger) is visible in the viewport and then fetches additional content dynamically."
+    },
+    {
+      "question": "Basic Steps:",
+      "answer": "<ul><li>Use an Intersection Observer to detect when the user reaches the bottom.</li><li>Fetch new data asynchronously (e.g., using fetch or axios).</li><li>Append new data to the existing list or grid layout.</li><li>Repeat the process as the user continues scrolling.</li></ul>"
+    }
+  ],
+  "codeSnippet": "import React, { useState, useEffect, useRef } from 'react';\nimport axios from 'axios';\n\nconst InfiniteScroll = () => {\n  const [pokemonList, setPokemonList] = useState([]);\n  const [offset, setOffset] = useState(0);\n  const [limit] = useState(20);\n  const [loading, setLoading] = useState(false);\n  const observerRef = useRef(null);\n\n  useEffect(() => {\n    fetchPokemon();\n  }, []);\n\n  useEffect(() => {\n    const observer = new IntersectionObserver(\n      (entries) => {\n        if (entries[0].isIntersecting && !loading) {\n          fetchPokemon();\n        }\n      },\n      { threshold: 1.0 }\n    );\n    if (observerRef.current) {\n      observer.observe(observerRef.current);\n    }\n    return () => observer.disconnect();\n  }, [loading]);\n\n  const fetchPokemon = async () => {\n    if (loading) return;\n    setLoading(true);\n    try {\n      const url = `https://pokeapi.co/api/v2/pokemon?limit=${limit}&offset=${offset}`;\n      const response = await axios.get(url);\n      setPokemonList((prevList) => [...prevList, ...response.data.results]);\n      setOffset((prevOffset) => prevOffset + limit);\n    } catch (error) {\n      console.error('Error fetching Pokémon:', error);\n    } finally {\n      setLoading(false);\n    }\n  };\n\n  return (\n    <div className=\"p-4\">\n      <h2 className=\"text-xl font-bold mb-4\">Infinite Scrolling - Pokémon List</h2>\n      {pokemonList.map((pokemon, index) => (\n        <div key={index} className=\"p-3 border-b border-gray-300\">\n          <h3 className=\"font-semibold\">{pokemon.name}</h3>\n        </div>\n      ))}\n      <div ref={observerRef} className=\"h-10\" />\n      {loading && <p className=\"text-center text-gray-500\">Loading...</p>}\n    </div>\n  );\n};\n\nexport default InfiniteScroll;"
+}

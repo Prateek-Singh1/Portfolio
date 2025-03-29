@@ -40,7 +40,7 @@ const Blogs: React.FunctionComponent = () => {
                       className={`zm:text-[15px] md:text-[20px] font-medium cursor-pointer inline-block p-4 rounded-t-lg ${
                         selectedTab === tab
                           ? "border-b-2 text-white"
-                          : "hover:border-b-2 hover:text-[var(--primary-color)] hover:border-[var(--primary-color)]"
+                          : "hover:border-b-2 hover:text-[var(--primary-color)] hover:border-[var(--primary-color)] dark:text-white"
                       }`}
                       style={
                         selectedTab === tab

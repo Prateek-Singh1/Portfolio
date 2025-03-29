@@ -29,7 +29,7 @@ const PopupLayout: React.FunctionComponent<PopupLayoutProps> = ({
   return (
     <section id="popup-layout" className="popup-layout-wrapper">
       <div className="popup-layout-container">
-        <div className="popup-layout-body" ref={popupLayoutRef}>
+        <div className="popup-layout-body bg-white dark:bg-[#181818] dark:border-[#383737]" ref={popupLayoutRef}>
           <div className="popup-layout-close" onClick={onClose}>
             <CloseIcon />
           </div>

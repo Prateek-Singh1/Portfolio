@@ -14,7 +14,7 @@ interface Points {
 
 const MainContainer = () => {
   const { componentName } = useParams();
-  const url = `../../../../public/JSON/${componentName}.json`;
+  const url = `../../../../JSON/${componentName}.json`;
   const { data } = useGet(url);
 
   const componentMap: Record<string, React.FC> = {

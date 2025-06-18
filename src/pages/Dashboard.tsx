@@ -7,7 +7,7 @@ import LoadingScreen from "../common/LoadingScreen";
 const Home = lazy(() => import("./Home"));
 const About = lazy(() => import("../components/About"));
 const WorkExperience = lazy(() => import("../components/WorkExperience"));
-const Resume = lazy(() => import("../components/Resume"));
+// const Resume = lazy(() => import("../components/Resume"));
 const Blogs = lazy(() => import("../components/Blogs"));
 const Contact = lazy(() => import("../components/Contact"));
 const Tools = lazy(() => import("../common/Tools/Tools"));
@@ -50,10 +50,13 @@ const Dashboard: React.FunctionComponent = () => {
         <div ref={sections.Work.ref} className="bg-white dark:bg-black">
           <WorkExperience />
         </div>
-        <div ref={sections.Resume.ref} className="white dark:bg-black">
+        {/* <div ref={sections.Resume.ref} className="white dark:bg-black">
           <Resume />
-        </div>
-        <div ref={sections.Experiments.ref} className="bg-gray-200/30 dark:bg-black">
+        </div> */}
+        <div
+          ref={sections.Experiments.ref}
+          className="bg-gray-200/30 dark:bg-black"
+        >
           <Experiments />
         </div>
         <div ref={sections.Blogs.ref} className="bg-white dark:bg-black">

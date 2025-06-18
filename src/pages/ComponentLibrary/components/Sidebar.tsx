@@ -4,7 +4,7 @@ import {
   ComponentsIcon,
 } from "../assets/svg";
 
-export const components = ["Infinite Scrolling", "Debouncing"];
+export const components = ["Infinite Scrolling", "Debouncing", "OTP Verification"];
 
 interface SidebarProps {
   show: boolean;

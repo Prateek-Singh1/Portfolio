@@ -1,3 +1,10 @@
+interface RightTiltedArrowProps {
+  color: string;
+  className: string;
+  rotate?: string;
+}
+
+
 export const EllipseStyle = () => {
   return (
     <svg
@@ -2140,11 +2147,6 @@ export const Ellipse = () => {
   );
 };
 
-interface RightTiltedArrowProps {
-  color: string;
-  className: string;
-}
-
 export const RightTiltedArrow: React.FunctionComponent<
   RightTiltedArrowProps
 > = ({ color, className }) => {
@@ -2278,5 +2280,36 @@ export const DownloadIcon = () => {
         />
       </svg>
     </div>
+  );
+};
+
+export const DirectionArrow: React.FunctionComponent<
+  RightTiltedArrowProps
+> = ({ color, className='rotate-90', rotate='0' }) => {
+  return (
+    <svg
+      className={className}
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      transform={`rotate(${rotate})`}
+    >
+      <path
+        d="M7 17L17 7"
+        stroke={color ? color : "#25282B"}
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M7 7H17V17"
+        stroke={color ? color : "#25282B"}
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
   );
 };

@@ -157,12 +157,11 @@
 
 @media screen and (max-width: 500px) {
   .contact-container {
+    margin: 0;
     border-radius: unset;
+    box-shadow: unset;
   }
   .contact-wrapper {
     padding: 0;
-  }
-  .contact-container {
-    margin: 0;
   }
 }

@@ -131,7 +131,7 @@ const Header: React.FunctionComponent<HeaderProps> = ({ activeSection }) => {
               </div>
             </div>
             <div className="w-fit">
-              <Button color="" onClick={handleDownload} text="Resume" btnType='round' svg={true} icon={<DownloadIcon/>}/>
+              <Button color="" onClick={handleDownload} text="Resume" btnType='round' svg={true} icon={<DownloadIcon/>} style={{paddingRight: '0px'}}/>
             </div>
             <div
               className={`mobile-header-wrapper-start ${

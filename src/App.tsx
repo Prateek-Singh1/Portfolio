@@ -7,6 +7,7 @@ import InfiniteScrolling from './playground/uiComponents/InfiniteScrolling';
 import Debouncing from './playground/uiComponents/Debouncing';
 import ComponentLibrary from './pages/ComponentLibrary';
 import PageNotFound from './components/PageNotFound/indisx';
+import OTPVerification from './playground/uiComponents/OTPVerification';
 
 
 const App: React.FunctionComponent = () => {
@@ -22,6 +23,7 @@ const App: React.FunctionComponent = () => {
           
           <Route path='/infinite-scrolling' element={<InfiniteScrolling />} />
           <Route path='/debouncing' element={<Debouncing />} />
+          <Route path='/otp-verification' element={<OTPVerification />} />
 
           <Route path='*' element={<PageNotFound />} />
         </Routes>

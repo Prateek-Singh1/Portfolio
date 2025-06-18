@@ -1,0 +1,17 @@
+{
+  "title": "OTP Verification",
+  "description": [
+    {
+      "question": "What is OTP Verification?",
+      "answer": "OTP (One-Time Password) Verification is a security process where a temporary code is sent to the user's phone or email to verify their identity. In a React component, this typically involves handling user input, validating the code, and interacting with a backend API for confirmation."
+    },
+    {
+      "question": "How Does OTP Verification Work in a React Component?",
+      "answer": "The component renders multiple input fields for each OTP digit, tracks the input state, and provides features like automatic cursor focus, a timer for expiration, resend functionality, and automatic form submission when the last digit is entered."
+    },
+    {
+      "question": "Basic Steps:",
+      "answer": "<ul><li>Render OTP input fields, typically 4–6 digits.</li><li>Use <code>useState</code> or similar to manage input values.</li><li>Automatically move focus to the next field as the user types.</li><li>When the last digit is entered, automatically trigger OTP submission without requiring a manual button click.</li><li>Validate the OTP via an API call and handle success or failure.</li><li>Implement resend functionality with a countdown timer to prevent spam requests.</li><li>Display feedback such as 'OTP expired', 'Invalid code', or 'Verification successful'.</li></ul>"
+    }
+  ]
+}

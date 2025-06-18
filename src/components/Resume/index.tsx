@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
 import './Resume.css'
-import Button from '../../common/Button'
+// import Button from '../../common/Button'
 import ResumePopup from './components/ResumePopup';
 import ScrollAnimation from '../../common/ScrollAnimation';
+import AnimatedButton from '../../common/Button/AnimatedButton';
 
 const Resume: React.FunctionComponent = () => {
     const [isResumePopupOpen, setIsResumePopupOpen] = useState(false);
@@ -23,7 +24,8 @@ const Resume: React.FunctionComponent = () => {
 
                             </div>
                             <div className='resume-btn'>
-                                <Button text='Resume' color='white' size='large' onClick={openResumeOption} />
+                                {/* <Button text='Resume' color='white' size='large' onClick={openResumeOption} /> */}
+                                <AnimatedButton text='Resume' onClick={openResumeOption}/>
                             </div>
                         </div>
                     </div>

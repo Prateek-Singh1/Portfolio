@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import ScrollAnimation from "../../common/ScrollAnimation";
 import { PageHeadings } from "../../common/GenericeFunction";
 import Cards from "../../common/Card";
+import CardSlider from "../../common/CardsCarousel";
 
 export const getProduct = [
   {
@@ -22,10 +23,12 @@ export const getProduct = [
       "https://res.cloudinary.com/dpyrylw7s/image/upload/v1743262863/gif/debouncing.gif",
   },
   {
-    title: "More to Come",
+    title: "OTP Verification",
     description:
-      "Stay tuned for more exciting features and components coming soon!",
-    path: "coming-soon",
+      "OTP (One-Time Password) Verification is a security process where a temporary code is sent to the user's phone or email to verify their identity. In a React component, this typically involves handling user input, validating the code, and interacting with a backend API for confirmation.",
+    path: "otp-verification",
+    image:
+      "https://res.cloudinary.com/dpyrylw7s/image/upload/v1746348046/gif/otp-verification.gif",
   },
 ];
 
@@ -45,13 +48,13 @@ const Experiments: React.FC = () => {
         <ScrollAnimation>
           <div className="w-full flex items-center justify-center flex-col gap-[50px] md:gap-[70px]">
             <PageHeadings heading="Experiments" subHeading="Components" />
-            <div className="flex w-full max-w-[1100px] md:grid gap-[20px] sm:gap-4 md:gap-[25px] md:grid-cols-3 grid-cols-2 overflow-x-scroll overflow-y-hidden md:overflow-auto">
-              {getProduct.map((item, index) => (
-                <div
-                  key={index}
-                  className="h-auto object-fit md:w-full w-[250px]"
-                >
-                  {item.path !== "coming-soon" ? (
+            <div className="flex w-full max-w-[1100px] md:gri gap-[20px] sm:gap-4 md:gap-[25px] md:grid-cols-3 grid-cols-2 pb-[5px]">
+              <CardSlider cardData={getProduct}>
+                {getProduct.map((item, index) => (
+                  <div
+                    key={index}
+                    className="h-auto object-fit md:w-full w-full mx-[10px]"
+                  >
                     <Cards
                       image={item.image}
                       btnText="Explore"
@@ -59,34 +62,14 @@ const Experiments: React.FC = () => {
                       description={item.description}
                       onClick={() => handleCardClick(item.path)}
                     />
-                  ) : (
-                    <SkeletonLoader />
-                  )}
-                </div>
-              ))}
+                  </div>
+                ))}
+              </CardSlider>
             </div>
           </div>
         </ScrollAnimation>
       </section>
     </>
-  );
-};
-
-export const SkeletonLoader = () => {
-  return (
-    <div className="relative w-[inherit] h-full border-gray-200 rounded-lg border-1 dark:border-[#383737] group">
-      <div className="w-full h-full shadow-lg rounded-lg overflow-hidden animate-pulse">
-        <div className="w-full h-full flex items-center justify-center">
-          <div className="text-center">
-            <h2 className="text-2xl font-bold text-gray-600 mb-2">
-              More to Come
-            </h2>
-          </div>
-        </div>
-      </div>
-      <div className="h-2 w-full bg-gradient-to-l group-hover:via-[var(--primary-color)] group-hover:blur-xl blur-2xl m-auto rounded transition-all absolute bottom-0"></div>
-      <div className="h-0.5 group-hover:w-full bg-gradient-to-l group-hover:via-[var(--primary-color)] w-[70%] m-auto rounded transition-all absolute bottom-[-1px] left-0"></div>
-    </div>
   );
 };
 

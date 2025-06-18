@@ -110,7 +110,7 @@ const Home: React.FunctionComponent = () => {
           </div>
           <div className="home-experience">
             <div className="flex justify-end items-center">
-              {[1, 2, 3, 4, 5].map((index) => {
+              {[1, 2, 3].map((index) => {
                 return <Star key={index} />;
               })}
             </div>

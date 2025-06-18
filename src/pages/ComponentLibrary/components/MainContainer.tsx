@@ -2,10 +2,11 @@ import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import Debouncing from "../../../playground/uiComponents/Debouncing";
 import InfiniteScrolling from "../../../playground/uiComponents/InfiniteScrolling";
-import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+// import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import "../index.css";
 import { useGet } from "../../../api/apiService";
 import parse from 'html-react-parser';
+import OTPVerification from "../../../playground/uiComponents/OTPVerification";
 
 interface Points {
   question: string
@@ -20,6 +21,7 @@ const MainContainer = () => {
   const componentMap: Record<string, React.FC> = {
     "infinite-scrolling": InfiniteScrolling,
     debouncing: Debouncing,
+    "otp-verification": OTPVerification
   };
 
   const SelectedComponent =
@@ -52,14 +54,14 @@ const MainContainer = () => {
               <div className="h-[400px] md:h-[550px] w-full grid grid-cols-1 gap-24 customScrollBar overflow-x-hidden pl-[5px]">
                 <SelectedComponent />
               </div>
-              <div className="inline-block px-3 text-gray-800 border-t border-gray-200 dark:text-white dark:border-gray-600 w-full p-4 border-b border-b-gray-200 bg-gray-50 dark:border-b-gray-600 dark:bg-gray-700">
+              {/* <div className="inline-block px-3 text-gray-800 border-t border-gray-200 dark:text-white dark:border-gray-600 w-full p-4 border-b border-b-gray-200 bg-gray-50 dark:border-b-gray-600 dark:bg-gray-700">
                 Code
               </div>
               <code className="code-base w-full text-black dark:text-white bg-[#f9fafb;] dark:bg-[#1c2029] px-5 py-5 overflow-x-scroll">
                 <SyntaxHighlighter language="jsx" style={{}}>
                   {data?.codeSnippet}
                 </SyntaxHighlighter>
-              </code>
+              </code> */}
               <p className="hidden cursor-pointer text-center px-3 text-gray-800 hover:bg-[#f3f4f6] dark:hover:bg-gray-700 border-t border-gray-200 dark:text-white dark:border-gray-600 w-full p-4 border-b border-b-gray-200 bg-gray-50 dark:border-b-gray-600 dark:bg-gray-700">
                 Expand code
               </p>

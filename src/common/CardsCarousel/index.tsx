@@ -1,8 +1,8 @@
-import { ReactNode, useState, useEffect } from "react";
+import React, { ReactNode, useState, useEffect } from "react";
 import { DirectionArrow } from "../../assets/svg/svg";
 
 interface CardSliderProps {
-  children?: ReactNode | null | undefined;
+  children?: ReactNode;
   cardData: any;
 }
 
@@ -11,6 +11,9 @@ const CardSlider: React.FC<CardSliderProps> = ({ children, cardData }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
   const [cardsPerView, setCardsPerView] = useState(3);
+
+  const childrenArray = React.Children.toArray(children);
+
 
   // Responsive handler for different screen sizes
   useEffect(() => {
@@ -85,7 +88,7 @@ const CardSlider: React.FC<CardSliderProps> = ({ children, cardData }) => {
             onClick={handlePrev}
             disabled={isTransitioning}
             className={`h-[40px] w-[40px] bg-white rounded-full p-1 sm:p-2 shadow-md hover:bg-gray-100 z-10 cursor-pointer flex items-center justify-center ${
-              children.length > 3 ? "" : "lg:hidden"
+              childrenArray.length > 3 ? "" : "lg:hidden"
             }`}
             aria-label="Previous cards"
           >
@@ -96,7 +99,7 @@ const CardSlider: React.FC<CardSliderProps> = ({ children, cardData }) => {
             onClick={handleNext}
             disabled={isTransitioning}
             className={`h-[40px] w-[40px] bg-white rounded-full p-1 sm:p-2 shadow-md hover:bg-gray-100 z-10 cursor-pointer flex items-center justify-center ${
-              children.length > 3 ? "" : "lg:hidden"
+              childrenArray.length > 3 ? "" : "lg:hidden"
             }`}
             aria-label="Next cards"
           >

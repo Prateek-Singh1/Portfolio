@@ -3,7 +3,7 @@ import "./Header.css";
 import { LogoMain, scrollToSection } from "../../commonFunction";
 import { DownloadIcon, MenuCloseIcon } from "../../assets/svg/svg";
 import Button from "../../common/Button";
-import resume from '../../assets/docs/Prateek Kumar Singh.pdf'
+import resume from '../../assets/docs/Prateek-Singh-Resume.pdf'
 
 interface HeaderProps {
   activeSection: string;

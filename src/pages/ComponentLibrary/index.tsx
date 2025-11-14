@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, lazy } from "react";
 import Sidebar from "./components/Sidebar";
-import MainContainer from "./components/MainContainer";
+const MainContainer = lazy(()=> import ("./components/MainContainer"));
 import Tools from "../../common/Tools/Tools";
 import Navbar from "./components/Navbar";
 import "./index.css";

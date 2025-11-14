@@ -1,9 +1,9 @@
-import React, { useRef } from "react";
+import React, { useRef, lazy } from "react";
 import "./About.css";
 import { AboutMe, TechIcon } from "../../constants";
 // import RangeSlider from "../../common/RangeSlider/RangeSlider";
 // import { AboutMeIcon, Ellipse } from "../../assets/svg/svg";
-import MyToolTip from "../../common/ToolTip";
+const MyToolTip = lazy(() => import ("../../common/ToolTip"));
 import ScrollAnimation from "../../common/ScrollAnimation";
 import { PageHeadings } from "../../common/GenericeFunction";
 import HoverCards from "../../common/HoverCards";

@@ -1,18 +1,20 @@
-import React from 'react'
+import React, { lazy, Suspense } from 'react'
 import './App.css'
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Dashboard from './pages/Dashboard';
-import Blogs from './pages/Blog/Blogs/Blogs';
-import InfiniteScrolling from './playground/uiComponents/InfiniteScrolling';
-import Debouncing from './playground/uiComponents/Debouncing';
-import ComponentLibrary from './pages/ComponentLibrary';
-import PageNotFound from './components/PageNotFound/indisx';
-import OTPVerification from './playground/uiComponents/OTPVerification';
+import LoadingScreen from './common/LoadingScreen';
+const Blogs = lazy(() => import ('./pages/Blog/Blogs/Blogs'));
+const InfiniteScrolling = lazy(() => import ('./playground/uiComponents/InfiniteScrolling'));
+const Debouncing = lazy(() =>  import ('./playground/uiComponents/Debouncing'));
+const ComponentLibrary = lazy(() =>  import ('./pages/ComponentLibrary'));
+const PageNotFound = lazy(() => import ('./components/PageNotFound/indisx'));
+const OTPVerification = lazy(() => import ('./playground/uiComponents/OTPVerification'));
 
 
 const App: React.FunctionComponent = () => {
   return (
     <>
+    <Suspense fallback={<LoadingScreen />}>
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<Dashboard />} />
@@ -28,6 +30,7 @@ const App: React.FunctionComponent = () => {
           <Route path='*' element={<PageNotFound />} />
         </Routes>
       </BrowserRouter>
+      </Suspense>
     </>
   )
 }

@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import axios from "axios";
 
 interface UseGetResponse<T> {
   loading: boolean;
@@ -18,12 +17,27 @@ export const useGet = <T = any>(url: string, params?: Record<string, any>): UseG
       setError(null);
 
       try {
-        const response = await axios({
-          method: 'GET',
-          url: url,
-          params: params
+        // Build URL + params (same behavior as axios GET)
+        const finalUrl = new URL(url, window.location.origin);
+        if (params) {
+          Object.entries(params).forEach(([key, value]) => {
+            if (value !== undefined && value !== null) {
+              finalUrl.searchParams.set(key, String(value));
+            }
+          });
+        }
+
+        const response = await fetch(finalUrl.toString(), {
+          method: "GET"
         });
-        setData(response.data);
+
+        if (!response.ok) {
+          throw new Error("Failed to fetch");
+        }
+
+        const json = await response.json();
+        setData(json);
+
       } catch (err) {
         setError("Failed to fetch data");
       } finally {
@@ -32,7 +46,6 @@ export const useGet = <T = any>(url: string, params?: Record<string, any>): UseG
     };
 
     fetchData();
-    
   }, [url, JSON.stringify(params)]);
 
   return { loading, error, data };

@@ -1,4 +1,48 @@
-dist/
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Dependency directories
 node_modules/
+
+# Vite build output
+dist/
+dist-ssr/
+
+# Local environment files
 .env
 .env.*
+!.env.example   # keep example template
+
+# Cache
+*.cache
+.vite/
+.eslintcache
+
+# TypeScript build
+tsbuildinfo
+*.tsbuildinfo
+
+# Editor directories and files
+.idea/
+.vscode/
+*.swp
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Optional coverage output
+coverage/
+
+# Local build files
+*.local
+
+# Parcel / other bundlers
+.cache/
+
+# Lock backups
+package-lock backup*

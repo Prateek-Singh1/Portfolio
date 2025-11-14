@@ -5,7 +5,6 @@ import InfiniteScrolling from "../../../playground/uiComponents/InfiniteScrollin
 // import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import "../index.css";
 import { useGet } from "../../../api/apiService";
-import parse from 'html-react-parser';
 import OTPVerification from "../../../playground/uiComponents/OTPVerification";
 
 interface Points {
@@ -86,12 +85,12 @@ export const TitleWithDescription: React.FC<TitleWithDescriptionProps> = ({
 }) => {
   return (
     <>
-      <h2 className="text-[24px] font-semibold leading-[32px] mt-[32px] mb-[16px] text-black dark:text-white">
-        {parse(title)}
-      </h2>
-      <p className="mb-4 text-lg text-gray-600 dark:text-[#808080]">
-        {parse(description || '')}
-      </p>
+      <h2 className="text-[24px] font-semibold leading-[32px] mt-[32px] mb-[16px] text-black dark:text-white"
+      dangerouslySetInnerHTML={{ __html: title }}
+      />
+      <p className="mb-4 text-lg text-gray-600 dark:text-[#808080]"
+      dangerouslySetInnerHTML={{ __html: description || '' }}
+      />
     </>
   );
 };

@@ -79,27 +79,44 @@ export const TectRange = [
 
 export const Experience = [
     {
-        designation: 'Frontend Developer',
+        designation: 'Frontend Engineer',
         company: 'MyYogaTeacher',
-        date: 'July 2023 - Current',
-        link:'https://myyogateacher.com/',
-        icon:'https://cloudimages.myyogateacher.com/dgerdfai4/image/upload/f_auto/v1642535357/website/lp/mobileHeaderIcon.png',
-        description: '<ul><li>Develop and maintain <b>user-friendly, high-performance web applications</b> using modern frontend technologies.</li><li>Write <b>clean, efficient, and maintainable code</b> following industry best practices.</li><li><b>Seamlessly integrate REST APIs</b>, ensuring robust and responsive user experiences.</li><li>Recognized for <b>collaborative teamwork, innovation, and adaptability</b> in dynamic environments.</li><li>Passionate about <b>continuous learning, problem-solving, and delivering scalable solutions</b>.</li></ul>',
+        date: 'Jan 2023 - Present',
+        link: 'https://myyogateacher.com/',
+        icon: 'https://cloudimages.myyogateacher.com/dgerdfai4/image/upload/f_auto/v1642535357/website/lp/mobileHeaderIcon.png',
+        description: `
+        <ul>
+            <li>Implemented a <b>micro-frontend architecture</b>, reducing deployment time by <b>40%</b>.</li>
+            <li>Improved <b>Core Web Vitals (LCP, CLS, FID)</b> by <b>40–60%</b> using code-splitting, lazy loading, and image optimization.</li>
+            <li>Boosted frontend performance by <b>50% (FCP)</b>, contributing to an <b>8% increase in conversions</b>.</li>
+            <li>Built <b>50+ reusable UI components</b>, reducing duplicate efforts by <b>60%</b> and speeding delivery by <b>25%</b>.</li>
+            <li>Standardized testing with <b>Vitest & RTL</b>, achieving <b>90%+ coverage</b> and reducing regressions by <b>40%</b>.</li>
+        </ul>
+        `
     },
+
     {
-        designation: 'UI Developer',
+        designation: 'UI Engineer',
         company: 'MyYogaTeacher',
         date: 'April 2022 - June 2023',
-        link:'https://myyogateacher.com/',
-        icon:'https://cloudimages.myyogateacher.com/dgerdfai4/image/upload/f_auto/v1642535357/website/lp/mobileHeaderIcon.png',
+        link: 'https://myyogateacher.com/',
+        icon: 'https://cloudimages.myyogateacher.com/dgerdfai4/image/upload/f_auto/v1642535357/website/lp/mobileHeaderIcon.png',
         description: '<ul><li><b>Skilled UI Developer</b> with expertise in creating <b>visually appealing and highly responsive applications</b>.</li><li><b>Expert in building reusable components</b> to enhance efficiency, maintainability, and design consistency.</li><li><b>Passionate about crafting intuitive user interfaces</b> that deliver a seamless and engaging user experience.</li><li>Adept at <b>translating design concepts into high-performance, pixel-perfect implementations</b>.</li></ul>',
+    },
+    {
+        designation: 'UI Engineer ( Internship )',
+        company: 'MyYogaTeacher',
+        date: 'April 2022 - June 2023',
+        link: 'https://myyogateacher.com/',
+        icon: 'https://cloudimages.myyogateacher.com/dgerdfai4/image/upload/f_auto/v1642535357/website/lp/mobileHeaderIcon.png',
+        description: '<ul><li><b>Developed dynamic, responsive pages with React.js, CSS, and Tailwind CSS.</b>.</li><li><b>Migrated features to functional components with hooks, reducing code complexity.</li><li><b>Applied component-driven development practices, increasing reusability.</li></ul>',
     },
     {
         designation: 'Frontend Course',
         company: 'Prepbytes',
         date: 'September 2021 - January 2022',
-        link:'https://www.prepbytes.com/',
-        icon:'https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/images/logo.webp',
+        link: 'https://www.prepbytes.com/',
+        icon: 'https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/images/logo.webp',
         description: '<ul><li>Familiar with <b>HTML, CSS, and JavaScript</b>, focusing on <b>clean code, responsive design, and cross-browser compatibility</b>.</li><li>Skilled in <b>Git version control</b> and familiar with front-end frameworks like <b>React</b>.</li><li>Emphasized <b>performance optimization and accessibility</b>, showcasing abilities through a diverse portfolio.</li><li>Committed to <b>continuous learning, problem-solving, and effective communication</b> in team environments.</li></ul>',
     },
 ]
@@ -150,34 +167,33 @@ export const GetBlogs = [
 
 export const AboutMe = [
     {
-      skill: "Responsive & User-Centric Design",
-      description: "Develops pixel-perfect, accessible, and high-performance UIs that provide seamless user experiences across all devices.",
-      icon: Layout,
+        skill: "Responsive & User-Centric Design",
+        description: "Develops pixel-perfect, accessible, and high-performance UIs that provide seamless user experiences across all devices.",
+        icon: Layout,
     },
     {
-      skill: "Clean, Efficient, and Scalable Code",
-      description: "Writes modular, reusable, and optimized code following industry best practices to ensure maintainability and scalability.",
-      icon: Code,
+        skill: "Clean, Efficient, and Scalable Code",
+        description: "Writes modular, reusable, and optimized code following industry best practices to ensure maintainability and scalability.",
+        icon: Code,
     },
     {
-      skill: "Advanced Debugging & Problem-Solving",
-      description: "Effectively identifies, troubleshoots, and resolves complex frontend issues, optimizing performance and user experience.",
-      icon: Cpu,
+        skill: "Advanced Debugging & Problem-Solving",
+        description: "Effectively identifies, troubleshoots, and resolves complex frontend issues, optimizing performance and user experience.",
+        icon: Cpu,
     },
     {
-      skill: "SEO-Friendly Development",
-      description: "Implements SEO best practices, including semantic HTML, structured data, and performance optimizations to improve search visibility.",
-      icon: Search,
+        skill: "SEO-Friendly Development",
+        description: "Implements SEO best practices, including semantic HTML, structured data, and performance optimizations to improve search visibility.",
+        icon: Search,
     },
     {
-      skill: "Strong Collaboration & Communication",
-      description: "Works seamlessly within cross-functional teams, translating business needs into elegant frontend solutions while ensuring clear communication.",
-      icon: Profile,
+        skill: "Strong Collaboration & Communication",
+        description: "Works seamlessly within cross-functional teams, translating business needs into elegant frontend solutions while ensuring clear communication.",
+        icon: Profile,
     },
     {
-      skill: "Continuous Learning & Technology Adaptation",
-      description: "Stays ahead of industry trends, rapidly adapting to new frameworks, tools, and best practices to enhance development workflows.",
-      icon: OpenBook,
+        skill: "Continuous Learning & Technology Adaptation",
+        description: "Stays ahead of industry trends, rapidly adapting to new frameworks, tools, and best practices to enhance development workflows.",
+        icon: OpenBook,
     },
-  ];
-  
+];

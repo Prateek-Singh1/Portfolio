@@ -83,8 +83,8 @@ const Home: React.FunctionComponent = () => {
               <Typewriter
                 options={{
                   strings: [
-                    "Frontend Developer",
-                    "UI Developer",
+                    "Frontend Engineer",
+                    "UI Engineer",
                     "Web Developer",
                   ],
                   autoStart: true,

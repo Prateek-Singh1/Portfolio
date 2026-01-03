@@ -242,4 +242,7 @@
     .experience-section{
         gap: 50px;
     }
+    .experience-info-title {
+    font-size: 20px;
+    }
 }
